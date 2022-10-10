@@ -1,6 +1,7 @@
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react';
 import styles from './styles/app.css';
-
+import { MobileMenuContext } from './contexts/MobileMenu.js';
+import {useState} from 'react'
 export function links() {
   return [
     { rel: 'stylesheet', href: styles },
@@ -15,6 +16,12 @@ export const meta = () => ({
 });
 
 export default function App() {
+  const [mobileMenuOpen, setMobileMenuState] = useState();
+
+  const mobileMenu = {
+    isOpen: mobileMenuOpen,
+    toggle: () => setMobileMenuState(!mobileMenuOpen)
+  }
   return (
     <html lang="en">
       <head>
@@ -22,7 +29,10 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
+      <MobileMenuContext.Provider value={mobileMenu}>
+          <Outlet />
+        </MobileMenuContext.Provider>
+
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
