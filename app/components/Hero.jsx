@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 export default function Hero(props) {
   const [isHover, setIsHover] = useState(false);
   return (

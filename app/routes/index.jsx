@@ -11,13 +11,6 @@ export default function Index() {
         color: '#fff',
       }}>
         <Header/>
-      {/* <MobileMenuContext.Consumer>
-        {({ isOpen }) =>
-          !isOpen && (  
-              <Hero />  
-          )
-        }
-      </MobileMenuContext.Consumer> */}
     </div>
     
   );

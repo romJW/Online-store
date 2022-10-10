@@ -1,15 +1,10 @@
 import { MobileMenuContext } from '../contexts/MobileMenu.js';
 const socials = [
-  { logo: 'fa-brands fa-youtube fa-xl', path: '/', id: '1', color: '#FF0000' },
-  { logo: 'fa-brands fa-instagram fa-xl', path: '/', id: '2', color: '#8a3ab9	' },
-  { logo: 'fa-brands fa-vk fa-xl', path: '/', id: '3', color: '#4C75A3' },
-  { logo: 'fa-brands fa-whatsapp-square fa-xl', path: '/', id: '4', color: '#25d366' },
-  { logo: 'fa-brands fa-telegram fa-xl', path: '/', id: '5', color: '#2AABEE' },
-];
-const mobileSocials = [
-  { logo: 'fa-brands fa-vk', path: '/', id: '1' },
-  { logo: 'fa-brands fa-instagram', path: '/', id: '2' },
-  { logo: 'fa-brands fa-facebook-f', path: '/', id: '3' },
+  { logo: 'fa-brands fa-youtube fa-xl hover:scale-110', path: '/', id: '1', color: '#FF0000' },
+  { logo: 'fa-brands fa-instagram fa-xl hover:scale-110', path: '/', id: '2', color: '#8a3ab9	' },
+  { logo: 'fa-brands fa-vk fa-xl hover:scale-110', path: '/', id: '3', color: '#4C75A3' },
+  { logo: 'fa-brands fa-whatsapp-square fa-xl hover:scale-110', path: '/', id: '4', color: '#25d366' },
+  { logo: 'fa-brands fa-telegram fa-xl hover:scale-110', path: '/', id: '5', color: '#2AABEE' },
 ];
 
 const mobileNav = [
@@ -236,7 +231,7 @@ export default function Header(props) {
                 </div>
               </div>
             </div>
-            {isOpen && <MobileMenu socials={mobileSocials} nav={mobileNav} onClose={toggle} />}
+            {isOpen && <MobileMenu nav={mobileNav} onClose={toggle} />}
           </header>
         </div>
       )}
