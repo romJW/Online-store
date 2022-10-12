@@ -28,7 +28,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body data-theme="berry">
       <MobileMenuContext.Provider value={mobileMenu}>
           <Outlet />
         </MobileMenuContext.Provider>

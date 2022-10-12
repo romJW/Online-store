@@ -8,10 +8,9 @@ export default function Index() {
         fontFamily: 'inter-regular, sans-serif',
         lineHeight: '1.4',
         fontSize: '18px',
-        color: '#fff',
       }}>
-        <Header/>
+      <Header />
+      <MobileMenuContext.Consumer>{({ isOpen }) => !isOpen && <Hero />}</MobileMenuContext.Consumer>
     </div>
-    
   );
 }

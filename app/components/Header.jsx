@@ -1,9 +1,16 @@
+import Btn from './UI/Btn';
+import Input from './UI/Input';
 import { MobileMenuContext } from '../contexts/MobileMenu.js';
 const socials = [
   { logo: 'fa-brands fa-youtube fa-xl hover:scale-110', path: '/', id: '1', color: '#FF0000' },
   { logo: 'fa-brands fa-instagram fa-xl hover:scale-110', path: '/', id: '2', color: '#8a3ab9	' },
   { logo: 'fa-brands fa-vk fa-xl hover:scale-110', path: '/', id: '3', color: '#4C75A3' },
-  { logo: 'fa-brands fa-whatsapp-square fa-xl hover:scale-110', path: '/', id: '4', color: '#25d366' },
+  {
+    logo: 'fa-brands fa-whatsapp-square fa-xl hover:scale-110',
+    path: '/',
+    id: '4',
+    color: '#25d366',
+  },
   { logo: 'fa-brands fa-telegram fa-xl hover:scale-110', path: '/', id: '5', color: '#2AABEE' },
 ];
 
@@ -101,17 +108,10 @@ function MobileMenu(props) {
           <option value="value3">Усть-Каменогорск</option>
         </select>
       </div>
-      <button className="bg-[#AC9B9C] font-semibold rounded-full text-white text-sm w-30 py-3 px-8 mb-2 mx-3">
-        Калькулятор стоимости
-      </button>
-      <div className="header__search flex justify-center">
-        <input
-          className="header__search-input w-72 text-black relative px-5 py-4 rounded border border-gray-300"
-          type="text"
-          placeholder="Я ищу..."
-        />
-        <i className="fa-solid fa-magnifying-glass fa-lg relative text-gray-300 top-8 right-9"></i>
-      </div>
+      <Btn className="btn btn-secondary font-semibold rounded-full text-white text-sm w-30 py-3 px-8 mb-2 mx-3">
+        Калькулятор стоимости{' '}
+      </Btn>
+      <Input className="right-8 top-6" icon="right-9 top-6"/>
       <div className="header-mobile__phone-section mx-auto text-center">
         <a rel="nofollow" href="tel:+7 (727) 328-80-81">
           <p className="text-lg font-bold">+7 (727) 328-80-81</p>
@@ -170,21 +170,13 @@ export default function Header(props) {
             </div>
           </div>
           <header className="shadow w-screen 2xl:w-full flex flex-col justify-center sticky top-[-1px] 2xl:sticky bg-white z-10">
-            <div className="mx-auto container flex flex-row items-center justify-between  py-4 w-full gap-10">
+            <div className="mx-auto container flex flex-row items-center justify-between px-5 py-4 w-full gap-10">
               <img className="w-28 lg:w-40" src="assets/logo.png" alt="logo" />
 
               <div className="hidden 2xl:block w-1/6 text-center">
                 <span className="text-black">Производство террасной доски ДПК в России</span>
               </div>
-              <div className="header__search hidden lg:flex">
-                <input
-                  className="header__search-input hidden lg:block w-72 text-black relative px-5 py-4 rounded border border-gray-300"
-                  type="text"
-                  placeholder="Я ищу..."
-                />
-                <i className="fa-solid fa-magnifying-glass fa-lg relative text-gray-300 top-8 right-9"></i>
-              </div>
-
+              <Input className="hidden lg:block" icon="right-9 top-1"/>
               <div
                 className="hidden lg:block text-black text-base font-bold"
                 style={{
@@ -217,7 +209,7 @@ export default function Header(props) {
                 </div>
               </div>
               <div
-                className="header__menu flex gap-5 items-center lg:hidden text-black"
+                className="header__menu flex gap-5 items-center  lg:hidden text-black"
                 onClick={toggle}>
                 <img src="assets/phone.svg" />
                 <img src="assets/basket.svg" />
