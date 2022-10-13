@@ -1504,8 +1504,8 @@ html {
   top: -1px;
 }
 
-.top-8 {
-  top: 2rem;
+.top-1 {
+  top: 0.25rem;
 }
 
 .left-3\/4 {
@@ -1522,10 +1522,6 @@ html {
 
 .right-1 {
   right: 0.25rem;
-}
-
-.top-1 {
-  top: 0.25rem;
 }
 
 .z-10 {
