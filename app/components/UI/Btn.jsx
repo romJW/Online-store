@@ -1,11 +1,15 @@
-export default function Btn({ className,children  }) {
+export default function Btn({ kind, className, children }) {
   return (
     <button
       className={`
-      font-normal
+        ${kind}
+        btn
+        font-normal
+        text-white
         shadow-3xl  
-        transition duration-150
-        hover:bg-[#B81C21] ${className}`}>
+        transition
+        duration-150
+        ${className}`}>
       {children}
     </button>
   );

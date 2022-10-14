@@ -40,6 +40,7 @@ function MobileMenu(props) {
                     width: '13px',
                     height: '20px',
                   }}
+                  alt=""
                 />
                 <a key={option.id} rel="nofollow" href={option.path} onClick={props.onClose}>
                   {option.title}
@@ -108,10 +109,10 @@ function MobileMenu(props) {
           <option value="value3">Усть-Каменогорск</option>
         </select>
       </div>
-      <Btn className="btn btn-secondary font-semibold rounded-full text-white text-sm w-30 py-3 px-8 mb-2 mx-3">
+      <Btn kind="secondary" className="text-sm w-30 mb-2 mx-3">
         Калькулятор стоимости{' '}
       </Btn>
-      <Input className="right-8 top-6" icon="right-9 top-6"/>
+      <Input classInput="w-full" classIcon="right-9 top-6" />
       <div className="header-mobile__phone-section mx-auto text-center">
         <a rel="nofollow" href="tel:+7 (727) 328-80-81">
           <p className="text-lg font-bold">+7 (727) 328-80-81</p>
@@ -176,7 +177,7 @@ export default function Header(props) {
               <div className="hidden 2xl:block w-1/6 text-center">
                 <span className="text-black">Производство террасной доски ДПК в России</span>
               </div>
-              <Input className="hidden lg:block" icon="right-9 top-1"/>
+              <Input classDiv="hidden lg:block" classInput="w-72" classIcon="right-9 top-1" />
               <div
                 className="hidden lg:block text-black text-base font-bold"
                 style={{
@@ -211,15 +212,15 @@ export default function Header(props) {
               <div
                 className="header__menu flex gap-5 items-center  lg:hidden text-black"
                 onClick={toggle}>
-                <img src="assets/phone.svg" />
-                <img src="assets/basket.svg" />
-                <div className="flex flex-col mt-2">
+                <img src="assets/phone.svg" alt="" />
+                <img src="assets/basket.svg" alt="" />
+                <div className="flex flex-col justify-center items-center mt-2">
                   {isOpen ? (
                     <i className="fa-solid fa-xmark "></i>
                   ) : (
                     <i className="fa-solid fa-bars"></i>
                   )}
-                  <p className="text-sm ">Меню</p>
+                  <p className="text-[10px]">Меню</p>
                 </div>
               </div>
             </div>

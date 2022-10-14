@@ -70,7 +70,7 @@ export default function Hero(props) {
             Стойкость к перепадам температур
           </li>
         </ul>
-        <Btn className='btn btn-primary w-80  h-10 lg:h-[100px] text-base lg:text-xl'>Рассчитать Стоимость</Btn>
+        <Btn kind='primary' className='w-80 h-10 lg:h-[100px] text-base lg:text-xl'>Рассчитать Стоимость</Btn>
 
         <WhatsAppBtn />
       </div>

@@ -21,6 +21,7 @@ module.exports = {
         berry: {
           primary: '#E41D24',
           secondary:'#AC9B9C',
+          neutral: "#ffffff",
           'primary-content': '#FFFFFF',
           '--rounded-btn': '80px',
           '--border-btn': '1px',
