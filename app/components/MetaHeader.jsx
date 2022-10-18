@@ -19,7 +19,7 @@ export default function MetaHeader({ className }) {
             <option value="value3">Усть-Каменогорск</option>
           </select>
         </div>
-        <a className="text-white" href="mailto:info@abbex.kz">
+        <a rel="nofollow" className="text-white" href="mailto:info@abbex.kz">
           info@abbex.kz
         </a>
       </div>

@@ -83,9 +83,9 @@ export default function Header(props) {
                 placeholder="Я ищу..."
               />
               <div className="hidden lg:block text-black text-base font-bold font-days">
-                <a href="tel:+7 (771) 741-18-22">+7 (771) 741-18-22</a>
+                <a rel="nofollow" href="tel:+7 (771) 741-18-22">+7 (771) 741-18-22</a>
                 <br />
-                <a href="tel:+7 (771) 741-18-44">+7 (727) 395-80-82</a>
+                <a rel="nofollow" href="tel:+7 (771) 741-18-44">+7 (727) 395-80-82</a>
               </div>
               <div className="hidden lg:flex items-center flex-col">
                 <button className="btn btn-outline btn-sm">Заказать звонок</button>
