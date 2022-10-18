@@ -177,7 +177,7 @@ export default function Header(props) {
               <div className="hidden 2xl:block w-1/6 text-center">
                 <span className="text-black">Производство террасной доски ДПК в России</span>
               </div>
-              <Input classDiv="hidden lg:block" classInput="w-72" classIcon="right-9 top-1" />
+              <Input className="hidden lg:block" classInput="w-72" classIcon="right-9 top-1" />
               <div
                 className="hidden lg:block text-black text-base font-bold"
                 style={{

@@ -2,7 +2,7 @@ import Btn from './UI/Btn';
 import WhatsAppBtn from './UI/WhatsAppBtn.jsx';
 export default function Hero(props) {
   return (
-    <div className="bg-no-repeat bg-cover bg-center h-fit font-inter overflow-hidden pb-28 lg:pb-0">
+    <div className="bg-no-repeat bg-cover bg-center h-full font-inter overflow-hidden pb-28 lg:pb-0">
       <img
         src="/assets/hero.png"
         className="absolute w-screen object-cover overflow-hidden h-fit"
