@@ -4,21 +4,49 @@
 
 @font-face {
   font-family: Inter;
-  src: url('/assets/fonts/Inter-Regular.ttf');
-}
-@font-face {
-  font-family: Days;
-  src: url('/assets/fonts/DaysOne-Regular.ttf');
-}
-@layer components {
-.primary {
-  @apply btn btn-primary hover:bg-[#B81C21];
-}
-.secondary {
-  @apply btn btn-secondary font-semibold rounded-full hover:bg-[#987F81];
+  src: url("/assets/fonts/Inter-Regular.ttf");
 }
 
-.alternative {
-  @apply btn btn-neutral text-black;
+@font-face {
+  font-family: Days;
+  src: url("/assets/fonts/DaysOne-Regular.ttf");
 }
+
+[data-theme="berry"] {
+  @layer components {
+    .input-bordered {
+      border: 1px solid rgba(134, 134, 134, 0.2);
+    }
+    .btn-lg {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    .btn-sm {
+      @apply text-xs;
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+    .btn-primary {
+      box-shadow: 0px 20px 45px rgba(216, 0, 0, 0.15),
+        inset 0px -12px 24px rgba(216, 0, 0, 0.5),
+        inset 0px 2px 24px rgba(255, 255, 255, 0.3);
+    }
+    .btn-secondary {
+      box-shadow: 0px 20px 30px rgba(141, 141, 141, 0.15),
+        inset 0px -12px 24px rgba(148, 131, 132, 0.8),
+        inset 0px 2px 24px rgba(255, 255, 255, 0.5);
+    }
+    .btn-primary:active {
+      background: #b81c21;
+      box-shadow: 0px 20px 45px rgba(216, 0, 0, 0.15),
+        inset 0px -12px 24px rgba(216, 0, 0, 0.5),
+        inset 0px 2px 24px rgba(255, 255, 255, 0.3);
+    }
+    .btn-secondary:active {
+      background: #987f81;
+      box-shadow: 0px 20px 45px rgba(141, 141, 141, 0.3),
+        inset 0px -12px 24px rgba(148, 131, 132, 0.8),
+        inset 0px 2px 24px rgba(255, 255, 255, 0.5);
+    }
+  }
 }

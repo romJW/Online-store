@@ -1,12 +1,14 @@
-export default function Input({className,classInput, classIcon}) {
+export default function Input({ className, placeholder }) {
   return (
-    <div className={`header__search flex justify-center ${className}`}>
+    <div className={`${className} input input-bordered w-full rounded flex items-center justify-between border-gray-300`}>
       <input
-        className={`header__search-input  h-12 text-black relative px-5 py-4 rounded border border-gray-300 ${classInput}`}
+        className={`w-full outline-none`}
         type="text"
-        placeholder="Я ищу..."
+        placeholder={placeholder}
       />
-      <i className={`fa-solid fa-magnifying-glass fa-lg relative text-gray-300 ${classIcon}`}></i>
+      <i
+        className={`fa-solid fa-magnifying-glass fa-lg relative text-gray-300`}
+      ></i>
     </div>
   );
 }
