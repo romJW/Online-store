@@ -1,7 +1,8 @@
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react';
 import styles from './styles/tailwind.css';
 import { MobileMenuContext } from './contexts/MobileMenu.js';
-import {useState} from 'react'
+import { useState } from 'react'
+
 export function links() {
   return [
     { rel: 'stylesheet', href: styles },
@@ -22,6 +23,7 @@ export default function App() {
     isOpen: mobileMenuOpen,
     toggle: () => setMobileMenuState(!mobileMenuOpen)
   }
+
   return (
     <html lang="en">
       <head>
