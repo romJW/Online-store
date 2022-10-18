@@ -1,0 +1,35 @@
+version: "3"
+
+networks:
+  # Use the previously created public network "traefik-public", shared with other
+  # services that need to be publicly available via this Traefik
+  traefik-public:
+    external: true
+
+services:
+  pirrogroup-kz:
+    image: ${CONTAINER_NAME?Variable not set}
+    deploy:
+      labels:
+        - traefik.enable=true
+        - traefik.docker.network=traefik-public
+        - traefik.constraint-label=traefik-public
+
+        - traefik.http.routers.pirrogroup-kz-http.rule=Host(`pirrogroup.kz`, `pirogroup.kz`)
+        - traefik.http.routers.pirrogroup-kz-http.entrypoints=http
+        - traefik.http.routers.pirrogroup-kz-http.middlewares=https-redirect
+
+        - traefik.http.routers.pirrogroup-kz-https.rule=Host(`pirrogroup.kz`, `pirogroup.kz`)
+        - traefik.http.routers.pirrogroup-kz-https.entrypoints=https
+
+        - traefik.http.routers.pirrogroup-kz-https.tls=true
+        - traefik.http.routers.pirrogroup-kz-https.tls.certresolver=acme_resolver
+
+        - traefik.http.services.pirrogroup-kz.loadbalancer.server.port=3000
+    environment:
+      - DIRECTUS_URL=${DIRECTUS_URL?Variable not set}
+      - SENTRY_DSN=${SENTRY_DSN?Variable not set}
+    networks:
+      # use the public network created to be shared between traefik and
+      # any other service that needs to be publicly available with https
+      - traefik-public
