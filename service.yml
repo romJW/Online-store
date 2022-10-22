@@ -8,7 +8,7 @@ networks:
 
 services:
   dpksklad-kz:
-    image: ${CONTAINER_NAME?Variable not set}
+    image: ${CI_CONTAINER_NAME?Variable not set}
     deploy:
       labels:
         - traefik.enable=true
