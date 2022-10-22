@@ -84,23 +84,11 @@ def deploy_steps(domain):
         'login to registry',
       ],
       "environment": {
-        'SENTRY_DSN': {
-          'from_secret': 'SENTRY_DSN',
-        },
         'CURRENCY_SOURCE': {
           'from_secret': 'CURRENCY_SOURCE',
         },
         'SESSION_SECRET': {
           'from_secret': 'SESSION_SECRET',
-        },
-        'POSTGRES_USER': {
-          'from_secret': 'POSTGRES_USER',
-        },
-        'POSTGRES_PASSWORD': {
-          'from_secret': 'POSTGRES_PASSWORD',
-        },
-        'POSTGRES_DB': {
-          'from_secret': 'POSTGRES_DB',
         },
         'DOMAIN': domain,
       },
