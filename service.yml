@@ -7,7 +7,7 @@ networks:
     external: true
 
 services:
-  pirrogroup-kz:
+  dpksklad-kz:
     image: ${CONTAINER_NAME?Variable not set}
     deploy:
       labels:
@@ -15,17 +15,17 @@ services:
         - traefik.docker.network=traefik-public
         - traefik.constraint-label=traefik-public
 
-        - traefik.http.routers.pirrogroup-kz-http.rule=Host(`pirrogroup.kz`, `pirogroup.kz`)
-        - traefik.http.routers.pirrogroup-kz-http.entrypoints=http
-        - traefik.http.routers.pirrogroup-kz-http.middlewares=https-redirect
+        - traefik.http.routers.dpksklad-kz-http.rule=Host(`${DOMAIN?Variable not set}`)
+        - traefik.http.routers.dpksklad-kz-http.entrypoints=http
+        - traefik.http.routers.dpksklad-kz-http.middlewares=https-redirect
 
-        - traefik.http.routers.pirrogroup-kz-https.rule=Host(`pirrogroup.kz`, `pirogroup.kz`)
-        - traefik.http.routers.pirrogroup-kz-https.entrypoints=https
+        - traefik.http.routers.dpksklad-kz-https.rule=Host(`${DOMAIN?Variable not set}`)
+        - traefik.http.routers.dpksklad-kz-https.entrypoints=https
 
-        - traefik.http.routers.pirrogroup-kz-https.tls=true
-        - traefik.http.routers.pirrogroup-kz-https.tls.certresolver=acme_resolver
+        - traefik.http.routers.dpksklad-kz-https.tls=true
+        - traefik.http.routers.dpksklad-kz-https.tls.certresolver=acme_resolver
 
-        - traefik.http.services.pirrogroup-kz.loadbalancer.server.port=3000
+        - traefik.http.services.dpksklad-kz.loadbalancer.server.port=3000
     environment:
       - DIRECTUS_URL=${DIRECTUS_URL?Variable not set}
       - SENTRY_DSN=${SENTRY_DSN?Variable not set}
