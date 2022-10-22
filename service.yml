@@ -26,9 +26,6 @@ services:
         - traefik.http.routers.dpksklad-kz-https.tls.certresolver=acme_resolver
 
         - traefik.http.services.dpksklad-kz.loadbalancer.server.port=3000
-    environment:
-      - DIRECTUS_URL=${DIRECTUS_URL?Variable not set}
-      - SENTRY_DSN=${SENTRY_DSN?Variable not set}
     networks:
       # use the public network created to be shared between traefik and
       # any other service that needs to be publicly available with https
