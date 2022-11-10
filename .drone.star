@@ -1,53 +1,90 @@
-def release_steps(image_prefix = '', build_folder = '.'): 
+def release(image_prefix = '', build_folder = '.'): 
   image_name = 'registry.gitlab.com/${DRONE_REPO}:' + image_prefix + '${DRONE_TAG##v}'
-
-  return [
-    {
-      'name': 'login to registry',
-      'environment': {
-        'REGISTRY_USER': {
-          'from_secret': 'REGISTRY_USER',
-        },
-        'REGISTRY_TOKEN': {
-          'from_secret': 'REGISTRY_TOKEN',
-        },
+    
+  return {
+    'kind': 'pipeline',
+    'name': 'release',
+    'trigger': {
+      'ref': [
+        'refs/tags/v*',
+      ],
+      'event': {
+        'exclude': [
+          'promote',
+        ],
       },
-      'commands': [
-        'docker login -u $${REGISTRY_USER} -p $${REGISTRY_TOKEN} registry.gitlab.com',
-      ],
     },
-    {
-      'name': 'build',
-      'depends_on': [
-        'clone',
-      ],
-      'commands': [
-        'export CI_CONTAINER_NAME=' + image_name,
-        'docker build -t $${CI_CONTAINER_NAME} ' + build_folder,
-      ],
-    },
-    {
-      'name': 'publish',
-      'depends_on': [
-        'login to registry',
-        'build',
-      ],
-      'commands': [
-        'export CI_CONTAINER_NAME=' + image_name,
-        'docker push $${CI_CONTAINER_NAME}',
-      ],
-    },
-    {
-      'name': 'clean up',
-      'depends_on': [
-        'publish',
-      ],
-      'commands': [
-        'export CI_CONTAINER_NAME=' + image_name,
-        'docker image rm $${CI_CONTAINER_NAME}',
-      ],
-    },
-  ]
+    'volumes': [
+      {
+        'name': 'dockersock',
+        'host': {
+          'path': '/var/run/docker.sock',
+        },  
+      },
+    ],
+    'steps': [
+      {
+        'name': 'build',
+        'image': 'docker:dind',
+        'depends_on': [
+          'clone',
+        ],
+        'volumes': [
+          { 
+            'name': 'dockersock',
+            'path': '/var/run/docker.sock',
+          },
+        ],
+        'commands': [
+          'export CI_CONTAINER_NAME=' + image_name,
+          'docker build -t $${CI_CONTAINER_NAME} ' + build_folder,
+        ],
+      },
+      {
+        'name': 'publish',
+        'image': 'docker:dind',
+        'depends_on': [
+          'build',
+        ],
+        'volumes': [
+          { 
+            'name': 'dockersock',
+            'path': '/var/run/docker.sock',
+          },
+        ],
+        'environment': {
+          'REGISTRY_USER': {
+            'from_secret': 'REGISTRY_USER',
+          },
+          'REGISTRY_TOKEN': {
+            'from_secret': 'REGISTRY_TOKEN',
+          },
+        },
+        'commands': [
+          'export CI_CONTAINER_NAME=' + image_name,
+          'docker login -u $${REGISTRY_USER} -p $${REGISTRY_TOKEN} registry.gitlab.com',
+          'docker push $${CI_CONTAINER_NAME}',
+        ],
+      },
+      {
+        'name': 'clean up',
+        'image': 'docker:dind',
+        'depends_on': [
+          'publish',
+        ],
+        'volumes': [
+          { 
+            'name': 'dockersock',
+            'path': '/var/run/docker.sock',
+          },
+        ],
+        'commands': [
+          'export CI_CONTAINER_NAME=' + image_name,
+          'docker image rm $${CI_CONTAINER_NAME}',
+        ],
+      },
+    ]
+  }
 
 def deploy_steps(domain): 
   image_name = 'registry.gitlab.com/${DRONE_REPO}:${DRONE_TAG##v}'
@@ -101,27 +138,7 @@ def deploy_steps(domain):
 
 def main(ctx):
   return [
-    {
-      'kind': 'pipeline',
-      'type': 'exec',
-      'name': 'release',
-      'trigger': {
-        'ref': [
-          'refs/tags/v*',
-        ],
-        'event': {
-          'exclude': [
-            'promote',
-          ],
-        },
-      },
-      'node': {
-        'env': 'ci',
-        'scope': 'build',
-        'domain': 'drone.croxware.com',
-      },
-      'steps': release_steps(),
-    },
+    release(),
     {
       'kind': 'pipeline',
       'type': 'exec',
