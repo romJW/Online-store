@@ -6,10 +6,18 @@
   font-family: Inter;
   src: url("/assets/fonts/Inter-Regular.ttf");
 }
-
+@font-face {
+  font-family: Montserrat;
+  src: url("/assets/fonts/Montserrat.ttf");
+}
 @font-face {
   font-family: Days;
   src: url("/assets/fonts/DaysOne-Regular.ttf");
+}
+
+
+.bg-footer {
+  background-image:url('/assets/wood-bg.png')
 }
 
 [data-theme="berry"] {
