@@ -10,6 +10,7 @@ export function links() {
   ];
 }
 
+
 export const meta = () => ({
   charset: 'utf-8',
   title: 'New Remix App',
