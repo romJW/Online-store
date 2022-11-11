@@ -2,8 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .bg-mainSection {
   background-image: url('/assets/wood-bg.png');
+}
+.swiper-pagination-bullet-active{
+    background-color:#AC9B9C !important;
+}
+
+.swiper-slide {
+  opacity: 0.2;
+  transition-property: all !important;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
+}
+.swiper-slide-active {
+  opacity: 1;
+  transition-property: all !important;
+  transition-duration: 2s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
+}
+.swiper-wrapper {
+  padding-bottom: 10px;
+}
+
+@font-face {
+  font-family: Inter;
+  src: url('/assets/fonts/Inter-Regular.ttf');
+}
+@font-face {
+  font-family: Days;
+  src: url('/assets/fonts/DaysOne-Regular.ttf');
+}
+@layer components {
+  .primary {
+    @apply btn btn-primary hover:bg-[#B81C21];
+  }
+  .secondary {
+    @apply btn btn-secondary font-semibold rounded-full hover:bg-[#987F81];
+  }
+
+  .alternative {
+    @apply btn btn-neutral text-black;
+  }
 }
 
 @font-face {

@@ -8,6 +8,7 @@ import Consult from '../components/Consult';
 import NewsBlock from '../components/NewsBlock';
 import Subscribe from '../components/Subscribe';
 import Footer from '../components/Footer';
+import SliderReview from '../components/SliderReview';
 
 export default function Index() {
   return (
@@ -21,6 +22,7 @@ export default function Index() {
       <MobileMenuContext.Consumer>{({ isOpen }) => !isOpen && <Hero />}</MobileMenuContext.Consumer>
       <MainSection />
        <BoardDescription/>
+       <SliderReview />
       <Consult/>
       <NewsBlock/>
       <Subscribe/>
