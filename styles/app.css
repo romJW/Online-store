@@ -24,7 +24,7 @@
   background-image:url('/assets/wood-bg.png')
 }
 
-[data-theme="berry"] {
+[data-theme='berry'] {
   @layer components {
     .input-bordered {
       border: 1px solid rgba(134, 134, 134, 0.2);
@@ -39,10 +39,12 @@
       padding-right: 35px;
     }
     .btn-primary {
+      @apply btn bg-[#E41D24] border-none hover:bg-[#B81C21];
       box-shadow: 0px 20px 45px rgba(216, 0, 0, 0.15), inset 0px -12px 24px rgba(216, 0, 0, 0.5),
         inset 0px 2px 24px rgba(255, 255, 255, 0.3);
     }
     .btn-secondary {
+      @apply btn font-semibold border-none rounded-full bg-[#AC9B9C] hover:bg-[#987F81];
       box-shadow: 0px 20px 30px rgba(141, 141, 141, 0.15),
         inset 0px -12px 24px rgba(148, 131, 132, 0.8), inset 0px 2px 24px rgba(255, 255, 255, 0.5);
     }
