@@ -1,5 +1,6 @@
 import Hero from '../components/Hero';
 import Header from '../components/Header';
+import MainSection from '../components/mainSection.jsx';
 import Map from '../components/Map';
 import { MobileMenuContext } from '../contexts/MobileMenu.js';
 import Consult from '../components/Consult';
@@ -17,6 +18,7 @@ export default function Index() {
       }}>
       <Header />
       <MobileMenuContext.Consumer>{({ isOpen }) => !isOpen && <Hero />}</MobileMenuContext.Consumer>
+      <MainSection />
       <Consult/>
       <NewsBlock/>
       <Subscribe/>
