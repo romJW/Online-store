@@ -1,6 +1,7 @@
 import Hero from '../components/Hero';
 import Header from '../components/Header';
 import { MobileMenuContext } from '../contexts/MobileMenu.js';
+import NewsBlock from '../components/NewsBlock';
 export default function Index() {
   return (
     <div
@@ -11,6 +12,7 @@ export default function Index() {
       }}>
       <Header />
       <MobileMenuContext.Consumer>{({ isOpen }) => !isOpen && <Hero />}</MobileMenuContext.Consumer>
+      <NewsBlock/>
     </div>
   );
 }
