@@ -3,7 +3,7 @@ import SwiperReviews from './SwiperReviews';
 
 export default function Slider() {
   useEffect(() => {
-    const swiper = new Swiper('.swiper', {
+    const swiper = new Swiper('.swiperReviews', {
       loop: true,
       slidesPerView: 1,
       speed: 600,

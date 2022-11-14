@@ -9,7 +9,7 @@ export default function NewsBlock(){
     return(
         <>
         <div className="newsBlock mx-auto mt-10">
-            <div className="newsBlock mx-auto container flex flex-col justify-center items-center">
+            <div className="newsBlock text-black mx-auto container flex flex-col justify-center items-center">
                 <h3 className="font-[Days] text-center text-3xl lg:text-5xl mb-4 lg:mb-10">НОВОСТИ И ПОЛЕЗНЫЕ СТАТЬИ</h3>
                 <div className='flex  gap-8 justify-between flex-col lg:flex-row mb-8 lg:mb-10'>
                     {NewsCards.map((card)=><NewsCard image={card.image} title={card.title} date={card.date} key={card.image}/>)}

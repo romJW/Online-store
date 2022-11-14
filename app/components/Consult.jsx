@@ -6,7 +6,7 @@ export default function Consult() {
   return (
     <>
       <div className="mx-auto mt-12 lg:mt-18">
-        <div className="container mx-auto flex flex-col justify-center items-center">
+        <div className="container text-black mx-auto flex flex-col justify-center items-center">
           <h3 className="text-3xl lg:text-5xl mb-3 font-bold text-center">Получите консультацию</h3>
           <p className="text-xl lg:text-3xl mb-8 ">
             <span className="font-bold">по вашему объекту уже сегодня.</span> Оставьте заявку и наш
