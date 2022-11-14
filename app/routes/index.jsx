@@ -2,13 +2,14 @@ import Hero from '../components/Hero';
 import Header from '../components/Header';
 import MainSection from '../components/mainSection.jsx';
 import Map from '../components/Map';
-import BoardDescription from "../components/BoardDescription.jsx";
+import BoardDescription from '../components/BoardDescription.jsx';
 import { MobileMenuContext } from '../contexts/MobileMenu.js';
 import Consult from '../components/Consult';
 import NewsBlock from '../components/NewsBlock';
 import Footer from '../components/Footer';
 import SliderReview from '../components/SliderReview';
 import SliderLicense from '../components/SliderLicense';
+import Slider from '../components/Slider';
 export default function Index() {
   return (
     <div
@@ -19,6 +20,7 @@ export default function Index() {
       }}>
       <Header />
       <MobileMenuContext.Consumer>{({ isOpen }) => !isOpen && <Hero />}</MobileMenuContext.Consumer>
+      <Slider />
       <SliderLicense />
       <MainSection />
        <BoardDescription/>

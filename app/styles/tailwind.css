@@ -4718,14 +4718,6 @@ html {
   max-width: 370px;
 }
 
-.max-w-\[1170px\] {
-  max-width: 1170px;
-}
-
-.max-w-\[570px\] {
-  max-width: 570px;
-}
-
 .grow {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -4978,10 +4970,6 @@ html {
   background-color: rgb(172 155 156 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'\/assets\/wood-bg\.png\'\)\] {
-  background-image: url('/assets/wood-bg.png');
-}
-
 .bg-cover {
   background-size: cover;
 }
@@ -5047,24 +5035,20 @@ html {
   padding-top: 140px;
 }
 
-.pb-14 {
-  padding-bottom: 3.5rem;
-}
-
-.pt-20 {
-  padding-top: 5rem;
-}
-
-.pb-20 {
-  padding-bottom: 5rem;
-}
-
 .pl-8 {
   padding-left: 2rem;
 }
 
 .pb-8 {
   padding-bottom: 2rem;
+}
+
+.pb-16 {
+  padding-bottom: 4rem;
+}
+
+.pb-14 {
+  padding-bottom: 3.5rem;
 }
 
 .text-center {
@@ -5277,7 +5261,7 @@ html {
   background-color:#AC9B9C !important;
 }
 
-.swiper-slide-license{
+.swiper-opacity{
   opacity: 1 !important;
 }
 
@@ -5720,4 +5704,3 @@ html {
     gap: 2.5rem;
   }
 }
-
