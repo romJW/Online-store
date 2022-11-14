@@ -3,6 +3,7 @@ import Btn from './UI/Btn'
 export default function Hero(props) {
   return (
     <div className="relative h-[80vh]">
+      
       <img
         src="/assets/hero.png"
         className="absolute w-screen object-cover overflow-hidden h-full"

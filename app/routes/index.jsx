@@ -10,6 +10,11 @@ import Footer from '../components/Footer';
 import SliderReview from '../components/SliderReview';
 import SliderLicense from '../components/SliderLicense';
 import Slider from '../components/Slider';
+import MontageBlock from '../components/MontageBlock';
+import DeliveryBlock from '../components/DeliveryBlock';
+import About from '../components/About';
+import FormBlock from '../components/FormBlock';
+import Subscribe from '../components/Subscribe';
 export default function Index() {
   return (
     <div
@@ -20,15 +25,21 @@ export default function Index() {
       }}>
       <Header />
       <MobileMenuContext.Consumer>{({ isOpen }) => !isOpen && <Hero />}</MobileMenuContext.Consumer>
-      <Slider />
-      <SliderLicense />
       <MainSection />
-       <BoardDescription/>
-       <SliderReview />
+      <Slider />
+      <Consult/>
+      <BoardDescription />
+      <MontageBlock />
+      <About />
+      <FormBlock />
+      <SliderReview />
+      <DeliveryBlock />
+      <SliderLicense />  
       <Consult/>
       <NewsBlock/>
-      <Map/>  
-      <Footer/>
+      <Map />
+      <Subscribe/>
+      <Footer />
     </div>
   );
 }

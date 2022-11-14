@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+.bg-about{
+background-image: url('/assets/wood-bg.png')
+}
 .bg-mainSection {
   background-image: url('/assets/wood-bg.png');
 }
@@ -53,7 +55,10 @@
     @apply btn btn-neutral text-black;
   }
 }
-
+@font-face {
+  font-family: Montserrat;
+  src: url("/assets/fonts/Montserrat.ttf");
+}
 @font-face {
   font-family: Inter;
   src: url('/assets/fonts/Inter-Regular.ttf');

@@ -5,8 +5,8 @@ import CheckBox from './UI/CheckBox';
 export default function Consult() {
   return (
     <>
-      <div className="mx-auto mt-12 lg:mt-18 ">
-        <div className="container mx-auto flex flex-col justify-center items-center bg-[#F0F6F0] relative rounded-[80px] py-12">
+      <div className="mx-auto my-24 lg:mt-18 ">
+        <div className={`container text-black mx-auto flex flex-col justify-center items-center bg-[#FDF7F2] relative rounded-[80px] py-12 `}>
           <h3 className="font-[Days]  text-3xl lg:text-5xl mb-3 font-bold text-center">
             Подпишитесь на рассылку
           </h3>
