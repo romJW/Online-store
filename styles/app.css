@@ -9,7 +9,9 @@
 .swiper-pagination-bullet-active{
     background-color:#AC9B9C !important;
 }
-
+.swiper-slide-license{
+  opacity: 1 !important;
+}
 .swiper-slide {
   opacity: 0.2;
   transition-property: all !important;
@@ -113,3 +115,7 @@
     }
   }
 }
+.swiper-pagination-bullet-active{
+    background-color:#AC9B9C !important;
+}
+

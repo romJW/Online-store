@@ -21,8 +21,10 @@ export default function Swipe() {
                 <div className="swiper-slide flex gap-12 items-center justify-center overflow-hidden">
                   <img src={slide.image} className="" />
                 </div>
-              );
-            })}
+              )
+            }
+            )}
+            </div>
           </div>
         </div>
         <SliderPagination />
@@ -30,7 +32,6 @@ export default function Swipe() {
           <SliderBtnLeft />
           <SliderBtnRight />
         </div>
-      </div>
     </>
   );
 }

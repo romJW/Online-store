@@ -23,7 +23,7 @@ export default function mainSection() {
   return (
     <>
     <Section>
-      <div className="mainSection container mx-auto flex flex-col justify-center text-black">
+      <div className="mainSection container mx-auto flex flex-col justify-center text-black ">
         <div className="mainSection__container container mx-auto flex flex-col justify-center items-center relative">
           <h3 className="font-[Days] text-center text-3xl lg:text-5xl uppercase relative top-[80px]">
             Террасная доска <br /> от производителя
@@ -33,7 +33,7 @@ export default function mainSection() {
               <MainSectionCard icon={cardInfo.icon} title={cardInfo.title} key={cardInfo.title} />
             ))}
           </div>
-            <div className='bg-mainSection w-screen bg-no-repeat bg-cover bg-center h-full flex flex-col justify-center items-center pt-[140px]'>
+            <div className='bg-mainSection w-screen bg-no-repeat bg-cover bg-center h-full flex flex-col justify-center items-center pt-[140px] pb-14'>
             <h3 className="font-[Days] text-3xl	text-center lg:text-5xl mb-5 text-white  uppercase ">Мы производим</h3>
             <div className="flex flex-col lg:flex-row items-center justify-center container gap-5 mb-10">
                 {

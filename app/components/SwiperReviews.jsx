@@ -106,11 +106,11 @@ export default function Slider() {
     <>
       <div className="mx-auto mt-20 text-black ">
         <h2 className="text-center text-5xl font-[Days] uppercase mb-10">отзывы наших клиентов</h2>
-        <div className="swiper  mx-auto mb-10 relative ">
+        <div className="swiper swiperReviews  mx-auto mb-10 relative ">
           <div className="swiper-wrapper  mx-auto relative">
             {reviews.map((review) => {
               return (
-                <div key={review.key} className="swiper-slide swiper-slide-active flex gap-12 items-center justify-center">
+                <div key={review.key} className="swiper-slide flex gap-12 items-center justify-center">
                   <ReviewSwipeCard
                     image={review.image}
                     review={review.review}

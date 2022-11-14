@@ -1,11 +1,12 @@
 import PlayBtn from './PlayBtn';
+
 export default function ReviewSwipeCard({ image, review, author, size, className, onClick, path }) {
   return (
     <>
       <div
         className={`flex flex-col w-[570px]  shadow-md rounded-[10px]  pb-8  ${className}`}
         onClick={onClick}>
-          <div className={`flex justify-center items-center rounded-t-xl bg-cover bg-no-repeat h-[220px] lg:h-[240px]`}
+          <div className={`flex justify-center max-w-[570px] items-center rounded-t-xl bg-cover bg-no-repeat h-[220px] lg:h-[240px]`}
           style={{ background:`url('${image}'`}}>
              <PlayBtn path={path}/>
           </div>
