@@ -2,7 +2,7 @@ import Input from "./UI/Input";
 import { MobileMenuContext } from "../contexts/MobileMenu.js";
 import MetaHeader from "./MetaHeader";
 import MobileMenu from "./MobileMenu";
-
+import Menu from "./Menu";
 const socials = [
   {
     logo: "fa-brands fa-youtube fa-xl hover:scale-110",
@@ -70,7 +70,7 @@ export default function Header(props) {
       {({ isOpen, toggle }) => (
         <>
           <MetaHeader className="hidden md:flex" />
-          <header className="shadow w-screen flex flex-col justify-center sticky top-[-1px] bg-base-100 z-10">
+          <header className="shadow w-screen flex flex-col justify-center sticky top-[-1px] bg-base-100 z-50">
             <div className="mx-auto container flex flex-row items-center justify-between py-4 w-full gap-4">
               <img className="" src="assets/logo.png" alt="logo" />
               <div className="hidden 2xl:block w-1/6">
@@ -125,6 +125,7 @@ export default function Header(props) {
             </div>
             {isOpen && <MobileMenu nav={mobileNav} socials={socials} onClose={toggle} />}
           </header>
+          <Menu/>
         </>
       )}
     </MobileMenuContext.Consumer>

@@ -5,7 +5,7 @@ import CheckBox from './UI/CheckBox';
 export default function Consult() {
   return (
     <>
-      <div className="mx-auto mt-12 lg:mt-18">
+      <div className="mx-auto my-24 lg:mt-18">
         <div className="container text-black mx-auto flex flex-col justify-center items-center">
           <h3 className="text-3xl lg:text-5xl mb-3 font-bold text-center">Получите консультацию</h3>
           <p className="text-xl lg:text-3xl mb-8 ">
@@ -13,8 +13,8 @@ export default function Consult() {
             менеджер <br /> свяжется с вами чтобы проконсультировать и рассчитать стоимость
           </p>
           <div className="flex gap-5 mb-4 items-center flex-col lg:flex-row">
-            <FormInput className="w-full lg:w-[380px] h-[75px] text-xs" placeholder="Введите ваше имя"/>
-            <PhoneInput className="w-full lg:w-[380px] h-[75px] text-xs" placeholder="Ваш номер телефона"/>
+            <FormInput className="w-full lg:w-[380px] h-[75px] text-sm lg:text-lg" placeholder="Введите ваше имя"/>
+            <PhoneInput className="w-full lg:w-[380px] h-[75px] text-sm lg:text-lg text-center placeholder:pl-0 placeholder:text-start" placeholder="Ваш номер телефона"/>
             <Btn kind='btn-primary' className="w-[330px] lg:w-[330px] h-[75px] font-semibold text-lg lg:text-2xl">Отправить</Btn>
           </div>
           <div className="flex gap-2">
