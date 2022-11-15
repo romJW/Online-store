@@ -11,7 +11,7 @@ const nav = [
 function MenuItem({ children, className }) {
   return (
     <>
-      <div className={`${className} cursor-pointer text-sm xl:text-base flex items-center lg:px-6 xl:px-12 2xl:px-14  hover:bg-[#8C1A1E] `}>
+      <div className={`cursor-pointer text-white text-sm xl:text-base flex items-center lg:px-6 xl:px-12 2xl:px-14  hover:bg-[#8C1A1E] ${className}`}>
         {children}
       </div>
     </>
@@ -104,10 +104,10 @@ export default function Menu(props) {
           <Bar/>
           <div className="justify-center flex ">
             <MenuItem>Контакты</MenuItem>
-            <MenuItem className='xl:px-8  2xl:px-10 '>
-              <img src="/assets/whiteBasket.svg" alt="" className=" " style={{maxWidth:'30px'}}/>
+            <MenuItem className='xl:px-4  2xl:px-4 '>
+              <img src="assets/whiteBasket.svg" alt="" className=" " />
             </MenuItem>
-            <MenuItem className="whitespace-nowrap  ">Рассчитать стоимость</MenuItem>
+            <MenuItem className="whitespace-nowrap xl:whitespace-normal 2xl:whitespace-nowrap xl:px-14 2xl:px-16">Рассчитать стоимость</MenuItem>
           </div>
         </div>
       </div>
