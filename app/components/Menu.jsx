@@ -11,7 +11,7 @@ const nav = [
 function MenuItem({ children, className }) {
   return (
     <>
-      <div className={`${className} cursor-pointer text-sm xl:text-base flex items-center lg:px-6 xl:px-12 2xl:px-14  hover:bg-[#8C1A1E]  whitespace-nowrap`}>
+      <div className={`${className} cursor-pointer text-sm xl:text-base flex items-center lg:px-6 xl:px-12 2xl:px-14  hover:bg-[#8C1A1E] `}>
         {children}
       </div>
     </>
