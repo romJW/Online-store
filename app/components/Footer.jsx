@@ -147,11 +147,11 @@ export default function Footer() {
                 </div>
               </nav>
             </div>
-          </div>
-          <div className="flex flex-col mt-4 lg:mt-0 items-start lg:flex-row lg:justify-start gap-2 lg:gap-[60px] xl:gap-24 text-sm text-[#FFFFFFB2] lg:relative lg:top-[-20px] lg:left-[-160px] xl:left-[-180px]">
-            <a href="">Политика конфиденциальности</a>
-            <a href="">Пользовательское соглашение</a>
-            <a href="">Разработка сайта ....</a>
+          </div >
+          <div className='flex flex-col mt-4 lg:mt-0 items-start lg:flex-row lg:justify-center lg:gap-14 text-sm text-[#FFFFFFB2] lg:relative lg:top-[-20px]'>
+            <a href=''>Политика конфиденциальности</a>
+            <a href=''>Пользовательское соглашение</a>
+            <a href=''>Разработка сайта ....</a>
           </div>
         </div>
       </footer>
