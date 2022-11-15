@@ -4631,10 +4631,6 @@ html {
   margin-bottom: -40px;
 }
 
-.ml-3 {
-  margin-left: 0.75rem;
-}
-
 .mb-\[-50px\] {
   margin-bottom: -50px;
 }
@@ -4777,10 +4773,6 @@ html {
   height: 2.5rem;
 }
 
-.w-screen {
-  width: 100vw;
-}
-
 .w-full {
   width: 100%;
 }
@@ -4891,6 +4883,14 @@ html {
 
 .w-10 {
   width: 2.5rem;
+}
+
+.w-\[500px\] {
+  width: 500px;
+}
+
+.w-\[550px\] {
+  width: 550px;
 }
 
 .max-w-full {
@@ -5546,10 +5546,6 @@ html {
           transition-duration: 200ms;
 }
 
-img {
-  max-width: none !important;
-}
-
 .bg-subscribe {
   background-image: url('/assets/bg-subscribe1.png');
   background-size: 1000px 400px;
@@ -5567,12 +5563,12 @@ img {
 
 .bg-about {
   background-image: url('/assets/wood-bg.png');
-  width: 100vw;
+  width: 100%;
 }
 
 .bg-mainSection {
   background-image: url('/assets/wood-bg.png');
-  width: 100vw;
+  width: 100%;
 }
 
 .swiper-pagination-bullet-active {
@@ -5653,7 +5649,7 @@ img {
 
 .bg-footer {
   background-image: url('/assets/wood-bg.png');
-  width: 100vw;
+  width: 100%;
 }
 
 [data-theme='berry'] {
@@ -6053,6 +6049,28 @@ img {
     width: 5rem;
   }
 
+  .lg\:w-\[550px\] {
+    width: 550px;
+  }
+
+  .lg\:w-\[300px\] {
+    width: 300px;
+  }
+
+  @media (min-width: 1024px) {
+    .lg\:lg\:w-\[380px\] {
+      width: 380px;
+    }
+  }
+
+  .lg\:w-\[180px\] {
+    width: 180px;
+  }
+
+  .lg\:w-\[170px\] {
+    width: 170px;
+  }
+
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -6194,9 +6212,23 @@ img {
   .lg\:text-\[22px\] {
     font-size: 22px;
   }
+
+  @media (min-width: 1280px) {
+    .lg\:xl\:w-\[190px\] {
+      width: 190px;
+    }
+  }
 }
 
 @media (min-width: 1280px) {
+  .xl\:block {
+    display: block;
+  }
+
+  .xl\:hidden {
+    display: none;
+  }
+
   .xl\:w-\[450px\] {
     width: 450px;
   }
@@ -6207,6 +6239,18 @@ img {
 
   .xl\:w-\[580px\] {
     width: 580px;
+  }
+
+  .xl\:w-full {
+    width: 100%;
+  }
+
+  .xl\:w-\[380px\] {
+    width: 380px;
+  }
+
+  .xl\:w-\[190px\] {
+    width: 190px;
   }
 
   .xl\:flex-row {
@@ -6225,14 +6269,9 @@ img {
     padding-right: 3rem;
   }
 
-  .xl\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
-  .xl\:px-1 {
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
+  .xl\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .xl\:px-14 {
@@ -6240,29 +6279,8 @@ img {
     padding-right: 3.5rem;
   }
 
-  .xl\:px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
   .xl\:pl-20 {
     padding-left: 5rem;
-  }
-
-  .xl\:pl-0 {
-    padding-left: 0px;
-  }
-
-  .xl\:pr-0 {
-    padding-right: 0px;
-  }
-
-  .xl\:pl-1 {
-    padding-left: 0.25rem;
-  }
-
-  .xl\:pr-1 {
-    padding-right: 0.25rem;
   }
 
   .xl\:text-2xl {
@@ -6303,35 +6321,13 @@ img {
     padding-right: 3.5rem;
   }
 
-  .\32xl\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
-  .\32xl\:px-1 {
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
-  }
-
-  .\32xl\:px-16 {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-
   .\32xl\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 
-  .\32xl\:pl-0 {
-    padding-left: 0px;
-  }
-
-  .\32xl\:pr-0 {
-    padding-right: 0px;
-  }
-
-  .\32xl\:pr-1 {
-    padding-right: 0.25rem;
+  .\32xl\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 }

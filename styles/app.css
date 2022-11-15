@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .text-black {
   color: #2f2222 !important;
 }
