@@ -168,6 +168,7 @@
 
 [data-theme='berry'] {
   @layer components {
+     
     .input-bordered {
       border: 1px solid rgba(134, 134, 134, 0.2);
     }
