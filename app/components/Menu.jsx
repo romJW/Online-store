@@ -11,7 +11,7 @@ const nav = [
 function MenuItem({ children, className }) {
   return (
     <>
-      <div className={`font-bold cursor-pointer text-white text-sm xl:text-base flex items-center lg:px-6 xl:px-12 2xl:px-14 hover:bg-[#8C1A1E]  ${className}`}>
+      <div className={`font-bold cursor-pointer text-white text-sm xl:text-base flex items-center lg:px-4 xl:px-8 2xl:px-14 hover:bg-[#8C1A1E]  ${className}`}>
         {children}
       </div>
     </>
@@ -107,7 +107,7 @@ export default function Menu(props) {
             <MenuItem className='xl:px-8  2xl:px-10 '>
               <img src="assets/whiteBasket.svg" alt="" className=" " style={{maxWidth:'30px'}}/>
             </MenuItem>
-            <MenuItem className="whitespace-nowrap xl:whitespace-normal 2xl:whitespace-nowrap ">Рассчитать стоимость</MenuItem>
+            <MenuItem className="whitespace-nowrap  ">Рассчитать стоимость</MenuItem>
           </div>
         </div>
       </div>
