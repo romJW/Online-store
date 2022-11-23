@@ -1,5 +1,14 @@
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react';
 import styles from './styles/tailwind.css';
+import { MobileMenuContext } from './contexts/MobileMenu.js';
+import {useState} from 'react';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 export function links() {
   return [
     { rel: 'stylesheet', href: styles },
@@ -32,10 +41,12 @@ export default function App() {
         <Links />
       </head>
       <body data-theme="berry">
+      <Router>
         <Outlet />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
+        </Router>
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
       </body>
     </html>
