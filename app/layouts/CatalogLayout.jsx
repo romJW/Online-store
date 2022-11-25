@@ -4,7 +4,6 @@ const CatalogLayout = ({children}) => {
  return(
     <MainLayout>
         <CatalogHeader/>
-        
         {children}
     </MainLayout>
  )
