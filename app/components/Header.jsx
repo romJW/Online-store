@@ -68,6 +68,7 @@ const mobileNav = [
 ];
 
 export default function Header() {
+  const {isCityModalOpen, setCityModalOpen } = useContext(ModalCityContext)
   const {isMobileMenuOpen, SetMobileMenuOpen } = useContext(MobileMenuContext)
   return (
         <>
