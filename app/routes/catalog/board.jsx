@@ -5,11 +5,13 @@ import Consult from '../../components/Consult';
 import Subscribe from '../../components/Subscribe';
 import BoardDescription from '../../components/BoardDescription';
 import CatalogProducts from '../../components/CatalogProducts';
-import CatalogFilter from '../../components/CatalogFilter'
+import CatalogBoard from '../../components/CatalogBoard'
 export default function Catalog() {
   return (
     <CatalogLayout>
-      <CatalogFilter/>
+      <div className="">
+      <CatalogBoard/>
+      </div>
       <BoardDescription/>
       <MontageBlock/>
       <SendProject />
