@@ -647,15 +647,9 @@ html {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1170px) {
   .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
+    max-width: 1170px;
   }
 }
 
@@ -5548,6 +5542,10 @@ html {
   line-height: 1;
 }
 
+.text-\[25px\] {
+  font-size: 25px;
+}
+
 .font-medium {
   font-weight: 500;
 }
@@ -6078,15 +6076,9 @@ html {
     }
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: 1170px) {
     .lg\:container {
-      max-width: 1280px;
-    }
-  }
-
-  @media (min-width: 1536px) {
-    .lg\:container {
-      max-width: 1536px;
+      max-width: 1170px;
     }
   }
 
@@ -6132,6 +6124,18 @@ html {
 
   .lg\:right-\[-325px\] {
     right: -325px;
+  }
+
+  .lg\:right-\[140px\] {
+    right: 140px;
+  }
+
+  .lg\:right-\[240px\] {
+    right: 240px;
+  }
+
+  .lg\:right-\[-140px\] {
+    right: -140px;
   }
 
   .lg\:col-span-2 {
@@ -6473,9 +6477,13 @@ html {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1170px) {
   .xl\:left-\[-180px\] {
     left: -180px;
+  }
+
+  .xl\:right-\[140px\] {
+    right: 140px;
   }
 
   .xl\:mr-0 {
@@ -6571,60 +6579,5 @@ html {
   .xl\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-}
-
-@media (min-width: 1536px) {
-  .\32xl\:right-\[140px\] {
-    right: 140px;
-  }
-
-  .\32xl\:left-\[250px\] {
-    left: 250px;
-  }
-
-  .\32xl\:ml-16 {
-    margin-left: 4rem;
-  }
-
-  .\32xl\:mr-8 {
-    margin-right: 2rem;
-  }
-
-  .\32xl\:block {
-    display: block;
-  }
-
-  .\32xl\:w-\[1300px\] {
-    width: 1300px;
-  }
-
-  .\32xl\:translate-x-\[50px\] {
-    --tw-translate-x: 50px;
-    -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-
-  .\32xl\:justify-center {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-
-  .\32xl\:gap-10 {
-    gap: 2.5rem;
-  }
-
-  .\32xl\:gap-\[820px\] {
-    gap: 820px;
-  }
-
-  .\32xl\:gap-32 {
-    gap: 8rem;
-  }
-
-  .\32xl\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
   }
 }
