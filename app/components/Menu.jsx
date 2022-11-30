@@ -105,7 +105,7 @@ export default function Menu(props) {
           <div className="justify-center flex ">
             <MenuItem>Контакты</MenuItem>
             <MenuItem className='xl:px-8  2xl:px-10 '>
-              <img src="assets/whiteBasket.svg" alt="" className=" " style={{maxWidth:'30px'}}/>
+              <img src="/assets/whiteBasket.svg" alt="" className=" " style={{maxWidth:'30px'}}/>
             </MenuItem>
             <MenuItem className="whitespace-nowrap  ">Рассчитать стоимость</MenuItem>
           </div>

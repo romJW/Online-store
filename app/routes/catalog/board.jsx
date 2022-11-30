@@ -1,15 +1,15 @@
-import CatalogLayout from '../layouts/CatalogLayout';
-import SendProject from '../components/SendProject';
-import MontageBlock from '../components/MontageBlock';
-import Consult from '../components/Consult';
-import Subscribe from '../components/Subscribe';
-import BoardDescription from '../components/BoardDescription';
-import CatalogProducts from '../components/CatalogProducts';
-import CatalogFilter from '../components/CatalogFilter'
+import CatalogLayout from '../../layouts/CatalogLayout';
+import SendProject from '../../components/SendProject';
+import MontageBlock from '../../components/MontageBlock';
+import Consult from '../../components/Consult';
+import Subscribe from '../../components/Subscribe';
+import BoardDescription from '../../components/BoardDescription';
+import CatalogProducts from '../../components/CatalogProducts';
+import CatalogFilter from '../../components/CatalogFilter'
 export default function Catalog() {
   return (
     <CatalogLayout>
-      <CatalogProducts/>
+      <CatalogFilter/>
       <BoardDescription/>
       <MontageBlock/>
       <SendProject />
