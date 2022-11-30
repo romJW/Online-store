@@ -6,12 +6,12 @@ import Subscribe from '../../components/Subscribe';
 import BoardDescription from '../../components/BoardDescription';
 import CatalogProducts from '../../components/CatalogProducts';
 import CatalogBoard from '../../components/CatalogBoard'
+import BreadCrumbs from '../../components/UI/BreadCrumbs'
 export default function Catalog() {
   return (
     <CatalogLayout>
-      <div className="">
+      <BreadCrumbs pages={['Главная', 'каталог ДПК','терраснаядоска']}/>
       <CatalogBoard/>
-      </div>
       <BoardDescription/>
       <MontageBlock/>
       <SendProject />
