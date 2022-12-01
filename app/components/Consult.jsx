@@ -15,7 +15,7 @@ export default function Consult({title,text}) {
           </div>
           <div className="flex gap-5 mb-4 items-center flex-col lg:flex-row">
             <FormInput className="w-full lg:w-[300px] xl:w-[380px] h-[75px] text-sm lg:text-lg" placeholder="Введите ваше имя"/>
-            <PhoneInput className="w-full lg:w-[300px] xl:w-[380px] h-[75px] text-sm lg:text-lg text-center placeholder:pl-0 placeholder:text-start" placeholder="Ваш номер телефона"/>
+            <PhoneInput className="w-full lg:w-[300px] xl:w-[380px] h-[75px] text-sm lg:text-lg placeholder:pl-0 placeholder:text-start" placeholder="Ваш номер телефона"/>
             <Btn kind='btn-primary' className="z-2 w-[300px] xl:w-[330px] h-[75px] font-semibold text-lg lg:text-2xl">ПОДПИСАТЬСЯ</Btn>
           </div>
           <div className="flex gap-2">
