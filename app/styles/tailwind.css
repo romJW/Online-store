@@ -4719,10 +4719,6 @@ html {
   margin-top: 1.25rem;
 }
 
-.mt-14 {
-  margin-top: 3.5rem;
-}
-
 .block {
   display: block;
 }
@@ -5148,10 +5144,6 @@ html {
   gap: 2rem;
 }
 
-.gap-14 {
-  gap: 3.5rem;
-}
-
 .gap-4 {
   gap: 1rem;
 }
@@ -5489,12 +5481,8 @@ html {
   padding-right: 3rem;
 }
 
-.pb-\[110px\] {
-  padding-bottom: 110px;
-}
-
-.pb-\[300px\] {
-  padding-bottom: 300px;
+.pb-\[250px\] {
+  padding-bottom: 250px;
 }
 
 .pt-20 {
@@ -5821,6 +5809,11 @@ html {
 .duration-300 {
   -webkit-transition-duration: 300ms;
           transition-duration: 300ms;
+}
+
+.dropItemShadow{
+  -webkit-box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.08);
 }
 
 .CatalogCardBg{
@@ -6340,10 +6333,6 @@ html {
     margin-bottom: 2.5rem;
   }
 
-  .lg\:mt-14 {
-    margin-top: 3.5rem;
-  }
-
   .lg\:block {
     display: block;
   }
@@ -6532,6 +6521,10 @@ html {
 
   .lg\:gap-4 {
     gap: 1rem;
+  }
+
+  .lg\:gap-14 {
+    gap: 3.5rem;
   }
 
   .lg\:gap-12 {
