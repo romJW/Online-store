@@ -3635,7 +3635,7 @@ html {
   --tw-bg-opacity: 1;
   background-color: hsl(var(--n) / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: hsl(var(--nc) / var(--tw-text-opacity))
+  color: hsl(var(--nc) / var(--tw-text-opacity));
 }
 
 .btn-neutral-disabled, 
@@ -4878,6 +4878,11 @@ html {
   padding-bottom: 1.25rem;
 }
 
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 .px-16 {
   padding-left: 4rem;
   padding-right: 4rem;
@@ -5074,10 +5079,6 @@ html {
   font-weight: 800;
 }
 
-.font-normal {
-  font-weight: 400;
-}
-
 .uppercase {
   text-transform: uppercase;
 }
@@ -5253,14 +5254,14 @@ html {
           transition-duration: 300ms;
 }
 
-.duration-150 {
-  -webkit-transition-duration: 150ms;
-          transition-duration: 150ms;
-}
-
 .duration-200 {
   -webkit-transition-duration: 200ms;
           transition-duration: 200ms;
+}
+
+.duration-150 {
+  -webkit-transition-duration: 150ms;
+          transition-duration: 150ms;
 }
 
 .text-black {
@@ -5309,6 +5310,10 @@ html {
   background-size: 1000px 400px;
   background-position: bottom -80px right 80px;
   background-repeat: no-repeat;
+}
+
+.swiper-wrapper-catalog{
+  padding-top: 40px !important;
 }
 
 @media (min-width: 640px) {
@@ -5609,6 +5614,10 @@ html {
 .hover\:bg-\[\#987F81\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(152 127 129 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[\#6F6F6F99\]:hover {
+  background-color: #6F6F6F99;
 }
 
 .hover\:text-white:hover {
