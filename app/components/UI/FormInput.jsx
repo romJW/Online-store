@@ -1,7 +1,7 @@
 export default function FormInput({ className, placeholder}) {
     return (
       <>
-        <input className={`outline-none border rounded-[10px] shadow-xl pl-8 placeholder:text-lg ${className}`} type="text" placeholder={placeholder} />
+        <input className={`outline-none formInputShadow border rounded-[10px] pl-8 placeholder:text-lg pr-4 ${className}`} type="text" placeholder={placeholder} />
       </>
     );
   }

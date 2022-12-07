@@ -4,11 +4,8 @@ export default function Btn({ kind, className, children }) {
       className={`
         ${kind}
         btn
-        font-normal
         text-white
-        shadow-3xl  
-        transition
-        duration-150
+        duration-300
         ${className}`}>
       {children}
     </button>

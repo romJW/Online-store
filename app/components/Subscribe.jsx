@@ -1,12 +1,13 @@
 import Btn from './UI/Btn';
 import FormInput from './UI/FormInput';
-import PhoneInput from './UI/PhoneInput';
 import CheckBox from './UI/CheckBox';
+import Section from '../components/UI/Section.jsx';
 export default function Consult() {
   return (
     <>
-      <div className="mx-auto my-24 lg:mt-18 ">
-        <div className={`container text-black mx-auto flex flex-col justify-center items-center bg-[#FDF7F2] relative rounded-[80px] py-12 `}>
+    <Section>
+      <div className="mx-auto ">
+        <div className="container text-black px-2 mx-auto flex flex-col justify-center items-center bg-[#FDF7F2] bg-subscribe relative rounded-[80px] py-12 pb-[170px] lg:pb-12">
           <h3 className="font-[Days]  text-3xl lg:text-5xl mb-3 font-bold text-center">
             Подпишитесь на рассылку
           </h3>
@@ -16,13 +17,13 @@ export default function Consult() {
           </p>
           <div className="flex gap-5 mb-4 items-center flex-col lg:flex-row">
             <FormInput
-              className="w-full lg:w-[380px] h-[75px] text-xs"
+              className="w-full lg:w-[380px] h-[75px] text-sm lg:text-lg"
               placeholder="Ваша электронная почта"
             />
             <Btn
               kind="btn-primary"
               className="w-[330px] lg:w-[330px] h-[75px] font-semibold text-lg lg:text-2xl">
-              Отправить
+              Подписаться
             </Btn>
           </div>
           <div className="flex gap-2">
@@ -38,6 +39,7 @@ export default function Consult() {
           </div>
         </div>
       </div>
+      </Section>
     </>
   );
 }

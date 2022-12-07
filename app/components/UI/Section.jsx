@@ -1,7 +1,7 @@
 export default function Section({ children }) {
   return (
     <>
-      <div className='py-24'>
+      <div className='py-12'>
         {children}
       </div>
     </>

@@ -13,7 +13,7 @@ export default function Swipe() {
   return (
     <>
       <div className="mx-auto mt-24">
-        <h2 className="text-center font-[Days] text-3xl lg:text-5xl mb-8 lg:mb-10">Фотографии с мест установки</h2>
+        <h2 className="text-center uppercase font-[Days] text-3xl lg:text-5xl mb-8 lg:mb-10">ФОТОГРАФИИ С МЕСТ УСТАНОВКИ</h2>
         <div className="swiper mx-auto mb-10 relative">
           <div className="swiper-wrapper mx-auto">
             {slides.map((slide) => {

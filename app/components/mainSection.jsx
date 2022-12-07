@@ -5,26 +5,28 @@ import Section from '../components/UI/Section.jsx';
 export default function mainSection() {
   const cardsInfo = [
     {
-      icon: 'assets/DeliveryIcon.svg',
+      icon: '/assets/DeliveryIcon.svg',
       title: <>Доставка по всей <br/> стране до 7 дней</>,
     },
-    { icon: 'assets/DiamondIcon.svg', title: <>Устойчивость к <br/> внешним воздействиям</> },
-    { icon: 'assets/RecycleIcon.svg', title: <>Экологичность <br/> материалов</> },
+    { icon: '/assets/DiamondIcon.svg', title: <>Устойчивость к <br/> внешним воздействиям</> },
+    { icon: '/assets/RecycleIcon.svg', title: <>Экологичность <br/> материалов</> },
   ];
   const cardsPicInfo = [
     {
-      image:`assets/wooden-board.png` ,
+      image:`/assets/wooden-board.png` ,
       title: `Террасная доска`,
     },
-    { image:`assets/wooden-stairs.png` , title: 'Ступени из ДПК' },
-    { image:`assets/wooden-defense.png` , title: 'Ограждения из ДПК' },
-    { image:`assets/wooden-hedge.png` , title: 'Заборная доска из ДПК' },
+    { image:`/assets/wooden-stairs.png` , title: 'Ступени из ДПК' },
+    { image:`/assets/wooden-defense.png` , title: 'Ограждения из ДПК' },
+    { image:`/assets/wooden-hedge.png` , title: 'Заборная доска из ДПК' },
   ];
   return (
     <>
-    <Section>
-      <div className="mainSection container mx-auto flex flex-col justify-center text-black ">
-        <div className="mainSection__container container mx-auto flex flex-col justify-center items-center relative">
+      <div className="mainSection w-full relative mx-auto flex flex-col justify-center  text-black py-12">
+      <div className='absolute right-[1px] top-[110px]'>
+          <img src='assets/circles.svg' alt='' className=''/>
+        </div>
+        <div className="mainSection__container w-full  mx-auto flex flex-col justify-center items-center relative">
           <h3 className="font-[Days] text-center text-3xl lg:text-5xl uppercase relative top-[80px]">
             Террасная доска <br /> от производителя
           </h3>
@@ -33,9 +35,9 @@ export default function mainSection() {
               <MainSectionCard icon={cardInfo.icon} title={cardInfo.title} key={cardInfo.title} />
             ))}
           </div>
-            <div className='bg-mainSection w-screen bg-no-repeat bg-cover bg-center h-full flex flex-col justify-center items-center pt-[140px] pb-14'>
-            <h3 className="font-[Days] text-3xl	text-center lg:text-5xl mb-5 text-white  uppercase ">Мы производим</h3>
-            <div className="flex flex-col lg:flex-row items-center justify-center container gap-5 mb-10">
+            <div className='wood-bg  bg-no-repeat bg-cover bg-center h-full flex flex-col justify-center items-center pt-[140px] pb-14'>
+            <h3 className="font-[Days] text-3xl	text-center lg:text-5xl mb-5 text-white  uppercase ">В продаже</h3>
+            <div className="flex flex-col xl:flex-row items-center justify-center container gap-5 mb-10">
                 {
                     cardsPicInfo.map((cardPicInfo)=><MainSectionPicCard image={cardPicInfo.image} title={cardPicInfo.title} key={cardPicInfo.title}/>)
                 }
@@ -45,7 +47,6 @@ export default function mainSection() {
           
         </div>
       </div>
-      </Section>
     </>
   );
 }

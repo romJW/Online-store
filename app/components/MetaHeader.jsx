@@ -1,28 +1,31 @@
+import ModalCities from './modals/ModalCities'
+import { useContext } from 'react';
+import {ModalCityContext} from '../contexts/context'
+
 export default function MetaHeader({ className }) {
+  const {isCityModalOpen, setCityModalOpen } = useContext(ModalCityContext)
   return (
-    <div className={`${className} w-screen bg-base-300 py-2`}>
-      <div className="hidden md:flex container mx-auto justify-between ">
+    <>
+    
+    <div className={`${className} w-full bg-[#2E2E2E] py-2`}>
+      <div className="hidden md:flex container justify-between mx-auto justify-between">
         <div className="flex items-center gap-5">
           <div className="flex items-center gap-2">
-            <i className="fa-solid fa-location-dot fa-sm text-gray-200"></i>
-            <p className="text-gray-200">Ваш регион:</p>
+            <i className="fa-solid fa-location-dot fa-sm text-[#FFFFFF80]"></i>
+            <p className="text-[#FFFFFF80] text-sm">Ваш регион:</p>
           </div>
-          <select name="select" className="text-white bg-transparent border-none">
-            <option value="value1" disable>
-              Выберите Город
-            </option>
-            <option value="value2">Алматы</option>
-            <option value="value3">Астана</option>
-            <option value="value3">Шымкент</option>
-            <option value="value3">Тараз</option>
-            <option value="value3">Талдыкорган</option>
-            <option value="value3">Усть-Каменогорск</option>
-          </select>
+          <p onClick={()=>setCityModalOpen(true)} className="outline-none cursor-pointer text-white bg-transparent border-none text-sm">
+              Выберите Город <i class="fa-sharp fa-solid fa-chevron-down"></i>  
+          </p>
         </div>
-        <a rel="nofollow" className="text-white" href="mailto:info@abbex.kz">
+        <a rel="nofollow" className="text-white text-sm " href="mailto:info@abbex.kz">
           info@abbex.kz
         </a>
       </div>
+
     </div>
+   
+    </>
+
   );
 }
