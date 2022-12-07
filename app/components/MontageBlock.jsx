@@ -10,7 +10,7 @@ export default function MontageBlock() {
           <p className="text-center lg:text-start text-lg xl:text-2xl lg:mb-0">
           не требует особых навыков и специальной подготовки
           </p>
-          <img src="assets/BoardPiece.png" className="lg:hidden mx-auto pr-8 lg:pr-0 lg:mx-0 text-base font-bold lg:text-2xl lg:relative lg:top-[-300px] right-[50px]" alt="" />
+          <img src="/assets/BoardPiece.png" className="lg:hidden mx-auto pr-8 lg:pr-0 lg:mx-0 text-base font-bold lg:text-2xl lg:relative lg:top-[-300px] right-[50px]" alt="" />
           <p className="xs:text-center lg:text-start text-lg xl:text-xl lg:mb-0">
           Террасная доска крепиться кляймерами к лагам.
           </p>
@@ -21,7 +21,7 @@ export default function MontageBlock() {
           
           <div className="flex text-center justify-center items-center lg:justify-between relative flex-col lg:flex-row">
             <Btn kind="btn-primary" className='mt-8 lg:relative lg:top-[-100px] h-[80px] lg:h-[110px] w-[310px] lg:w-[430px] lg:text-2xl font-bold '>Открыть инструкцию</Btn>
-            <img src="assets/BoardPiece.png" className="hidden lg:block mx-auto pr-8 lg:pr-0 lg:mx-0 text-base font-bold lg:text-2xl lg:relative lg:top-[-250px] right-[55px]" alt="" />
+            <img src="/assets/BoardPiece.png" className="lg:w-[550px] xl:w-full hidden lg:block mx-auto pr-8 lg:pr-0 lg:mx-0 text-base font-bold lg:text-2xl lg:relative lg:top-[-250px] right-[55px]" alt="" />
           </div>
         </div>
       </div>

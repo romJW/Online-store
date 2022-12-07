@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import SwiperReviews from './SwiperReviews';
 
+
 export default function Slider() {
   useEffect(() => {
     const swiper = new Swiper('.swiperReviews', {
@@ -15,7 +16,7 @@ export default function Slider() {
       centeredSlides: true,
       spaceBetween: 30,
       pagination: {
-        el: '.swipe-pagination',
+        el: '.swiper-pagination-review',
         clickable: true,
       },
       navigation: {

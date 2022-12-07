@@ -1,8 +1,11 @@
 import Input from "./UI/Input";
-import { MobileMenuContext } from "../contexts/MobileMenu.js";
 import MetaHeader from "./MetaHeader";
 import MobileMenu from "./MobileMenu";
 import Menu from "./Menu";
+import ModalCities from './modals/ModalCities'
+import { useContext } from 'react';
+import {ModalCityContext, MobileMenuContext} from '../contexts/context'
+
 const socials = [
   {
     logo: "fa-brands fa-youtube fa-xl hover:scale-110",
@@ -38,44 +41,44 @@ const socials = [
 
 const mobileNav = [
   {
-    logo: "assets/noun-woodgrain.svg",
+    logo: "/assets/noun-woodgrain.svg",
     title: "Террасная доска",
     path: "/",
     id: "1",
   },
   {
-    logo: "assets/noun-stairs.svg",
+    logo: "/assets/noun-stairs.svg",
     title: "Ступени из ДПК",
     path: "/",
     id: "2",
   },
   {
-    logo: "assets/noun-ladder.svg",
+    logo: "/assets/noun-ladder.svg",
     title: "Ограждения из ДПК",
     path: "/",
     id: "3",
   },
   {
-    logo: "assets/wooden-board.svg",
+    logo: "/assets/wooden-board.svg",
     title: "Заборная доска из ДПК",
     path: "/",
     id: "4",
   },
-  { logo: "assets/noun-screw.svg", title: "Комплектующие", path: "/", id: "5" },
+  { logo: "/assets/noun-screw.svg", title: "Комплектующие", path: "/", id: "5" },
 ];
 
-export default function Header(props) {
+export default function Header() {
+  const {isCityModalOpen, setCityModalOpen } = useContext(ModalCityContext)
+  const {isMobileMenuOpen, SetMobileMenuOpen } = useContext(MobileMenuContext)
   return (
-    <MobileMenuContext.Consumer>
-      {({ isOpen, toggle }) => (
         <>
           <MetaHeader className="hidden md:flex" />
-          <header className="shadow w-screen flex flex-col justify-center sticky top-[-1px] bg-base-100 z-50">
-            <div className="mx-auto container flex flex-row items-center justify-between py-4 w-full gap-4">
-              <img className="" src="assets/logo.png" alt="logo" />
-              <div className="hidden 2xl:block w-1/6">
-                <span className="text-black">
-                  Производство террасной доски ДПК в России
+          <header className="shadow w-full flex flex-col justify-center sticky top-[-1px] bg-base-100 z-50">
+            <div className="mx-auto container flex flex-row justify-center items-center justify-between py-4 w-full ">
+              <div className="flex gap-8">
+              <img className="" src="/assets/logo.png" alt="logo" />
+                <span className="text-black text-sm hidden xl:block">
+                Продажа материалов  <br/> из ДПК по всему Казахстану
                 </span>
               </div>
               <Input
@@ -87,8 +90,8 @@ export default function Header(props) {
                 <br />
                 <a rel="nofollow" href="tel:+7 (771) 741-18-44">+7 (727) 395-80-82</a>
               </div>
-              <div className="hidden lg:flex items-center flex-col">
-                <button className="btn btn-outline btn-sm">Заказать звонок</button>
+              <div className="hidden lg:flex items-center flex-col gap-2">
+                <button className="btn btn-outline border-[#212864] text-[#2F2222] btn-sm">Заказать звонок</button>
                 <div className="flex gap-2 justify-around">
                   {socials.map((social) => (
                     <a key={social.id} rel="nofollow" href={social.path}>
@@ -109,25 +112,25 @@ export default function Header(props) {
               </div>
               <div
                 className="header__menu flex gap-5 items-center  lg:hidden text-black"
-                onClick={toggle}
               >
-                <img src="assets/phone.svg" alt="" />
-                <img src="assets/basket.svg" alt="" />
+                <img src="/assets/phone.svg" alt="" />
+                <img src="/assets/basket.svg" alt="" />
                 <div className="flex flex-col justify-center items-center mt-2">
-                  {isOpen ? (
-                    <i className="fa-solid fa-xmark"></i>
+                  {isMobileMenuOpen ? (
+                    <i className="fa-solid fa-xmark " onClick={()=>SetMobileMenuOpen(false)}></i>
                   ) : (
-                    <i className="fa-solid fa-bars"></i>
+                    <i className="fa-solid fa-bars" onClick={()=>SetMobileMenuOpen(true)}></i>
                   )}
                   <p className="text-[10px]">Меню</p>
                 </div>
               </div>
             </div>
-            {isOpen && <MobileMenu nav={mobileNav} socials={socials} onClose={toggle} />}
+            {isMobileMenuOpen && <MobileMenu nav={mobileNav} socials={socials} onClose={()=>SetMobileMenuOpen(false)} />}
+            <Menu/>
+            <ModalCities/>
           </header>
-          <Menu/>
+          
         </>
-      )}
-    </MobileMenuContext.Consumer>
+      
   );
 }

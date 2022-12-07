@@ -2,19 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-.bg-about{
-background-image: url('/assets/wood-bg.png')
+.text-black {
+  color: #2f2222 !important;
 }
-.bg-mainSection {
+.montageCardShadow{
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+}
+.formInputShadow{
+  box-shadow: 1px 2px 13px rgba(0, 0, 0, 0.12);
+}
+.dropItemShadow {
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.08);
+}
+.playBtnShadow{
+  box-shadow: 0px 20px 45px rgba(216, 0, 0, 0.15), inset 0px -12px 24px rgba(216, 0, 0, 0.15), inset 0px 2px 24px rgba(255, 255, 255, 0.5);
+}
+.BoardVidBg{
+  background:url('/assets/BgVid.png');
+  background-repeat: no-repeat;
+}
+.CatalogCardBg {
+  box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.1);
+}
+.grayBtnHover {
+  box-shadow: 0px 20px 45px rgba(141, 141, 141, 0.15), inset 0px -12px 24px rgba(148, 131, 132, 0.8),
+    inset 0px 2px 24px rgba(255, 255, 255, 0.3);
+}
+.bg-subscribe {
+  background-image: url('/assets/bg-subscribe1.png');
+  background-size: 1000px 400px;
+  background-position: bottom -80px right 80px;
+  background-repeat: no-repeat;
+}
+.swiper-wrapper-catalog{
+  padding-top: 40px !important;
+}
+
+@media (min-width: 640px) {
+  .bg-subscribe {
+    background-image: url('/assets/bg-subscribe1.png');
+    background-size: cover;
+    background-position: bottom right;
+  }
+}
+.wood-bg {
   background-image: url('/assets/wood-bg.png');
+  width: 100%;
 }
-.swiper-pagination-bullet-active{
-    background-color:#AC9B9C !important;
-}
-.swiper-slide-license{
+.swiper-slide-next {
   opacity: 1 !important;
 }
-.swiper-opacity{
+.swiper-slide-prev {
+  opacity: 1 !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: #ac9b9c !important;
+}
+.swiper-slide-license {
+  opacity: 1 !important;
+}
+.swiper-opacity {
   opacity: 1 !important;
 }
 .swiper-slide {
@@ -24,8 +71,15 @@ background-image: url('/assets/wood-bg.png')
   transition-timing-function: ease-out;
   transition-delay: 0s;
 }
+.swiper-slide-review {
+  opacity: 0.2 !important;
+  transition-property: all !important;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
+}
 .swiper-slide-active {
-  opacity: 1;
+  opacity: 1 !important;
   transition-property: all !important;
   transition-duration: 2s;
   transition-timing-function: ease-out;
@@ -33,6 +87,22 @@ background-image: url('/assets/wood-bg.png')
 }
 .swiper-wrapper {
   padding-bottom: 10px;
+}
+
+@media (max-width: 1400px) 
+{
+  .btn-board-left{
+    top:0 !important;
+    left:0 !important;
+}
+.btn-board-right{
+  top:0 !important;
+  right:0 !important;
+}
+}
+
+.calcBtnShadow {
+  box-shadow: 4px 4px 11px 0px #ac9b9c1f;
 }
 
 @font-face {
@@ -45,19 +115,29 @@ background-image: url('/assets/wood-bg.png')
 }
 @layer components {
   .primary {
-    @apply btn btn-primary hover:bg-[#B81C21];
+    @apply btn btn-primary hover:bg-[#B81C21] duration-300;
+    box-shadow: 0px 20px 45px rgba(216, 0, 0, 0.15), inset 0px -12px 24px rgba(216, 0, 0, 0.15),
+      inset 0px 2px 24px rgba(255, 255, 255, 0.5);
+    border-radius: 80px;
+    letter-spacing: 0.07em;
   }
   .secondary {
-    @apply btn btn-secondary font-semibold rounded-full hover:bg-[#987F81];
+    @apply btn btn-secondary font-semibold rounded-full hover:bg-[#987F81] duration-300;
+    box-shadow: 0px 20px 45px rgba(141, 141, 141, 0.3),
+      inset 0px -12px 24px rgba(148, 131, 132, 0.8), inset 0px 2px 24px rgba(255, 255, 255, 0.5);
   }
-
   .alternative {
-    @apply btn btn-neutral text-black;
+    @apply btn btn-neutral text-black bg-transparent;
+    box-shadow: inset 0px -12px 24px rgba(148, 131, 132, 0.8),
+      inset 0px 2px 24px rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 20px 45px rgba(141, 141, 141, 0.15));
+    border: 3px solid #ac9b9c;
+    border-radius: 80px;
   }
 }
 @font-face {
   font-family: Montserrat;
-  src: url("/assets/fonts/Montserrat.ttf");
+  src: url('/assets/fonts/Montserrat.ttf');
 }
 @font-face {
   font-family: Inter;
@@ -65,22 +145,34 @@ background-image: url('/assets/wood-bg.png')
 }
 @font-face {
   font-family: Montserrat;
-  src: url("/assets/fonts/Montserrat.ttf");
+  src: url('/assets/fonts/Montserrat.ttf');
 }
 @font-face {
   font-family: Days;
   src: url('/assets/fonts/DaysOne-Regular.ttf');
 }
 
-
 .bg-footer {
-  background-image:url('/assets/wood-bg.png')
+  background: linear-gradient(
+      132.78deg,
+      rgba(255, 255, 255, 0.2) -10.4%,
+      rgba(255, 255, 255, 0) 40.5%
+    ),
+    linear-gradient(320.21deg, rgba(0, 0, 0, 0.2) 9.93%, rgba(0, 0, 0, 0) 65.65%), #4a3d3d;
+  width: 100%;
+}
+.btn {
+  min-height: 30px !important;
 }
 
 [data-theme='berry'] {
   @layer components {
     .input-bordered {
       border: 1px solid rgba(134, 134, 134, 0.2);
+    }
+    .btn {
+    @apply font-semibold;
+    transition-duration: 400ms !important;
     }
     .btn-lg {
       padding-left: 50px;
@@ -111,22 +203,41 @@ background-image: url('/assets/wood-bg.png')
       box-shadow: 0px 20px 45px rgba(141, 141, 141, 0.3),
         inset 0px -12px 24px rgba(148, 131, 132, 0.8), inset 0px 2px 24px rgba(255, 255, 255, 0.5);
     }
-    .primary {
-      @apply btn btn-primary hover:bg-[#B81C21];
-    }
-    .secondary {
-      @apply btn btn-secondary font-semibold rounded-full hover:bg-[#987F81];
-    }
-
-    .alternative {
-      @apply btn btn-neutral text-black;
+    .btn-neutral {
+      @apply font-semibold;
+      border: 3px solid #ac9b9c;
+      
+      filter: drop-shadow(0px 20px 45px rgba(141, 141, 141, 0.15));
+      border-radius: 80px;
+      @apply btn hover:bg-[#AC9B9C] hover:text-white hover:shadow-2xl duration-500
     }
   }
 }
-.swiper-pagination-bullet-active{
-    background-color:#AC9B9C !important;
+.swiper-pagination-bullet-active {
+  background-color: #ac9b9c !important;
 }
-.swiper-pagination-bullet-active{
-    background-color:#AC9B9C !important;
+.swiper-pagination-bullet-active {
+  background-color: #ac9b9c !important;
 }
 
+.modalCities {
+}
+.modalCities::-webkit-scrollbar {
+  height: 100px;
+}
+
+/* Track */
+.modalCities::-webkit-scrollbar-track {
+  background: #ffff;
+}
+
+/* Handle */
+.modalCities::-webkit-scrollbar-thumb {
+  background: #ffff;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+.modalCities::-webkit-scrollbar-thumb:hover {
+  background: #a3a3a3;
+}

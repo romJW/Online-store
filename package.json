@@ -17,10 +17,12 @@
     "@remix-run/serve": "^1.7.1",
     "@splidejs/react-splide": "^0.7.12",
     "daisyui": "^2.33.0",
+    "gsap": "^3.11.3",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-input-mask": "^2.0.4",
-    "react-router-dom": "^6.4.2",
+    "react-router-dom": "^6.4.3",
     "swiper": "^8.4.4"
   },
   "devDependencies": {

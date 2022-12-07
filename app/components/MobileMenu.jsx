@@ -1,13 +1,16 @@
 import Input from "./UI/Input";
+import { useContext } from 'react';
+import {ModalCityContext} from '../contexts/context'
 
 export default function MobileMenu(props) {
+  const {isCityModalOpen, setCityModalOpen } = useContext(ModalCityContext)
   return (
-    <div className="container mx-auto py-5 flex flex-col justify-center align-center gap-5 font-medium text-sm text-center bg-white inset-0 object-cover w-screen text-black">
+    <div className="container mx-auto py-5 flex flex-col items-center gap-5 font-medium text-sm text-center bg-white inset-0 object-cover w-full h-screen text-black">
       <div>
         <h3 className="font-semibold text-base">Каталог</h3>
         <div className="w-16 border border-black mx-auto"></div>
       </div>
-      <div className="header-mobile__nav flex flex-col justify-start gap-2 align-start text-start">
+      <div className="header-mobile__nav flex flex-col justify-start gap-2 align-start sm:justify-center sm:items-center sm:text-center">
         {props.nav.map((option) => {
           return (
             <>
@@ -37,7 +40,7 @@ export default function MobileMenu(props) {
         <h3 className="font-semibold text-base">Информация</h3>
         <div className="w-16 border border-black mx-auto"></div>
       </div>
-      <div className="header-mobile__nav flex flex-col gap-2 justify-start align-start text-base text-start">
+      <div className="header-mobile__nav flex flex-col gap-2 justify-start align-start text-base text-start sm:justify-center sm:align-center sm:text-center">
         <a rel="nofollow" href="/">
           О компании
         </a>
@@ -61,7 +64,7 @@ export default function MobileMenu(props) {
         <h3 className="font-semibold text-base">Полезно</h3>
         <div className="w-16 border border-black mx-auto"></div>
       </div>
-      <div className="header-mobile__nav flex flex-col gap-2 justify-start align-start text-base text-start">
+      <div className="header-mobile__nav flex flex-col gap-2 justify-start align-start text-base text-start sm:justify-center sm:align-center sm:text-center">
         <a rel="nofollow" href="/">
           Инструкции
         </a>
@@ -80,17 +83,9 @@ export default function MobileMenu(props) {
           <i className="fa-solid fa-location-dot fa-sm text-gray-400"></i>
           <p className="top-header__region-label text-gray-400">Ваш регион:</p>
         </div>
-        <select name="towns" className="text-black bg-transparent border-none">
-          <option value="value1" disable>
-            Выберите Город
-          </option>
-          <option value="value2">Алматы</option>
-          <option value="value3">Астана</option>
-          <option value="value3">Шымкент</option>
-          <option value="value3">Тараз</option>
-          <option value="value3">Талдыкорган</option>
-          <option value="value3">Усть-Каменогорск</option>
-        </select>
+        <p onClick={()=>setCityModalOpen(true)}  className="text-black bg-transparent border-none">
+            Выберите Город <i class="fa-sharp fa-solid fa-chevron-down"></i>
+        </p>
       </div>
       <button className="btn btn-secondary">Калькулятор стоимости</button>
       <Input className="max-w-xs" placeholder="Я ищу..." />

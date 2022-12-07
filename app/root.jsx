@@ -1,8 +1,5 @@
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react';
 import styles from './styles/tailwind.css';
-import { MobileMenuContext } from './contexts/MobileMenu.js';
-import {useState} from 'react';
-
 export function links() {
   return [
     { rel: 'stylesheet', href: styles },
@@ -10,10 +7,14 @@ export function links() {
       rel: 'stylesheet',
       href: 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css',
     },
-    { rel: 'stylesheet', href: 'assets/fontawesome/css/all.css' },
+    { rel: 'stylesheet', href: '/assets/fontawesome/css/all.css' },
+    {rel:"preconnect", href:"https://fonts.googleapis.com"},
+    {rel:"preconnect", href:"https://fonts.gstatic.com" },
+    {rel:"stylesheet", href:"https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&display=swap"},
+    {rel:"stylesheet", href:"https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500;600;700;800;900&display=swap"}
+
   ];
 }
-
 
 
 export const meta = () => ({

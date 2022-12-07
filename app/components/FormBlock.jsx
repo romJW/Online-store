@@ -6,8 +6,8 @@ export default function Consult() {
   return (
     <>
       <div className="mx-auto mt-[-50px] flex flex-col lg:flex-row justify-center items-center">
-        <div className="container text-black px-10 flex flex-col z-10 justify-center items-center w-[745px]  bg-[#FDF7F2] rounded-[80px]">
-          <h3 className="text-3xl text-center lg:text-5xl font-[Days] mb-3 mt-10 lg:mt-20">
+        <div className="container lg:mr-[480px] text-black px-10 flex flex-col z-10 justify-center items-center xs:w-[745px]  bg-[#FDF7F2] rounded-[80px]">
+          <h3 className="uppercase text-3xl text-center lg:text-5xl font-[Days] mb-3 mt-10 lg:mt-20">
             Заполните форму
           </h3>
           <p className="mb-8 text-lg text-center  lg:text-2xl">
@@ -18,8 +18,8 @@ export default function Consult() {
             placeholder="Ваше имя"
           />
           <PhoneInput
-            className="w-[300px] lg:w-[420px] h-[65px] lg:h-[75px] mb-3 text-center placeholder:text-start"
-            placeholder="Ваш номер"
+            className="w-[300px] lg:w-[420px] h-[65px] lg:h-[75px] mb-3 placeholder:text-start"
+            placeholder='+7 (700) 000-00-00'
           />
           <Btn kind="btn-secondary rounded-[18px] w-[300px] lg:w-[420px] h-[65px] text-sm mb-3 lg:mb-6">
             Прикрепить файл
@@ -36,13 +36,9 @@ export default function Consult() {
               </p>
             </div>
           </div>
-          <img src="assets/Ipad.png " className="mr-20 lg:ml-[-270px] block lg:hidden" alt="" />
+          <img src="/assets/IpadHQ.png " className=" mr-20 lg:ml-[-270px] block lg:hidden" alt="" />
         </div>
-        <img
-          src="assets/Ipad.png "
-          className="w-[900px] h-[700px] mr-20 realtive z-1 hidden lg:block lg:ml-[-400px] "
-          alt=""
-        />
+        <img src="/assets/IpadHQ.png " className="absolute z-1 hidden lg:block xl:right-[140px]" alt="" />
       </div>
     </>
   );

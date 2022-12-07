@@ -28,7 +28,7 @@ export default function Slider() {
     },
       centeredSlides: true,
       pagination: {
-        el: '.swiper-paginationLicense',
+        el: '.swiper-pagination-license',
         clickable:true,
 
       },

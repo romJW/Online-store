@@ -1,12 +1,12 @@
 import WhatsAppBtn from "./UI/WhatsAppBtn.jsx";
 import Btn from './UI/Btn'
-export default function Hero(props) {
+export default function Hero() {
   return (
     <div className="relative h-[80vh]">
       
       <img
         src="/assets/hero.png"
-        className="absolute w-screen object-cover overflow-hidden h-full"
+        className="absolute w-full object-cover overflow-hidden h-full"
         alt=""
       />
       <div className="
@@ -26,7 +26,7 @@ export default function Hero(props) {
             Стойкость к перепадам температур
           </li>
         </ul>
-        <Btn kind='btn-primary' className="text-2xl w-[430px] h-[110px]">Рассчитать Стоимость</Btn>
+        <Btn kind='btn-primary' className="text-base lg:text-2xl w-[310px] h-[90px]  lg:w-[430px] lg:h-[110px]">Рассчитать Стоимость</Btn>
         <WhatsAppBtn />
       </div>
     </div>

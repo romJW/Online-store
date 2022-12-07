@@ -4,10 +4,12 @@ import SliderPagination from './UI/SliderPagination';
 import ReviewSwipeCard from './UI/ReviewSwipeCard';
 import Btn from './UI/Btn';
 import PlayBtn from './UI/PlayBtn';
+import Section from '../components/UI/Section.jsx';
+
 export default function Slider() {
   const reviews = [
     {
-      image: 'assets/reviewPhoto.png',
+      image: '/assets/reviewPhoto.png',
       review: (
         <>
           Отправка в день заказа со складов в Москве, Ульяновске, Санкт-Петербурге, Ростове-на-Дону,
@@ -26,7 +28,7 @@ export default function Slider() {
       key: 1,
     },
     {
-      image: 'assets/reviewPhoto.png',
+      image: '/assets/reviewPhoto.png',
       review: (
         <>
           Отправка в день заказа со складов в Москве, Ульяновске, Санкт-Петербурге, Ростове-на-Дону,
@@ -45,7 +47,7 @@ export default function Slider() {
       key: 2,
     },
     {
-      image: 'assets/reviewPhoto.png',
+      image: '/assets/reviewPhoto.png',
       review: (
         <>
           Отправка в день заказа со складов в Москве, Ульяновске, Санкт-Петербурге, Ростове-на-Дону,
@@ -64,7 +66,7 @@ export default function Slider() {
       key: 3,
     },
     {
-      image: 'assets/reviewPhoto.png',
+      image: '/assets/reviewPhoto.png',
       review: (
         <>
           Отправка в день заказа со складов в Москве, Ульяновске, Санкт-Петербурге, Ростове-на-Дону,
@@ -83,7 +85,7 @@ export default function Slider() {
       key: 4,
     },
     {
-      image: 'assets/reviewPhoto.png',
+      image: '/assets/reviewPhoto.png',
       review: (
         <>
           Отправка в день заказа со складов в Москве, Ульяновске, Санкт-Петербурге, Ростове-на-Дону,
@@ -104,13 +106,14 @@ export default function Slider() {
   ];
   return (
     <>
+    <Section>
       <div className="mx-auto mt-20 text-black ">
         <h2 className="text-center text-5xl font-[Days] uppercase mb-10">отзывы наших клиентов</h2>
         <div className="swiper swiperReviews  mx-auto mb-10 relative ">
           <div className="swiper-wrapper  mx-auto relative">
             {reviews.map((review) => {
               return (
-                <div key={review.key} className="swiper-slide flex gap-12 items-center justify-center">
+                <div key={review.key} className="swiper-slide  swiper-slide-review flex gap-12 items-center justify-center">
                   <ReviewSwipeCard
                     image={review.image}
                     review={review.review}
@@ -126,12 +129,12 @@ export default function Slider() {
          
         </div>
 
-        <SliderPagination />
+        <SliderPagination className="swiper-pagination-review"/>
         <div className="flex justify-center gap-6 mt-5">
           <SliderBtnLeft className="relative lg:top-[-400px] lg:left-[-325px] z-20" />
           <SliderBtnRight className="relative lg:top-[-400px] lg:right-[-325px] z-20" />
         </div>
-        <div className="flex justfy-center">
+        <div className="flex justify-center">
           <Btn
             kind="secondary"
             className="mx-auto mt-5 lg:mt-0 w-[300px] lg:w-[436px] h-20 lg:h-[89px] text-base lg:text-xl">
@@ -140,6 +143,7 @@ export default function Slider() {
          
         </div>
       </div>
+      </Section>
     </>
   );
 }

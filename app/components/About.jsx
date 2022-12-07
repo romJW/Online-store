@@ -3,19 +3,19 @@ import PlayBtn from './UI/PlayBtn';
 export default function About() {
   const AboutCards = [
     {
-      icon: 'assets/woods.svg',
+      icon: '/assets/woods.svg',
       text: (
         <>
           Материал для производства <br /> закупаем на год вперед
         </>
       ),
     },
-    { icon: 'assets/store.svg', text: '10 производственных линий' },
-    { icon: 'assets/Machine.svg', text: '7 складов по всей стране' },
+    { icon: '/assets/store.svg', text: '10 производственных линий' },
+    { icon: '/assets/Machine.svg', text: '7 складов по всей стране' },
   ];
   return (
     <>
-      <div className="mx-auto  bg-no-repeat bg-cover  bg-about py-24 lg:py-36">
+      <div className="mx-auto  bg-no-repeat bg-cover w-full wood-bg py-24 lg:py-36">
         <div className="container mx-auto flex flex-col z-10 justify-center items-center px-3">
           <div className="flex flex-col lg:flex-row mx-auto justify-center items-center gap-6  mb-5">
             <div className="text-white ">
