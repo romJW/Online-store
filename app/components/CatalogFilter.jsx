@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState,useRef,useEffect} from 'react';
 
 const colors = [
   'FilterColor.png',
@@ -8,6 +8,7 @@ const colors = [
   'FilterColor.png',
   'FilterColor.png',
 ];
+
 
  const FilteredItem = ({name}) => {
   return (
@@ -55,7 +56,7 @@ export const CatalogMobileFilter = ({FilteredItemColor,FilteredtemAppointment,Fi
           </div>
           <div className="dropList flex flex-wrap ">
             {isColorClicked && FilteredItemColor.map((color) => (
-              <img src={`/assets/${color}`} className="w-14 h-14"/>
+              <img src={`/assets/${color}`} className="w-14 h-14 " />
             ))}
           </div>
         </div>}
@@ -97,11 +98,30 @@ export const CatalogMobileFilter = ({FilteredItemColor,FilteredtemAppointment,Fi
   );
 };
 
-export const CatalogFilter = ({className,FilteredItemColor,FilteredtemAppointment,FilteredItemBoard,FilteredItemCover}) => {
+export const CatalogFilter = ({className,FilteredItemColor,FilteredtemAppointment,FilteredItemBoard,FilteredItemCover,id}) => {
     const [isColorClicked, setColorClicked] = useState(true);
     const [isAppointClicked, setAppointClicked] = useState(true);
     const [isVarietyClicked, setVarietyClicked] = useState(true);
     const [isCoverClicked, setCoverClicked] = useState(true);
+    const [activeColor, setActiveColor] = useState([]);
+    const [active, setActive] = useState();
+    const onClick = (id) => {
+      if(activeColor.length==0){
+        setActiveColor([id])
+        setActive(true)
+      }
+       else if(activeColor.includes(id)){
+          console.log(activeColor.indexOf(id))
+          activeColor.splice(activeColor.indexOf(id),1);
+          setActiveColor([...activeColor]);
+        }
+       
+      else  if(!activeColor.includes(id)){
+        setActiveColor([...activeColor,id]);
+        setActive(true)
+        }
+        
+    };
   return (
     <>
     <div className={`w-[370px] bg-[#FDF7F2] text-black rounded-[20px] py-8 px-9 hidden lg:block ${className}`}>
@@ -115,13 +135,16 @@ export const CatalogFilter = ({className,FilteredItemColor,FilteredtemAppointmen
           <div className="flex justify-between " onClick={()=>setColorClicked(!isColorClicked)}>
             <div className="flex gap-4 items-center mb-4 ">
               <p className="font-extrabold lg:text-lg">Цвет</p>
-              <p className='text-[#A6A79F] border-[#A6A79F] border-b border-dashed'>Сбросить</p>
+              <p className='text-[#A6A79F] border-[#A6A79F] border-b border-dashed' onClick={(e)=>{ e.stopPropagation();setActive(false);setActiveColor([])}}>Сбросить</p>
             </div>
             {isColorClicked ? <i className="fa-sharp fa-solid fa-chevron-up"></i> : <i className="fa-sharp fa-solid fa-chevron-down"></i> }
           </div>
           {isColorClicked &&<div className='dropList flex flex-wrap gap-4 '>
             {FilteredItemColor.map((color) => (
-              <img src={`/assets/${color}`} className='hover:scale-110'/>
+              <img src={`/assets/${color.col}`} className={`hover:scale-110 ${(active && activeColor.includes(color.id)) && 'activeColor'}`} onClick={() => {
+                onClick(color.id);
+                console.log(activeColor);
+              }} />
             ))}
           </div>}
         </div>}

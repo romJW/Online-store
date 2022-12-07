@@ -14,7 +14,7 @@ const catalogCards = [
 ]
 
 const BoardFilteredItems ={
-  FilteredItemColor:['FilterColor.png','FilterColor.png','FilterColor.png','FilterColor.png','FilterColor.png','FilterColor.png',],
+  FilteredItemColor:[{col:'FilterColor.png',id:1},{col:'FilterColor.png',id:2},{col:'FilterColor.png',id:3},{col:'FilterColor.png',id:4},{col:'FilterColor.png',id:5},{col:'FilterColor.png',id:6},],
   FilteredtemAppointment:['Терраса','Веранда','Беседка','Дом и дача','Пол', 'Бассейн', 'Улица','Грядки', 'Баня'],
   FilteredItemBoard:['Пустотелая','С тиснением','Полнотелая'],
   FilteredItemCover:['Узкий вельвет','Широкий вельвет'],
