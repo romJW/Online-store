@@ -40,6 +40,8 @@ export const CatalogMobileFilter = ({
   const [isVarietyClicked, setVarietyClicked] = useState(true);
   const [isCoverClicked, setCoverClicked] = useState(true);
   const [activeColor, setActiveColor] = useState([]);
+
+  
   const onSelect = (id) => {
     if (activeColor.length == 0) {
       setActiveColor([id]);

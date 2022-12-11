@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+.swiper-pagination-bullet-article {
+	color:#2F2222 !important;
+  font-family:Inter !important;
+  font-weight:500;
+  font-size: 20px;
+  height:0 !important;
+  width:0 !important;
+  opacity:1 !important;
+}
+.swiper-pagination-bullet-active-article{
+  height:0 !important;
+  width:0 !important;
+	color:#D3585C !important;
+  opacity:1 !important;
+}
+.swiper-pagination-news{
+  width:150px !important;
+}
+@media (max-width: 1024px){
+  .swiper-pagination-news{
+    width:100px !important;
+  }
+} 
+.activeColor {
+  outline: 2px solid  #e41d24;
+  border-radius: 5px;
+  
+}
 .text-black {
   color: #2f2222 !important;
 }
@@ -45,6 +73,10 @@
     background-size: cover;
     background-position: bottom right;
   }
+}
+.header-bg{
+  background-image: url('/assets/headerBg.png');
+  width: 100%;
 }
 .wood-bg {
   background-image: url('/assets/wood-bg.png');
@@ -213,12 +245,6 @@
       @apply btn hover:bg-[#AC9B9C] hover:text-white hover:shadow-2xl duration-500;
     }
   }
-}
-.swiper-pagination-bullet-active {
-  background-color: #ac9b9c !important;
-}
-.swiper-pagination-bullet-active {
-  background-color: #ac9b9c !important;
 }
 
 .modalCities {

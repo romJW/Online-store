@@ -153,7 +153,7 @@ const CatalogBoard = () => {
   return (
     <Section>
       <div className="mx-auto container text-black px-6 xs:px-0 relative z-10">
-        <h3 className="font-[Days] uppercase text-3xl lg:text-5xl mb-14">Террасная доска</h3>
+        <h3 className="font-days uppercase text-3xl lg:text-5xl mb-14">Террасная доска</h3>
         <div className="">
           <CatalogFilter
             className="float-left mr-8"

@@ -12,20 +12,8 @@ module.exports = {
     },
     fontFamily: {
       days: ['Days', 'serif'],
+      mont:['Montserrat', 'serif'],
     },
-  },
-  plugins: [require('daisyui')],
-  daisyui: {
-    themes: [
-      {
-        berry: {
-          primary: '#E41D24',
-          secondary: '#AC9B9C',
-          accent: '#37cdbe',
-          neutral: '#3d4451',
-        },
-      },
-    ],
   },
   daisyui: {
     themes: [
@@ -34,6 +22,7 @@ module.exports = {
           primary: '#E41D24',
           secondary: '#AC9B9C',
           neutral: '#ffffff',
+          accent: '#37cdbe',
           'primary-content': '#FFFFFF',
           '--rounded-btn': '80px',
           '--border-btn': '1px',
