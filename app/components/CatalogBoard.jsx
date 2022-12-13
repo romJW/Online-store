@@ -127,12 +127,12 @@ const catalogCards = [
 
 const BoardFilteredItems = {
   FilteredItemColor: [
-    { col: 'FilterColor.png', id: 1 },
-    { col: 'FilterColor.png', id: 2 },
-    { col: 'FilterColor.png', id: 3 },
-    { col: 'FilterColor.png', id: 4 },
-    { col: 'FilterColor.png', id: 5 },
-    { col: 'FilterColor.png', id: 6 },
+    { col: 'FilterColor1.png', id: 1 },
+    { col: 'FilterColor2.png', id: 2 },
+    { col: 'FilterColor3.png', id: 3 },
+    { col: 'FilterColor4.png', id: 4 },
+    { col: 'FilterColor5.png', id: 5 },
+    { col: 'FilterColor6.png', id: 6 },
   ],
   FilteredtemAppointment: [
     'Терраса',

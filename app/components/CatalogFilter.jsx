@@ -1,12 +1,12 @@
 import { useState } from 'react';
 
 const colors = [
-  'FilterColor.png',
-  'FilterColor.png',
-  'FilterColor.png',
-  'FilterColor.png',
-  'FilterColor.png',
-  'FilterColor.png',
+  'FilterColor1.png',
+  'FilterColor2.png',
+  'FilterColor3.png',
+  'FilterColor4.png',
+  'FilterColor5.png',
+  'FilterColor6.png',
 ];
 
 const FilteredItem = ({ name }) => {
@@ -84,7 +84,7 @@ export const CatalogMobileFilter = ({
                   <div className="flex gap-4 items-center mb-4">
                     <p className="font-extrabold text-base">Цвет</p>
                     <p
-                      className="text-[#A6A79F] border-[#A6A79F] border-b border-dashed text-sm"
+                      className="text-[#A6A79F] border-[#A6A79F]  border-dashed text-sm"
                       onClick={(e) => onClear(e)}>
                       Сбросить
                     </p>
@@ -95,12 +95,12 @@ export const CatalogMobileFilter = ({
                     <i className="fa-sharp fa-solid fa-chevron-down"></i>
                   )}
                 </div>
-                <div className="dropList flex flex-wrap ">
+                <div className="dropList mt-4 flex flex-wrap ">
                   {isColorClicked &&
                     FilteredItemColor.map((color) => (
                       <img
                         src={`/assets/${color.col}`}
-                        className={`w-14 h-14 ${activeColor.includes(color.id) && 'activeColor'}`}
+                        className={`w-14 h-14 duration-500 rounded-[10px] ${activeColor.includes(color.id) && 'activeColor'}`}
                         onClick={() => onSelect(color.id)}
                       />
                     ))}
@@ -215,7 +215,7 @@ export const CatalogFilter = ({
               <div
                 className="flex justify-between "
                 onClick={() => setColorClicked(!isColorClicked)}>
-                <div className="flex gap-4 items-center mb-4 ">
+                <div className="flex gap-4 items-center">
                   <p className="font-extrabold lg:text-lg cursor-pointer">Цвет</p>
                   <p
                     className="text-[#A6A79F] border-[#A6A79F] border-b border-dashed cursor-pointer"
@@ -230,11 +230,11 @@ export const CatalogFilter = ({
                 )}
               </div>
               {isColorClicked && (
-                <div className="dropList flex flex-wrap gap-4 ">
+                <div className="dropList mt-4 flex flex-wrap gap-4 ">
                   {FilteredItemColor.map((color) => (
                     <img
                       src={`/assets/${color.col}`}
-                      className={`cursor-pointer hover:scale-110 ${
+                      className={`cursor-pointer rounded-[5px] duration-500 hover:scale-110 ${
                         activeColor.includes(color.id) && 'activeColor'
                       }`}
                       onClick={() => onSelect(color.id)}
@@ -248,7 +248,7 @@ export const CatalogFilter = ({
           {FilteredtemAppointment && (
             <div className="Appointment cursor-pointer">
               <div
-                className="flex justify-between items-center mb-4"
+                className="flex justify-between items-center"
                 onClick={() => setAppointClicked(!isAppointClicked)}>
                 <p className="font-extrabold lg:text-lg cursor-pointer">Назначения</p>
                 {isAppointClicked ? (
@@ -267,7 +267,7 @@ export const CatalogFilter = ({
           {FilteredItemBoard && (
             <div className="Variants cursor-pointer">
               <div
-                className="flex justify-between items-center mb-4"
+                className="flex justify-between items-center"
                 onClick={() => setVarietyClicked(!isVarietyClicked)}>
                 <p className="font-extrabold lg:text-lg ">Разновидность доски</p>
                 {isVarietyClicked ? (
@@ -286,7 +286,7 @@ export const CatalogFilter = ({
           {FilteredItemCover && (
             <div className="Cover cursor-pointer">
               <div
-                className="flex justify-between items-center mb-4"
+                className="flex justify-between items-center "
                 onClick={() => setCoverClicked(!isCoverClicked)}>
                 <p className="font-extrabold lg:text-lg">Поверхность</p>
                 {isCoverClicked ? (

@@ -29,12 +29,20 @@ export default function BoardType() {
     );
   };
 
-  const BoardSize = ({ size }) => {
+  const BoardSize = ({ size, area, weight }) => {
     return (
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center lg:items-start">
         <p className="text-black font-medium text-sm lg:text-lg mb-2">Размер/Габариты:</p>
-        <div className="rounded-[80px] flex justify-center items-center text-center bg-[#E4E4E4B2] text-[#6F6F6F] text-sm lg:text-lg w-20 lg:w-[100px] h-12 duration-300 hover:bg-[#6F6F6F99]">
+        <div className='flex flex-col lg:flex-row gap-2'>
+        <div className="rounded-[80px] flex justify-center items-center text-center bg-[#E4E4E4B2] text-[#6F6F6F] text-sm lg:text-lg px-2 h-12 duration-300 hover:bg-[#6F6F6F99]">
           {size}
+        </div>
+        <div className="rounded-[80px] flex justify-center items-center text-center bg-[#E4E4E4B2] text-[#6F6F6F] text-sm lg:text-lg px-2 h-12 duration-300 hover:bg-[#6F6F6F99]">
+          {area}
+        </div>
+        <div className="rounded-[80px] flex justify-center items-center text-center bg-[#E4E4E4B2] text-[#6F6F6F] text-sm lg:text-lg px-2 h-12 duration-300 hover:bg-[#6F6F6F99]">
+          {weight}
+        </div>
         </div>
       </div>
     );
@@ -98,11 +106,11 @@ export default function BoardType() {
     );
   };
   const colors = [
-    'FilterColor.png',
-    'FilterColor.png',
-    'FilterColor.png',
-    'FilterColor.png',
-    'FilterColor.png',
+    'FilterColor1.png',
+    'FilterColor2.png',
+    'FilterColor3.png',
+    'FilterColor4.png',
+    'FilterColor5.png',
   ];
   const AvailableColors = ({ colors }) => {
     return (
@@ -110,7 +118,7 @@ export default function BoardType() {
         <p className="text-black font-medium text-sm lg:text-lg mb-2">Доступные цвета:</p>
         <div className="flex gap-2">
           {colors.map((color) => (
-            <img src={`/assets/${color}`} className="w-12 h-12 rounded hover:scale-110" />
+            <img src={`/assets/${color}`} className="w-12 h-12 duration-500 rounded hover:scale-110" />
           ))}
         </div>
       </div>
@@ -172,7 +180,7 @@ export default function BoardType() {
       return (
         <div className="flex gap-2">
           <img src={icon} className="w-8 h-8" />
-          <p className="text-base text-sm lg:text-lg">{text}</p>
+          <p className="text-sm lg:text-lg">{text}</p>
         </div>
       );
     };
@@ -310,7 +318,7 @@ export default function BoardType() {
     ];
     return (
       <>
-        <div className="mx-auto relative text-black w-[230px] lg:w-[280px]">
+        <div className="mx-auto relative text-black w-[230px] lg:w-[285px]">
           <div className="swiper swiperBoardBottom mx-auto relative ">
             <div className="swiper-wrapper mx-auto">
               {slides.map((slide, i) => {
@@ -318,8 +326,8 @@ export default function BoardType() {
                   <div
                     key={slide.image}
                     className="swiper-slide swiper-opacity flex gap-1 lg:gap-2 items-center justify-center overflow-hidden">
-                    <div className="w-[90px] h-[70px] scale-75 lg:scale-100">
-                      <img src={slide.image} alt="" onClick={() => setSliderState(i)} />
+                    <div className="w-[90px] rounded-[5px] h-[70px] scale-75 lg:scale-100">
+                      <img src={slide.image} className="rounded-[5px] w-[90px] h-[70px]" alt="" onClick={() => setSliderState(i)} />
                     </div>
                   </div>
                 );
@@ -344,7 +352,7 @@ export default function BoardType() {
           ]}
         />
         <div className="mx-auto container hidden lg:block">
-          <BoardHeader title={id} size="11" className="mb-10" />
+          <BoardHeader title={id} size="11" className="mb-5" />
           <div className="flex gap-7">
             <div className="flex flex-col gap-12">
               <div>
@@ -355,7 +363,7 @@ export default function BoardType() {
               <BoardVid text="Мы подготовили для Вас видео с рекомендациями по монтажу террасной доски" />
             </div>
             <div className="flex flex-col gap-12">
-              <BoardSize size="150x22" />
+              <BoardSize size="2900 x 148 x 24 мм" area='0,45 м2' weight='7,8 кг / шт'/>
               <AvailableColors colors={colors} />
               <BoardText />
               <BoardPdf />
@@ -369,7 +377,7 @@ export default function BoardType() {
           </div>
         </div>
         <div className="mx-auto container flex flex-col gap-8 items-center lg:hidden">
-          <BoardHeader title={id} size="11" className="mb-10" />
+          <BoardHeader title={id} size="11" className="mb-5" />
           <div>
             <BoardSliderTop className='w-[280px]'/>
             <BoardSliderBottom />

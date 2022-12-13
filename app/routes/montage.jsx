@@ -19,10 +19,12 @@ export default function Index() {
     ];
     const AdvantageCard = ({ icon, text }) => {
       return (
-        <div className="w-[290px] relative z-10  py-5 px-2 rounded-[10px] montageCardShadow ">
-          <div className="flex flex-col justify-center items-center gap-2 lg:gap-6 ">
-            <img src={`/assets/${icon}`} className="scale-75 lg:scale-100" />
+        <div className="w-[290px] relative z-10 self-stretch  py-5 px-2 rounded-[10px] montageCardShadow ">
+          <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center items-center gap-2 lg:gap-6">
+            <img src={`/assets/${icon}`} className="h-[70px] w-[70px] scale-75 lg:scale-100" />
             <p className="font-medium text-base lg:text-xl text-center text-black">{text}</p>
+            </div>
           </div>
         </div>
       );
@@ -73,7 +75,7 @@ export default function Index() {
         <div
           className={`flex flex-col CatalogCardBg rounded-[10px] pb-4  text-black ${className}`}
           onClick={onClick}>
-          <div className="flex flex-col justify-center mx-auto gap-2 px-2 text-sm lg:text-xl text-black">
+          <div className="flex flex-col justify-center mx-auto gap-2 text-sm lg:text-xl text-black">
             <img src={`/assets/${image}`} className="mb-3" />
             <div className="px-4">
               <p className="font-semibold text-lg lg:text-xl mb-3">{title}</p>
@@ -200,14 +202,14 @@ export default function Index() {
               У нас вы можете заказать материал и последующий монтаж «под ключ»
             </p>
             <div className="swiper swiperMontage  mx-auto mb-10 relative ">
-              <div className="swiper-wrapper swiper-wrapper-montage py-20 mx-auto relative">
+              <div className="swiper-wrapper swiper-wrapper-montage py-20 px-10 mx-auto relative">
                 {catalogCards.map((card) => {
                   return (
                     <div
                       key={card.image}
                       className="swiper-slide  flex items-center justify-center lg:w-[370px]">
                       <MontageSliderCard
-                        className="w-[280px] lg:w-[370px]"
+                        className="w-[280px] lg:w-[360px]"
                         image={card.image}
                         title={card.title}
                         city={card.city}
@@ -223,8 +225,8 @@ export default function Index() {
 
             <SliderPagination className="swiper-pagination-montage " />
             <div className="flex justify-center gap-6 mt-5 mb-5">
-              <SliderBtnLeft className="relative xl:top-[-420px] xl:left-[-480px]  z-20" />
-              <SliderBtnRight className="relative xl:top-[-420px] xl:right-[-480px] z-20" />
+              <SliderBtnLeft className="relative xl:top-[-420px] xl:left-[-580px]  z-20" />
+              <SliderBtnRight className="relative xl:top-[-420px] xl:right-[-580px] z-20" />
             </div>
             <div className="flex justify-center"></div>
           </div>

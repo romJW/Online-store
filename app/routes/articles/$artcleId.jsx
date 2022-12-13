@@ -1,5 +1,5 @@
 import Subscribe from '../../components/Subscribe';
-import Consult from '../../components/Consult';
+import QuestionConsult from '../../components/QuestionConsult';
 import MainLayout from '../../layouts/MainLayout';
 import Section from '../../components/UI/Section';
 import BreadCrumbs from '../../components/UI/BreadCrumbs';
@@ -115,47 +115,6 @@ const articleID = () => {
       </Section>
     );
   };
-  const ArticleConsult = () => {
-    return (
-      <Section>
-        <div className="container mx-auto">
-          <div className="flex flex-col items-center gap-5 text-black">
-            <div>
-              <h3 className="font-days text-center uppercase text-3xl lg:text-5xl">
-                остались вопросы
-                <br /> или нужна консультация
-              </h3>
-              <p className="text-2xl lg:text-3xl text-center">
-                <span className="font-bold">по вашему объекту.</span> Оставьте заявку и наш менеджер{' '}
-                <br /> свяжется с вами чтобы проконсультировать
-              </p>
-            </div>
-            <div className="flex flex-col lg:flex-row gap-2 lg:gap-5 justify-center">
-              <FormInput
-                className="w-[300px] lg:w-[380px] h-[75px]"
-                placeholder="Введите ваше имя"
-              />
-              <PhoneInput
-                className="w-[300px] lg:w-[380px] h-[75px]"
-                placeholder="Ваш номер телефона"
-              />
-            </div>
-            <FormTextArea className="w-[300px] lg:w-[780px] h-[122px]" placeholder="Ваш вопрос" />
-            <Btn className="btn btn-primary w-[300px] lg:w-[420px] h-[85px] text-xl">Отправить</Btn>
-            <div className="flex gap-2">
-              <CheckBox className="w-5 h-5" />
-              <p className="text-sm text-[#2F222266]">
-                Согласен с{' '}
-                <a href="#" className="font-Montserrat text-[#4E5CD1]">
-                  политикой конфиденциальности <br /> и обработкой моих персональных данных
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </Section>
-    );
-  };
   return (
     <MainLayout>
       <div className="header-bg py-6 lg:py-12 ">
@@ -169,7 +128,7 @@ const articleID = () => {
         />
       </div>
       <ArticleContent />
-      <ArticleConsult />
+      <QuestionConsult />
       <Subscribe />
     </MainLayout>
   );

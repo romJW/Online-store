@@ -45,7 +45,7 @@ return(
 
 const ListItem = ({children}) => {
     return( 
-        <div className='flex gap-4'>
+        <div className='flex gap-4 items-center'>
             <img src='/assets/check.svg' className='w-4 h-4 lg:w-6 lg:h-6'/> 
              <p className="text-base lg:text-xl">{children}</p>
         </div> 
@@ -70,14 +70,14 @@ const ListItem = ({children}) => {
         <h3 className="
           font-days text-white font-semibold uppercase text-3xl
           lg:w-[70%] lg:text-5xl lg:whitespace-nowrap
-          mb-12
+          lg:mb-12
         ">
           Монтаж террасной доски
         </h3>
-        <div className="flex flex-col md:flex-row justify-center gap-12 lg:gap-28 ">
+        <div className="flex flex-col md:flex-row justify-center gap-6 lg:gap-28 pb-6">
         <div className='font-[Montserrat] lg:pt-16'>
-        <p className='text-2xl lg:text-3xl font-bold text-white mb-10 px-3'>Реализуем проект любой <br/> сложности и масштаба:</p>
-        <div className="text-xl text-white list-inside flex flex-col align-center gap-5 px-3">
+        <p className='text-2xl lg:text-3xl font-bold text-white mb-0 lg:mb-10 px-3'>Реализуем проект любой <br/> сложности и масштаба:</p>
+        <div className="text-xl text-white list-inside flex flex-col align-center gap-2 lg:gap-5 px-3">
           <ListItem>Террасы и веранды</ListItem>
           <ListItem>Коммерческие объекты</ListItem>
           <ListItem>Беседки и подиумы</ListItem>

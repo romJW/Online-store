@@ -19,7 +19,7 @@ export const CatalogCard = ({ image, title, colors, size, price, fullPrice }) =>
             </>
           )}
           <div className="flex ">
-          {colors && colors.map(color=><img src={`/assets/${color}`} alt='' className='w-10 h-10 hover:scale-110'/>)}
+          {colors && colors.map(color=><img src={`/assets/${color}`} alt='' className='w-10 h-10 duration-500 hover:scale-110'/>)}
           </div>
           <div className='text-xl'>
           <p className=''><span className="font-bold">{price} ₸</span> пог. метр</p>
