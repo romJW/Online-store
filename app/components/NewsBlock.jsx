@@ -14,7 +14,7 @@ export default function NewsBlock(){
             <div className="newsBlock text-black mx-auto container flex flex-col justify-center items-center">
                 <h3 className="font-[Days] text-center text-3xl lg:text-5xl mb-4 lg:mb-10">НОВОСТИ И ПОЛЕЗНЫЕ СТАТЬИ</h3>
                 <div className='flex  gap-8 justify-between flex-col xl:flex-row mb-8 lg:mb-10'>
-                    {NewsCards.map((card)=><NewsCard image={card.image} title={card.title} date={card.date} key={card.image}/>)}
+                    {NewsCards.map((card)=><NewsCard className="w-[370px]" image={card.image} title={card.title} date={card.date} key={card.image}/>)}
                 </div>
                 <Btn kind="btn-secondary" className="font-semibold tracking-wider text-base lg:text-2xl w-[300px]  lg:w-[380px] h-[90px]">Больше новостей</Btn>
             </div>

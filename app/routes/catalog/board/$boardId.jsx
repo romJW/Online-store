@@ -33,16 +33,16 @@ export default function BoardType() {
     return (
       <div className="flex flex-col items-center lg:items-start">
         <p className="text-black font-medium text-sm lg:text-lg mb-2">Размер/Габариты:</p>
-        <div className='flex flex-col lg:flex-row gap-2'>
-        <div className="rounded-[80px] flex justify-center items-center text-center bg-[#E4E4E4B2] text-[#6F6F6F] text-sm lg:text-lg px-2 h-12 duration-300 hover:bg-[#6F6F6F99]">
-          {size}
-        </div>
-        <div className="rounded-[80px] flex justify-center items-center text-center bg-[#E4E4E4B2] text-[#6F6F6F] text-sm lg:text-lg px-2 h-12 duration-300 hover:bg-[#6F6F6F99]">
-          {area}
-        </div>
-        <div className="rounded-[80px] flex justify-center items-center text-center bg-[#E4E4E4B2] text-[#6F6F6F] text-sm lg:text-lg px-2 h-12 duration-300 hover:bg-[#6F6F6F99]">
-          {weight}
-        </div>
+        <div className="flex flex-col lg:flex-row gap-2">
+          <div className="rounded-[80px] flex justify-center items-center text-center bg-[#E4E4E4B2] text-[#6F6F6F] text-sm lg:text-lg px-2 h-12 duration-300 hover:bg-[#6F6F6F99]">
+            {size}
+          </div>
+          <div className="rounded-[80px] flex justify-center items-center text-center bg-[#E4E4E4B2] text-[#6F6F6F] text-sm lg:text-lg px-2 h-12 duration-300 hover:bg-[#6F6F6F99]">
+            {area}
+          </div>
+          <div className="rounded-[80px] flex justify-center items-center text-center bg-[#E4E4E4B2] text-[#6F6F6F] text-sm lg:text-lg px-2 h-12 duration-300 hover:bg-[#6F6F6F99]">
+            {weight}
+          </div>
         </div>
       </div>
     );
@@ -67,14 +67,15 @@ export default function BoardType() {
       </div>
     );
   };
-
   const BoardCalculator = () => {
     let [size, setSize] = useState(0);
     let [squareMeter, setSquareMeter] = useState(0);
+    let numArr = size.toString().split('')
+    console.log(numArr)
     const el = useRef();
     useEffect(() => {
       gsap.to(el.current, {
-        innerText: size * 395,
+        innerText: (size * 395).toFixed(0),
         duration: 0.5,
       });
     });
@@ -84,21 +85,39 @@ export default function BoardType() {
           <div className="flex gap-8">
             <BoardCounter
               title="Погонные метры"
-              minusEvent={() => setSize(--size)}
-              plusEvent={() => setSize(++size)}
+              minusEvent={() => {
+                if (size > 0){
+                  setSize(--size);
+                  if (size % 7 == 6) setSquareMeter(--squareMeter)
+                  
+                }
+                ;
+              }}
+              plusEvent={() => {
+                setSize(++size);
+                if (size % 7 == 0) setSquareMeter(++squareMeter);
+              }}
               state={size}
             />
             <BoardCounter
               title="Квадратные метры"
-              minusEvent={() => setSquareMeter(--squareMeter)}
-              plusEvent={() => setSquareMeter(++squareMeter)}
+              minusEvent={() => {
+                if (squareMeter > 0) {
+                  setSquareMeter(--squareMeter);
+                  setSize(size - 7);
+                }
+              }}
+              plusEvent={() => {
+                setSquareMeter(++squareMeter);
+                setSize(size + 7);
+              }}
               state={squareMeter}
             />
           </div>
           <div className="mx-auto border-2 border-white lg:w-[230px] mt-8 mb-4"></div>
           <p className="text-[#6F6F6F] text-base mb-1">1.00 пог. метр 359.00 ₸</p>
           <p className="text-black text-3xl font-bold uppercase mb-5" ref={el}>
-            {size * 395} ₸
+            { (size * 395).toFixed(0)} ₸
           </p>
           <Btn className="btn btn-primary w-[280px] lg:w-[230px] h-[65px]"> В корзину </Btn>
         </div>
@@ -118,7 +137,10 @@ export default function BoardType() {
         <p className="text-black font-medium text-sm lg:text-lg mb-2">Доступные цвета:</p>
         <div className="flex gap-2">
           {colors.map((color) => (
-            <img src={`/assets/${color}`} className="w-12 h-12 duration-500 rounded hover:scale-110" />
+            <img
+              src={`/assets/${color}`}
+              className="w-12 h-12 duration-500 rounded hover:scale-110"
+            />
           ))}
         </div>
       </div>
@@ -234,7 +256,7 @@ export default function BoardType() {
 
   const [sliderState, setSliderState] = useState();
 
-  const BoardSliderTop = ({className}) => {
+  const BoardSliderTop = ({ className }) => {
     useEffect(() => {
       const swiper = new Swiper('.swiperBoardTop', {
         loop: true,
@@ -285,7 +307,10 @@ export default function BoardType() {
             src="/assets/chevron.svg"
             className="btn-left  absolute bottom-[-50px] left-0 rotate-180 scale-75 lg:scale-100"
           />
-          <img src="/assets/chevron.svg" className="btn-right absolute bottom-[-50px] right-0 scale-75 lg:scale-100" />
+          <img
+            src="/assets/chevron.svg"
+            className="btn-right absolute bottom-[-50px] right-0 scale-75 lg:scale-100"
+          />
         </div>
       </>
     );
@@ -327,7 +352,12 @@ export default function BoardType() {
                     key={slide.image}
                     className="swiper-slide swiper-opacity flex gap-1 lg:gap-2 items-center justify-center overflow-hidden">
                     <div className="w-[90px] rounded-[5px] h-[70px] scale-75 lg:scale-100">
-                      <img src={slide.image} className="rounded-[5px] w-[90px] h-[70px]" alt="" onClick={() => setSliderState(i)} />
+                      <img
+                        src={slide.image}
+                        className="rounded-[5px] w-[90px] h-[70px]"
+                        alt=""
+                        onClick={() => setSliderState(i)}
+                      />
                     </div>
                   </div>
                 );
@@ -356,14 +386,14 @@ export default function BoardType() {
           <div className="flex gap-7">
             <div className="flex flex-col gap-12">
               <div>
-                <BoardSliderTop className='w-[370px]'/>
+                <BoardSliderTop className="w-[370px]" />
                 <BoardSliderBottom />
               </div>
               <BoardVid text="Посмотрите краткий видеообзор доски 140*20 мм. Расскажем о назначении, цветах, рекомендациях" />
               <BoardVid text="Мы подготовили для Вас видео с рекомендациями по монтажу террасной доски" />
             </div>
             <div className="flex flex-col gap-12">
-              <BoardSize size="2900 x 148 x 24 мм" area='0,45 м2' weight='7,8 кг / шт'/>
+              <BoardSize size="2900 x 148 x 24 мм" area="0,45 м2" weight="7,8 кг / шт" />
               <AvailableColors colors={colors} />
               <BoardText />
               <BoardPdf />
@@ -379,26 +409,33 @@ export default function BoardType() {
         <div className="mx-auto container flex flex-col gap-8 items-center lg:hidden">
           <BoardHeader title={id} size="11" className="mb-5" />
           <div>
-            <BoardSliderTop className='w-[280px]'/>
+            <BoardSliderTop className="w-[280px]" />
             <BoardSliderBottom />
           </div>
-    <div className="flex flex-col gap-12">
-    <BoardCalculator />
-    <BoardConditions/>
-    <BoardHelp/>
-    <BoardInstance/>
-    </div>
-    </div>
-    </div>
-    <SliderCatalog/>
-    <BoardDescription/>
-    <SliderReview/>
-    <MontageBlock/>
-    <SendProject />
-    <Slider/>
-    <Consult title='Получите консультацию' text={<><span className='font-bold'>по вашему объекту уже сегодня. </span> Оставьте заявку и наш менеджер <br/> свяжется с вами чтобы проконсультировать и рассчитать стоимость </>} />
-    <Subscribe/>
-  </CatalogLayout>
-  </>
-  )
+          <div className="flex flex-col gap-12">
+            <BoardCalculator />
+            <BoardConditions />
+            <BoardHelp />
+            <BoardInstance />
+          </div>
+        </div>
+        <SliderCatalog />
+        <BoardDescription />
+        <SliderReview />
+        <MontageBlock />
+        <SendProject />
+        <Slider />
+        <Consult
+          title="Получите консультацию"
+          text={
+            <>
+              <span className="font-bold">по вашему объекту уже сегодня. </span> Оставьте заявку и
+              наш менеджер <br /> свяжется с вами чтобы проконсультировать и рассчитать стоимость{' '}
+            </>
+          }
+        />
+        <Subscribe />
+      </CatalogLayout>
+    </>
+  );
 }

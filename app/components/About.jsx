@@ -1,6 +1,6 @@
 import AboutCard from './AboutCard';
 import PlayBtn from './UI/PlayBtn';
-export default function About() {
+export default function About({children, className}) {
   const AboutCards = [
     {
       icon: '/assets/woods.svg',
@@ -15,7 +15,10 @@ export default function About() {
   ];
   return (
     <>
-      <div className="mx-auto  bg-no-repeat bg-cover w-full wood-bg py-24 lg:py-36">
+      <div className={`mx-auto  bg-no-repeat bg-cover w-full wood-bg py-24 lg:py-36 ${className}`}>
+        <>
+        {children}
+        </>
         <div className="container mx-auto flex flex-col z-10 justify-center items-center px-3">
           <div className="flex flex-col lg:flex-row mx-auto justify-center items-center gap-6  mb-5">
             <div className="text-white ">

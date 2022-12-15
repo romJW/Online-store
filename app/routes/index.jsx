@@ -14,7 +14,7 @@ import DeliveryBlock from '../components/DeliveryBlock';
 import About from '../components/About';
 import FormBlock from '../components/FormBlock';
 import Subscribe from '../components/Subscribe';
-import MainLayout from '../layouts/MainLayout'
+import MainLayout from '../layouts/MainLayout';
 export default function Index() {
   return (
     <>
@@ -44,7 +44,7 @@ export default function Index() {
         <FormBlock />
         <SliderReview />
         <DeliveryBlock />
-        <SliderLicense />
+        <SliderLicense className="wood-bg text-white" />
         <Consult
           title="Получите консультацию"
           text={

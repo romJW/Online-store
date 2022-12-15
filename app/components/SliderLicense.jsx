@@ -2,8 +2,8 @@ import { useEffect } from 'react';
 import SliderBtnLeft from './UI/SliderBtnLeft';
 import SliderBtnRight from './UI/SliderBtnRight';
 import SliderPagination from './UI/SliderPagination';
-
-export default function Slider() {
+import Section from './UI/Section';
+export default function Slider({className}) {
   useEffect(() => {
     const swiper = new Swiper('.swiperLicense', {
       loop: true,
@@ -50,9 +50,10 @@ export default function Slider() {
   ];
   return (
     <>
-    <div className="mx-auto mt-24 wood-bg pt-28">
+    <Section>
+    <div className={`mx-auto ${className}`}>
       <div className="max-w-[1170px] mx-auto">
-      <h2 className="uppercase text-center text-white font-[Days] text-[25px] lg:text-5xl mb-8 lg:mb-10">
+      <h2 className="uppercase text-center font-[Days] text-[25px] lg:text-5xl mb-8 lg:mb-10">
         Вся продукция сертифицирована <br/> и лицензирована
       </h2>
       <div className="swiper swiperLicense mx-auto mb-10 relative">
@@ -73,6 +74,7 @@ export default function Slider() {
       </div>
       </div>
     </div>
+    </Section>
   </>
   );
 }
