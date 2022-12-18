@@ -19,7 +19,7 @@ export default function About({children, className}) {
         <>
         {children}
         </>
-        <div className="container mx-auto flex flex-col z-10 justify-center items-center px-3">
+        <div className="container mx-auto flex flex-col z-10 justify-center items-center px-3 lg:px-0">
           <div className="flex flex-col lg:flex-row mx-auto justify-center items-center gap-6  mb-5">
             <div className="text-white ">
               <h3 className="font-[Days] uppercase text-3xl lg:text-5xl mb-8">О компании</h3>
