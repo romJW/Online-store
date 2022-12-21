@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { Link } from "@remix-run/react";
 const nav = [
   { logo: '/assets/noun-woodgrain.svg', title: 'Террасная доска', path: '/catalog/board', id: '1' },
-  { logo: '/assets/noun-stairs.svg', title: 'Ступени из ДПК', path: '/', id: '2' },
-  { logo: '/assets/noun-ladder.svg', title: 'Ограждения из ДПК', path: '/', id: '3' },
-  { logo: '/assets/wooden-board.svg', title: 'Заборная доска из ДПК', path: '/', id: '4' },
-  { logo: '/assets/noun-screw.svg', title: 'Комплектующие', path: '/', id: '5' },
+  { logo: '/assets/noun-stairs.svg', title: 'Ступени из ДПК', path: '/catalog/stairs', id: '2' },
+  { logo: '/assets/noun-ladder.svg', title: 'Ограждения из ДПК', path: '/catalog', id: '3' },
+  { logo: '/assets/wooden-board.svg', title: 'Заборная доска из ДПК', path: '/catalog', id: '4' },
+  { logo: '/assets/noun-screw.svg', title: 'Комплектующие', path: '/catalog', id: '5' },
 ];
 
 function MenuItem({ children, className }) {
@@ -33,7 +33,8 @@ function Bar({  }) {
     );
   }
 
-const companyItems = ['Отзывы', 'Продукция', 'Сертификаты и лицензии', 'Партнерам'];
+const companyItems = [
+  {name:'Отзывы', path:'/reviews'}, {name:'Продукция',path:'/about/products'}, {name:'Сертификаты и лицензии',path:'/license'}, {name:'Партнерам',path:'/partners'}];
 
 export default function Menu(props) {
   const [isCatalogHover, setCatalogHover] = useState(false);
@@ -51,7 +52,7 @@ export default function Menu(props) {
               ) : (
                 <i className="fa-solid text-white fa-bars-staggered w-4"></i>
               )}
-              <p className='text-white cursor-pointer'>Каталог</p>
+              <p className='text-white cursor-pointer'><Link to="/catalog">Каталог</Link></p>
             </div>
             <div tabIndex={0} className="dropdown-content shadow-2xl z-20 w-[230px]">
               {nav.map((option) => {
@@ -77,17 +78,17 @@ export default function Menu(props) {
             </div>
           </div>
               <Bar/>
-          <MenuItem>Инструкция</MenuItem>
+          <MenuItem><Link to=''>Инструкция</Link></MenuItem>
           <Bar/>
-          <MenuItem>Монтаж</MenuItem>
+          <MenuItem><Link to='/montage'>Монтаж</Link></MenuItem>
           <Bar/>
           <MenuItem className={`dropdown dropdown-hover`}>
             <div tabIndex={0} className={`z-20`}>
               <p>Информация</p>
             </div>
             <div tabIndex={0} className="dropdown-content left-0 top-10 z-20 shadow w-[230px]">
-              <DropItem text="Новости и статьи" />
-              <DropItem text="Популярные вопросы" />
+            <Link to='/articles'><DropItem text="Новости и статьи" /></Link>
+            <Link to='/questions'><DropItem text="Популярные вопросы" /></Link>
             </div>
           </MenuItem>
           <Bar/>
@@ -97,13 +98,13 @@ export default function Menu(props) {
             </div>
             <div tabIndex={0} className="dropdown-content left-0 top-10 shadow w-[230px]">
               {companyItems.map((item) => (
-                <DropItem key={item} text={item} />
+                <Link to={item.path}><DropItem key={item.name} text={item.name} /></Link>
               ))}
             </div>
           </MenuItem>
           <Bar/>
           <div className="justify-center flex ">
-            <MenuItem>Контакты</MenuItem>
+            <MenuItem><Link to='/contacts'>Контакты</Link></MenuItem>
             <MenuItem className='xl:px-8  2xl:px-10 '>
               <img src="/assets/whiteBasket.svg" alt="" className=" " style={{maxWidth:'30px'}}/>
             </MenuItem>

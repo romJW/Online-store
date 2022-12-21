@@ -3,7 +3,6 @@ import BreadCrumbs from '../components/UI/BreadCrumbs';
 import Btn from '../components/UI/Btn';
 import Section from '../components/UI/Section';
 import FormInput from '../components/UI/FormInput';
-import CurrencyFormat from 'react-currency-format';
 import {useState} from 'react'
 const partners = () => {
   const PartnersHero = () => {
@@ -159,6 +158,7 @@ const partners = () => {
     const [volume, setVolume] = useState(0)
     const addSpaces = num => num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
     return (
+      <Section>
       <div className="container mx-auto">
         <div className="bg-[#FDF7F2] box-bg rounded-[60px]  py-8 lg:py-16 lg:pl-16">
           <div className="flex flex-col justify-center lg:justify-start items-center lg:items-start text-black font-mont text-center lg:text-start mb-5">
@@ -179,6 +179,7 @@ const partners = () => {
           </div>
         </div>
       </div>
+      </Section>
     );
   };
   return (

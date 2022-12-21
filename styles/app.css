@@ -87,6 +87,12 @@
   box-shadow: 0px 20px 45px rgba(216, 0, 0, 0.15), inset 0px -12px 24px rgba(216, 0, 0, 0.15),
     inset 0px 2px 24px rgba(255, 255, 255, 0.5);
 }
+.whiteGradient{
+  background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #F3DFCE;
+}
+.InstructionShadow{
+  box-shadow: 0px 0px 90px rgba(0, 0, 0, 0.05);
+}
 .BoardVidBg {
   background: url('/assets/BgVid.png');
   background-repeat: no-repeat;

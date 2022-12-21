@@ -44,7 +44,7 @@ export default function Index() {
         <FormBlock />
         <SliderReview />
         <DeliveryBlock />
-        <SliderLicense className="wood-bg text-white" />
+        <SliderLicense className="wood-bg text-white pt-24 lg:pt-[170px]" />
         <Consult
           title="Получите консультацию"
           text={

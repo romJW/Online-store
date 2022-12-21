@@ -8,7 +8,7 @@ export default function Consult() {
     <Section>
       <div className="mx-auto ">
         <div className="container text-black px-2 mx-auto flex flex-col justify-center items-center bg-[#FDF7F2] bg-subscribe relative rounded-[80px] py-12 pb-[170px] lg:pb-12">
-          <h3 className="font-[Days]  text-3xl lg:text-5xl mb-3 font-bold text-center">
+          <h3 className="font-[Days]  text-3xl lg:text-5xl mb-3 uppercase text-center">
             Подпишитесь на рассылку
           </h3>
           <p className="text-center text-xl lg:text-2xl mb-8 ">

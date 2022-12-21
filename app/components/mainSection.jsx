@@ -36,7 +36,7 @@ export default function mainSection() {
             ))}
           </div>
             <div className='wood-bg  bg-no-repeat bg-cover bg-center h-full flex flex-col justify-center items-center pt-[140px] pb-14'>
-            <h3 className="font-[Days] text-3xl	text-center lg:text-5xl mb-5 text-white  uppercase ">В продаже</h3>
+            <h3 className="font-[Days] text-3xl	text-center lg:text-5xl mb-10 text-white  uppercase ">В продаже</h3>
             <div className="flex flex-col xl:flex-row items-center justify-center container gap-5 mb-10">
                 {
                     cardsPicInfo.map((cardPicInfo)=><MainSectionPicCard image={cardPicInfo.image} title={cardPicInfo.title} key={cardPicInfo.title}/>)

@@ -51,7 +51,7 @@ export default function Slider({className}) {
   return (
     <>
     <Section>
-    <div className={`mx-auto ${className}`}>
+    <div className={`mx-auto ${className} relative`}>
       <div className="max-w-[1170px] mx-auto">
       <h2 className="uppercase text-center font-[Days] text-[25px] lg:text-5xl mb-8 lg:mb-10">
         Вся продукция сертифицирована <br/> и лицензирована
