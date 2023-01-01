@@ -1,6 +1,6 @@
 import React from 'react';
 import Btn from './Btn'
-export const CatalogCard = ({ image, title, colors, size, price, fullPrice }) => {
+export const CatalogCard = ({ image, title, colors, size, price, fullPrice, addToBasket }) => {
   return (
     <>
       <div className="w-[320px] lg:w-[370px] py-6 px-4 text-black rounded-[10px] CatalogCardBg">
@@ -27,7 +27,7 @@ export const CatalogCard = ({ image, title, colors, size, price, fullPrice }) =>
           </div>
           <div className="flex flex-col w-full lg:flex-row gap-2">
           <Btn className='btn uppercase tracking-wider text-base font-semibold bg-transparent border-[3px] border-[#AC9B9C] text-[#AC9B9C] w-full lg:w-[160px] h-[60px] mt-4 hover:bg-[#AC9B9C] hover:text-white hover:shadow-2xl'>Подробнее</Btn>
-          <Btn className='btn uppercase tracking-wider text-base font-semibold bg-transparent border-[3px] border-[#E41D24] text-[#E41D24] w-full lg:w-[160px] h-[60px] mt-4 hover:bg-[#E41D24] hover:text-white hover:shadow-2xl'>В корзину</Btn>
+          <Btn className='btn uppercase tracking-wider text-base font-semibold bg-transparent border-[3px] border-[#E41D24] text-[#E41D24] w-full lg:w-[160px] h-[60px] mt-4 hover:bg-[#E41D24] hover:text-white hover:shadow-2xl' onClick={addToBasket}>В корзину</Btn>
           </div>
           
         </div>

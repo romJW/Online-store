@@ -7,6 +7,8 @@ import Subscribe from '../components/Subscribe';
 import Section from '../components/UI/Section';
 import FormInput from '../components/UI/FormInput';
 import { useState } from 'react';
+import { useContext } from 'react';
+import { ModalInstructionContext, ModalInstructionVidContext } from '../contexts/context';
 const textInstructions = [
   {
     image: 'Instruction.png',
@@ -98,6 +100,7 @@ const videoInstructions = [
 const instructions = () => {
   const [isVideo, setVideo] = useState(false);
   const [isMobileOpen, setMobileOpen] = useState(false);
+
   const CategoryItem = ({ icon, text, onClick, className, children }) => {
     return (
       <div
@@ -110,6 +113,7 @@ const instructions = () => {
     );
   };
   const InstructionCard = ({ image, title, list, memory }) => {
+    const { isInstructionModalOpen, setInstructionModalOpen } = useContext(ModalInstructionContext);
     return (
       <div className="mx-auto container">
         <div className="flex flex-col lg:flex-row">
@@ -122,7 +126,11 @@ const instructions = () => {
               ))}
             </ul>
             <div className="flex flex-col lg:flex-row items-center gap-5">
-              <Btn className="btn-secondary w-[280px] lg:w-[360px] h-20">Скачать инструкцию</Btn>
+              <Btn
+                className="btn-secondary w-[280px] lg:w-[360px] h-20"
+                onClick={() => setInstructionModalOpen(true)}>
+                Скачать инструкцию
+              </Btn>
               <p className="text-[#8D8D8D] text-base ">PDF | {memory} Mb</p>
             </div>
           </div>
@@ -131,13 +139,17 @@ const instructions = () => {
     );
   };
   const VideoInstructionCard = ({ image, title, list, length }) => {
+    const { isInstructionVidModalOpen, setInstructionVidModalOpen } = useContext(
+      ModalInstructionVidContext,
+    );
     return (
       <div className="mx-auto container">
         <div className="flex flex-col lg:flex-row items-center lg:items-start ">
           <div
+            
             className="flex justify-center items-center w-[280px] lg:w-[535px] h-[200px] lg:h-[280px] rounded-[10px] bg-cover bg-no-repeat"
             style={{ background: `url('/assets/${image}'` }}>
-            <PlayBtn />{' '}
+            <PlayBtn onClick={() => setInstructionVidModalOpen(true)}/>{' '}
           </div>
           <div className="flex flex-col pl-6">
             <p className="font-bold text-lg lg:text-3xl mb-2">{title}</p>
@@ -225,6 +237,7 @@ const instructions = () => {
             <div className="flex flex-col items-center  gap-10 lg:gap-12 py-4 lg:py-10 px-4 lg:px-12">
               {videoInstructions.map((instruction) => (
                 <VideoInstructionCard
+                  key={instruction.list}
                   image={instruction.image}
                   title={instruction.title}
                   list={instruction.list}

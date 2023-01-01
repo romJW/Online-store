@@ -1,3 +1,10 @@
 import { createContext } from 'react';
 export const MobileMenuContext = createContext(null);
 export const ModalCityContext = createContext(null);
+export const ModalBasketContext = createContext(null);
+export const BasketArrContext = createContext(null);
+export const ModalInstructionContext = createContext(null);
+export const ModalInstructionVidContext = createContext(null);
+export const ModalDataSentContext = createContext(null);
+export const ModalFormContext = createContext(null);
+export const ModalPartnershipContext = createContext(null);

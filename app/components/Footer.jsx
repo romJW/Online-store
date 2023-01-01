@@ -1,4 +1,6 @@
 import Btn from './UI/Btn';
+import { useContext } from 'react';
+import { ModalFormContext } from '../contexts/context';
 export default function Footer() {
   const socials = [
     {
@@ -32,7 +34,7 @@ export default function Footer() {
       color: '#2AABEE',
     },
   ];
-
+  const { isForm, setForm } = useContext(ModalFormContext);
   return (
     <>
       <footer>
@@ -47,7 +49,8 @@ export default function Footer() {
               </div>
               <Btn
                 kind=""
-                className="text-xs w-[150px] h-[40px] border-white text-white bg-transparent lg:hidden">
+                className="text-xs w-[150px] h-[40px] border-white text-white bg-transparent lg:hidden"
+                onClick={() => setForm(true)}>
                 Заказать звонок
               </Btn>
             </div>
@@ -102,10 +105,18 @@ export default function Footer() {
 
               <nav className="flex flex-col mt-4  text-sm text-[#FFFFFFB2]">
                 <div className="flex flex-col gap-2">
-                  <a href="" className="hover:opacity-75">Отзывы</a>
-                  <a href="" className="hover:opacity-75">Сертификаты и лицензии</a>
-                  <a href="" className="hover:opacity-75">Партнерам</a>
-                  <a href="" className="hover:opacity-75">Контакты</a>
+                  <a href="" className="hover:opacity-75">
+                    Отзывы
+                  </a>
+                  <a href="" className="hover:opacity-75">
+                    Сертификаты и лицензии
+                  </a>
+                  <a href="" className="hover:opacity-75">
+                    Партнерам
+                  </a>
+                  <a href="" className="hover:opacity-75">
+                    Контакты
+                  </a>
                 </div>
               </nav>
             </div>

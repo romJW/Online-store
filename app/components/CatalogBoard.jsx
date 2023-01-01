@@ -1,7 +1,8 @@
-import React from 'react';
+import {useContext} from 'react';
 import { CatalogFilter, CatalogMobileFilter } from './CatalogFilter';
 import CatalogCard from './UI/CatalogCard';
 import Section from './UI/Section';
+import {BasketArrContext } from '../contexts/context';
 const tags = [
   'Террасная доска пустотелая',
   'Террасная доска полнотелая',
@@ -13,6 +14,7 @@ const tags = [
 const catalogCards = [
   {
     id: 1,
+    amount:0,
     image: 'CatalogBoard.png',
     title: 'Террасная доска',
     colors: [
@@ -29,6 +31,7 @@ const catalogCards = [
   },
   {
     id: 2,
+    amount:0,
     image: 'CatalogBoard.png',
     title: 'Террасная доска',
     colors: [
@@ -45,6 +48,7 @@ const catalogCards = [
   },
   {
     id: 3,
+    amount:0,
     image: 'CatalogBoard.png',
     title: 'Террасная доска',
     colors: [
@@ -61,6 +65,7 @@ const catalogCards = [
   },
   {
     id: 4,
+    amount:0,
     image: 'CatalogBoard.png',
     title: 'Террасная доска',
     colors: [
@@ -77,6 +82,7 @@ const catalogCards = [
   },
   {
     id: 5,
+    amount:0,
     image: 'CatalogBoard.png',
     title: 'Террасная доска',
     colors: [
@@ -93,6 +99,7 @@ const catalogCards = [
   },
   {
     id: 6,
+    amount:0,
     image: 'CatalogBoard.png',
     title: 'Террасная доска',
     colors: [
@@ -109,6 +116,7 @@ const catalogCards = [
   },
   {
     id: 7,
+    amount:0,
     image: 'CatalogBoard.png',
     title: 'Террасная доска',
     colors: [
@@ -150,6 +158,30 @@ const BoardFilteredItems = {
 };
 
 const CatalogBoard = () => {
+  const { BasketArr, SetBasketArr } = useContext(BasketArrContext);
+  const addToBasket = (item) => {
+    // localStorage.getItem('basketArr');
+    if (BasketArr.some((cartItem) => cartItem.id === item.id)) {
+      SetBasketArr((BasketArr) =>
+      BasketArr.map((cartItem) =>
+          cartItem.id === item.id
+            ? {
+                ...cartItem,
+              }
+            : cartItem
+        )
+      );
+      return;
+    }
+    SetBasketArr((BasketArr) => [
+      ...BasketArr,
+      { ...item, amount:item.amount+1 }
+    ]);
+    //  localStorage.setItem('basketArr', JSON.stringify(BasketArr));
+
+  };
+  
+
   return (
     <Section>
       <div className="mx-auto container text-black px-6 xs:px-0 relative z-10">
@@ -196,6 +228,7 @@ const CatalogBoard = () => {
                   size={card.size}
                   price={card.price}
                   fullPrice={card.fullPrice}
+                  addToBasket={()=>{addToBasket(card)}}
                 />
               ))}
             </div>

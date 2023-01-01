@@ -2,7 +2,10 @@ import Btn from './UI/Btn';
 import FormInput from './UI/FormInput';
 import PhoneInput from './UI/PhoneInput';
 import CheckBox from './UI/CheckBox';
+import { ModalDataSentContext } from '../contexts/context';
+import { useContext} from 'react';
 export default function Consult() {
+  const { isDataSent, setDataSent } = useContext(ModalDataSentContext);
   return (
     <>
       <div className="mx-auto mt-[-50px] flex flex-col lg:flex-row justify-center items-center">
@@ -25,7 +28,7 @@ export default function Consult() {
             Прикрепить файл
           </Btn>
           <div className="flex flex-col-reverse lg:flex-col items-center gap-5 lg:pb-12">
-            <Btn kind="btn-primary w-[300px] lg:w-[420px] h-[65px] lg:h-[85px] text-xl mb-4">
+            <Btn kind="btn-primary w-[300px] lg:w-[420px] h-[65px] lg:h-[85px] text-xl mb-4" onClick={()=>setDataSent(true)}>
               Отправить
             </Btn>
             <div className="flex items-start justify-center gap-3">

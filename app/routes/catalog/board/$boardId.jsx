@@ -75,7 +75,7 @@ export default function BoardType() {
     const el = useRef();
     useEffect(() => {
       gsap.to(el.current, {
-        innerText: (size * 395).toFixed(0),
+        innerText:`${(size * 395).toFixed(2)} ₸`,
         duration: 0.5,
       });
     });
@@ -117,7 +117,7 @@ export default function BoardType() {
           <div className="mx-auto border-2 border-white lg:w-[230px] mt-8 mb-4"></div>
           <p className="text-[#6F6F6F] text-base mb-1">1.00 пог. метр 359.00 ₸</p>
           <p className="text-black text-3xl font-bold uppercase mb-5" ref={el}>
-            { (size * 395).toFixed(0)} ₸
+            { (size * 395).toFixed(2)} ₸
           </p>
           <Btn className="btn btn-primary w-[280px] lg:w-[230px] h-[65px]"> В корзину </Btn>
         </div>

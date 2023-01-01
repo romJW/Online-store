@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Link } from "@remix-run/react";
+import { useContext } from 'react';
+import { ModalBasketContext,ModalPartnershipContext } from '../contexts/context';
 const nav = [
   { logo: '/assets/noun-woodgrain.svg', title: 'Террасная доска', path: '/catalog/board', id: '1' },
   { logo: '/assets/noun-stairs.svg', title: 'Ступени из ДПК', path: '/catalog/stairs', id: '2' },
@@ -8,10 +10,10 @@ const nav = [
   { logo: '/assets/noun-screw.svg', title: 'Комплектующие', path: '/catalog', id: '5' },
 ];
 
-function MenuItem({ children, className }) {
+function MenuItem({ children, className, onClick }) {
   return (
     <>
-      <div className={`font-bold cursor-pointer text-white text-sm xl:text-base flex items-center lg:px-6 xl:px-8 hover:bg-[#8C1A1E]  ${className}`}>
+      <div onClick={onClick} className={`font-bold cursor-pointer text-white text-sm xl:text-base flex items-center lg:px-6 xl:px-8 hover:bg-[#8C1A1E]  ${className}`}>
         {children}
       </div>
     </>
@@ -38,6 +40,8 @@ const companyItems = [
 
 export default function Menu(props) {
   const [isCatalogHover, setCatalogHover] = useState(false);
+  const { isBasketOpen, setBasketOpen } = useContext(ModalBasketContext);
+  const { isPartnership, setPartnership } = useContext(ModalPartnershipContext);
   return (
     <>
       <div className="header w-full h-10 sticky mb-[-40px] top-[-1px] z-50  mx-auto  flex justify-center bg-[#21212199] items-center mix-blend-normal backdrop-blur-sm hidden lg:flex">
@@ -78,7 +82,7 @@ export default function Menu(props) {
             </div>
           </div>
               <Bar/>
-          <MenuItem><Link to=''>Инструкция</Link></MenuItem>
+          <MenuItem><Link to='/instructions'>Инструкция</Link></MenuItem>
           <Bar/>
           <MenuItem><Link to='/montage'>Монтаж</Link></MenuItem>
           <Bar/>
@@ -105,10 +109,10 @@ export default function Menu(props) {
           <Bar/>
           <div className="justify-center flex ">
             <MenuItem><Link to='/contacts'>Контакты</Link></MenuItem>
-            <MenuItem className='xl:px-8  2xl:px-10 '>
-              <img src="/assets/whiteBasket.svg" alt="" className=" " style={{maxWidth:'30px'}}/>
+            <MenuItem className='xl:px-8  2xl:px-10 ' onClick={() => setBasketOpen(true)}>
+              <img src="/assets/whiteBasket.svg" alt="" className=" " style={{maxWidth:'30px'}} />
             </MenuItem>
-            <MenuItem className="whitespace-nowrap  ">Рассчитать стоимость</MenuItem>
+            <MenuItem className="whitespace-nowrap" onClick={()=>setPartnership(true)}>Рассчитать стоимость</MenuItem>
           </div>
         </div>
       </div>

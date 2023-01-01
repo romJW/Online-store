@@ -1,4 +1,4 @@
-export default function Btn({ kind, className, children }) {
+export default function Btn({ kind, className, children, onClick }) {
   return (
     <button
       className={`
@@ -6,7 +6,8 @@ export default function Btn({ kind, className, children }) {
         btn
         text-white
         duration-300
-        ${className}`}>
+        ${className}`}
+        onClick={onClick}>
       {children}
     </button>
   );
