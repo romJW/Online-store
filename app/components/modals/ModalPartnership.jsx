@@ -12,10 +12,9 @@ const Modal = () => {
   const { isPartnership, setPartnership } = useContext(ModalPartnershipContext);
   const { isDataSent, setDataSent } = useContext(ModalDataSentContext);
   const [images, setImages] = useState([]);
-  const maxNumber = 69;
+  const maxNumber = 68;
 
   const onChange = (imageList, addUpdateIndex) => {
-    // data for submit
     console.log(imageList, addUpdateIndex);
     setImages(imageList);
   };
@@ -87,7 +86,7 @@ const Modal = () => {
               </Btn>
               <div className="flex items-start justify-center gap-3">
                 <CheckBox className="w-5 h-5" />
-                <p className="text-sm  text-[#4E5CD1] font-[Montserrat]">
+                <p className="text-sm  text-[#4E5CD1] font-mont">
                   <span className="text-[#2F222266]">Согласен с</span> политикой конфиденциальности
                   <br />и обработкой моих персональных данных
                 </p>

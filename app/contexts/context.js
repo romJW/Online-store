@@ -8,3 +8,5 @@ export const ModalInstructionVidContext = createContext(null);
 export const ModalDataSentContext = createContext(null);
 export const ModalFormContext = createContext(null);
 export const ModalPartnershipContext = createContext(null);
+export const ModalFormPartnersFullContext = createContext(null);
+export const ModalQuizContext = createContext(null);

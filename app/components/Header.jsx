@@ -9,8 +9,10 @@ import ModalInstructionVideo from './modals/ModalInstructionVideo';
 import ModalDataSent from './modals/ModalDataSent';
 import ModalForm from './modals/ModalForm';
 import ModalPartnership from './modals/ModalPartnership';
+import ModalFormPartnersFull from './modals/ModalFormPartnersFull';
+import ModalQuiz from './modals/ModalQuiz';
 import { useContext } from 'react';
-import { MobileMenuContext, ModalBasketContext, ModalFormContext,  } from '../contexts/context';
+import { MobileMenuContext, ModalBasketContext, ModalFormContext } from '../contexts/context';
 import { Link } from '@remix-run/react';
 const socials = [
   {
@@ -76,7 +78,7 @@ const mobileNav = [
 export default function Header() {
   const { isMobileMenuOpen, SetMobileMenuOpen } = useContext(MobileMenuContext);
   const { isBasketOpen, setBasketOpen } = useContext(ModalBasketContext);
-  const {isForm, setForm } = useContext(ModalFormContext);
+  const { isForm, setForm } = useContext(ModalFormContext);
   return (
     <>
       <MetaHeader className="hidden md:flex" />
@@ -101,7 +103,9 @@ export default function Header() {
             </a>
           </div>
           <div className="hidden lg:flex items-center flex-col gap-2">
-            <button className="btn btn-outline border-[#212864] text-[#2F2222] btn-sm" onClick={()=>setForm(true)}>
+            <button
+              className="btn btn-outline border-[#212864] text-[#2F2222] btn-sm"
+              onClick={() => setForm(true)}>
               Заказать звонок
             </button>
             <div className="flex gap-2 justify-around">
@@ -145,7 +149,9 @@ export default function Header() {
         <ModalInstructionVideo />
         <ModalDataSent />
         <ModalForm />
-        <ModalPartnership/>
+        <ModalPartnership />
+        <ModalFormPartnersFull />
+        <ModalQuiz/>
       </header>
     </>
   );

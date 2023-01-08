@@ -3,7 +3,8 @@ import BreadCrumbs from '../components/UI/BreadCrumbs';
 import Btn from '../components/UI/Btn';
 import Section from '../components/UI/Section';
 import FormInput from '../components/UI/FormInput';
-import {useState} from 'react'
+import { useState, useContext } from 'react';
+import { ModalFormPartnersFullContext, ModalQuizContext } from '../contexts/context';
 const partners = () => {
   const PartnersHero = () => {
     return (
@@ -19,7 +20,7 @@ const partners = () => {
           <div className="flex flex-col lg:flex-row mb-6 lg:mb-24">
             <div className="flex flex-col px-4 lg:px-0">
               <h3 className="text-white font-days uppercase text-3xl lg:text-5xl">
-                ЗАРАБАТЫВАЙТЕ ОТ 5%  С КАЖДОГО ЗАКАЗА
+                ЗАРАБАТЫВАЙТЕ ОТ 5% С КАЖДОГО ЗАКАЗА
               </h3>
               <p className="text-[#FFFFFFB2] text-lg lg:text-2xl mb-5 lg:mb-16">
                 предлагая террасную доску и другие изделия из ДПК
@@ -31,7 +32,7 @@ const partners = () => {
                 <br />
                 остальное мы сделаем сами и отправим вам %
               </p>
-              <Btn className="btn-primary max-w-[670px] text-base lg:text-xl h-24 lg:h-20">
+              <Btn className="btn-primary max-w-[670px] text-base lg:text-xl h-24 lg:h-20 mb-10 lg:mb-0">
                 Узнать условия работы и получить образцы
               </Btn>
             </div>
@@ -94,6 +95,8 @@ const partners = () => {
     );
   };
   const DealerCondition = () => {
+  const { isQuizModal, setQuizModal } = useContext(ModalQuizContext);
+
     return (
       <div className="container mx-auto my-32">
         <div className="bg-[#FDF7F2] text-black max-w-[740px] h-[280px] mx-auto rounded-[20px] pt-6 lg:pt-0">
@@ -106,7 +109,8 @@ const partners = () => {
                 <br />
                 индивидуального предложения
               </p>
-              <Btn className="w-[320px] lg:w-[390px] text-sm lg:teat-base lg:w-[btn-neutral text-[#E41D24] border-[#E41D24] hover:bg-[#E41D24] hover:text-white">
+              <Btn className="w-[320px] lg:w-[390px] text-sm lg:teat-base lg:w-[btn-neutral text-[#E41D24] border-[#E41D24] hover:bg-[#E41D24] hover:text-white"
+              onClick={()=>setQuizModal(true)}>
                 Получить Условия для дилеров
               </Btn>
             </div>
@@ -116,6 +120,7 @@ const partners = () => {
     );
   };
   const DesignerCondition = () => {
+    const { isFormPartnersFull, setFormPartnersFull } = useContext(ModalFormPartnersFullContext);
     return (
       <Section>
         <div className="container mx-auto">
@@ -140,12 +145,16 @@ const partners = () => {
                     Вышлем образцы <br /> продукции бесплатно
                   </p>
                 </div>
-                <Btn className="btn-primary w-[300px] xl:w-[340px] h-16 xl:h-20 hidden lg:block">
+                <Btn
+                  className="btn-primary w-[300px] xl:w-[340px] h-16 xl:h-20 hidden lg:block"
+                  onClick={() => setFormPartnersFull(true)}>
                   Cтать партнером
                 </Btn>
               </div>
               <img src="/assets/DesignerLaptop.png" className="lg:w-3/5 xl:w-3/4" />
-              <Btn className="btn-primary w-[300px] xl:w-[340px] h-16 xl:h-20 block lg:hidden mt-1">
+              <Btn
+                className="btn-primary w-[300px] xl:w-[340px] h-16 xl:h-20 block lg:hidden mt-1"
+                onClick={() => setFormPartnersFull(true)}>
                 Cтать партнером
               </Btn>
             </div>
@@ -155,30 +164,44 @@ const partners = () => {
     );
   };
   const DealerEarn = () => {
-    const [volume, setVolume] = useState(0)
-    const addSpaces = num => num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    const [volume, setVolume] = useState(0);
+    const addSpaces = (num) => num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
     return (
       <Section>
-      <div className="container mx-auto">
-        <div className="bg-[#FDF7F2] box-bg rounded-[60px]  py-8 lg:py-16 lg:pl-16">
-          <div className="flex flex-col justify-center lg:justify-start items-center lg:items-start text-black font-mont text-center lg:text-start mb-5">
-            <h3 className="font-days uppercase text-3xl lg:text-5xl ">
-              НАШ ДИЛЕР ЗАРАБАТЫВАЕТ
-              <br />
-              ОТ 150 000 Р В МЕСЯЦ
-            </h3>
-            <p className="font-bold text-xl lg:text-3xl">Узнайте, сколько вы можете заработать</p>
-            <p className='font-medium text-sm lg:text-lg mb-5'>Введите объем продаж (м²)</p>
-            <FormInput value={volume} className='w-[280px] lg:w-[460px] h-20 mb-8' onChange={e => setVolume(e.target.value)}/>
-            <input type="range" min="0" max="10000" step='10' value={volume} onChange={e => setVolume(e.target.value)} className="w-[280px] lg:w-[460px] inputRange mb-12" />
-            <div className="flex flex-col lg:flex-row gap-10 mb-10">
-              <p className="font-medium text-sm lg:text-lg">Ваш доход:</p>
-              <p className="font-bold text-xl lg:text-3xl">{addSpaces(volume * 700)} ₸</p>
+        <div className="container mx-auto">
+          <div className="bg-[#FDF7F2] box-bg rounded-[60px]  py-8 lg:py-16 lg:pl-16">
+            <div className="flex flex-col justify-center lg:justify-start items-center lg:items-start text-black font-mont text-center lg:text-start mb-5">
+              <h3 className="font-days uppercase text-3xl lg:text-5xl ">
+                НАШ ДИЛЕР ЗАРАБАТЫВАЕТ
+                <br />
+                ОТ 150 000 Р В МЕСЯЦ
+              </h3>
+              <p className="font-bold text-xl lg:text-3xl">Узнайте, сколько вы можете заработать</p>
+              <p className="font-medium text-sm lg:text-lg mb-5">Введите объем продаж (м²)</p>
+              <FormInput
+                value={volume}
+                className="w-[280px] lg:w-[460px] h-20 mb-8"
+                onChange={(e) => setVolume(e.target.value)}
+              />
+              <input
+                type="range"
+                min="0"
+                max="10000"
+                step="10"
+                value={volume}
+                onChange={(e) => setVolume(e.target.value)}
+                className="w-[280px] lg:w-[460px] inputRange mb-12"
+              />
+              <div className="flex flex-col lg:flex-row gap-10 mb-10">
+                <p className="font-medium text-sm lg:text-lg">Ваш доход:</p>
+                <p className="font-bold text-xl lg:text-3xl">{addSpaces(volume * 700)} ₸</p>
+              </div>
+              <Btn className="btn-primary w-[300px] lg:w-[460px] h-16 lg:h-20  text-base lg:text-xl">
+                Получить условия работы
+              </Btn>
             </div>
-            <Btn className='btn-primary w-[300px] lg:w-[460px] h-16 lg:h-20  text-base lg:text-xl'>Получить условия работы</Btn>
           </div>
         </div>
-      </div>
       </Section>
     );
   };

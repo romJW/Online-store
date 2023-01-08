@@ -9,12 +9,12 @@ const Modal = () => {
   return (
     <>
       <div className="fixed flex justify-center top-2/4 left-2/4 translate-x-[-50%] translate-y-[-50%]  z-[100]">
-        <div className="w-[320px] lg:w-[1170px] h-[680px] text-black bg-white border-[#D5D5D5] rounded-[5px]  z-[100]  pb-4 overflow-auto">
+        <div className="w-[320px] lg:w-[900px] xl:w-[1170px] h-[710px] text-black bg-white border-[#D5D5D5] rounded-[5px]  z-[100]  pb-4 ">
           <div className="flex items-center justify-center gap-24 px-16 py-8 lg:py-14 ">
-            <div className='hidden xl:block'>
-            <img src="/assets/Instruction.png" cLassName="w-[430px] h-[300px] " />
+            <div className='hidden xl:flex '>
+            <img src="/assets/Instruction.png" className="w-[430px]" />
             </div>
-            <div className="flex flex-col ">
+            <div className="flex flex-col max-w-[500px]">
               <h3 className="font-days uppercase text-3xl lg:text-[35px] text-center lg:text-start mb-2">
                 Получите бесплатно
               </h3>

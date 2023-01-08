@@ -42,9 +42,9 @@ const ImageUploader = ({ className }) => {
             )}
             {imageList.map((image, index) => (
               <div key={index} className="image-item">
-                <img src={image['data_url']} alt="" width="100" className="" />
+                <img src={image['data_url']} alt="" width="100" className="w-24 h-20" />
                 <div className="flex gap-2 items-center">
-                  <button onClick={() => onImageUpdate(index)}>Обновить</button>
+                  <button onClick={() => onImageUpdate(index)} className='text-sm font-mont'>Обновить</button>
                   <i
                     className="fa-sharp cursor-pointer fa-solid fa-xmark"
                     onClick={() => onImageRemove(index)}></i>

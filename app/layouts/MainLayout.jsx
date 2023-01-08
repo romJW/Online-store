@@ -10,7 +10,9 @@ import {
   ModalInstructionVidContext,
   ModalDataSentContext,
   ModalFormContext,
-  ModalPartnershipContext
+  ModalPartnershipContext,
+  ModalFormPartnersFullContext,
+  ModalQuizContext,
 } from '../contexts/context';
 export default function MainLayout({ children }) {
   const [isCityModalOpen, setCityModalOpen] = useState(false);
@@ -22,6 +24,8 @@ export default function MainLayout({ children }) {
   const [isDataSent, setDataSent] = useState(false);
   const [isForm, setForm] = useState(false);
   const [isPartnership, setPartnership] = useState(false);
+  const [isFormPartnersFull, setFormPartnersFull] = useState(false);
+  const [isQuizModal, setQuizModal] = useState(false);
   return (
     <div
       style={{
@@ -37,14 +41,20 @@ export default function MainLayout({ children }) {
                 value={{ isInstructionModalOpen, setInstructionModalOpen }}>
                 <ModalInstructionVidContext.Provider
                   value={{ isInstructionVidModalOpen, setInstructionVidModalOpen }}>
-                    <ModalDataSentContext.Provider value={{ isDataSent, setDataSent }}>
-                      <ModalFormContext.Provider value={{ isForm, setForm }}>
-                        <ModalPartnershipContext.Provider value={{isPartnership, setPartnership}}>
-                  <Header />
-                  {children}
-                  <Footer />
-                  </ModalPartnershipContext.Provider>
-                  </ModalFormContext.Provider>
+                  <ModalDataSentContext.Provider value={{ isDataSent, setDataSent }}>
+                    <ModalFormContext.Provider value={{ isForm, setForm }}>
+                      <ModalPartnershipContext.Provider value={{ isPartnership, setPartnership }}>
+                        <ModalFormPartnersFullContext.Provider
+                          value={{ isFormPartnersFull, setFormPartnersFull }}>
+                          <ModalQuizContext.Provider value={{ isQuizModal, setQuizModal }}>
+                            <Header />
+
+                            {children}
+                            <Footer />
+                          </ModalQuizContext.Provider>
+                        </ModalFormPartnersFullContext.Provider>
+                      </ModalPartnershipContext.Provider>
+                    </ModalFormContext.Provider>
                   </ModalDataSentContext.Provider>
                 </ModalInstructionVidContext.Provider>
               </ModalInstructionContext.Provider>
