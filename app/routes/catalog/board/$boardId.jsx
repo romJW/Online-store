@@ -70,28 +70,26 @@ export default function BoardType() {
   const BoardCalculator = () => {
     let [size, setSize] = useState(0);
     let [squareMeter, setSquareMeter] = useState(0);
-    let numArr = size.toString().split('')
-    console.log(numArr)
+    let numArr = size.toString().split('');
+    console.log(numArr);
     const el = useRef();
     useEffect(() => {
       gsap.to(el.current, {
-        innerText:`${(size * 395).toFixed(2)} ₸`,
+        innerText: `${(size * 395).toFixed(2)} ₸`,
         duration: 0.5,
       });
     });
     return (
       <div className="w-[320px] xl:w-[370px] bg-[#FDF7F2] rounded-[20px] py-8">
         <div className="flex flex-col justify-center items-center">
-          <div className="flex gap-8">
+          <div className="flex justify-center gap-8">
             <BoardCounter
               title="Погонные метры"
               minusEvent={() => {
-                if (size > 0){
+                if (size > 0) {
                   setSize(--size);
-                  if (size % 7 == 6) setSquareMeter(--squareMeter)
-                  
+                  if (size % 7 == 6) setSquareMeter(--squareMeter);
                 }
-                ;
               }}
               plusEvent={() => {
                 setSize(++size);
@@ -117,7 +115,7 @@ export default function BoardType() {
           <div className="mx-auto border-2 border-white lg:w-[230px] mt-8 mb-4"></div>
           <p className="text-[#6F6F6F] text-base mb-1">1.00 пог. метр 359.00 ₸</p>
           <p className="text-black text-3xl font-bold uppercase mb-5" ref={el}>
-            { (size * 395).toFixed(2)} ₸
+            {(size * 395).toFixed(2)} ₸
           </p>
           <Btn className="btn btn-primary w-[280px] lg:w-[230px] h-[65px]"> В корзину </Btn>
         </div>
@@ -354,7 +352,7 @@ export default function BoardType() {
                     <div className="w-[90px] rounded-[5px] h-[70px] scale-75 lg:scale-100">
                       <img
                         src={slide.image}
-                        className="rounded-[5px] w-[90px] h-[70px]"
+                        className="rounded-[5px] w-[80px] h-[70px]"
                         alt=""
                         onClick={() => setSliderState(i)}
                       />
@@ -372,8 +370,13 @@ export default function BoardType() {
   return (
     <>
       <CatalogLayout>
+        <img
+          src="/assets/circles.svg"
+          alt=""
+          className="circles rotate-180 z-0 absolute left-[1px] top-[180px]"
+        />
         <BreadCrumbs
-          className="text-black"
+          className="text-black pt-6 lg:pt-10 pb-6 lg:pb-2"
           pages={[
             { name: 'Главная', path: '/' },
             { name: 'каталог ДПК', path: '/catalog' },

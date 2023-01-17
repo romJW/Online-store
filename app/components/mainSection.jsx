@@ -24,7 +24,7 @@ export default function mainSection() {
     <>
       <div className="mainSection w-full relative mx-auto flex flex-col justify-center  text-black py-12">
       <div className='absolute right-[1px] top-[110px]'>
-          <img src='assets/circles.svg' alt='' className=''/>
+          <img src='assets/circles.svg' alt='' className='circles'/>
         </div>
         <div className="mainSection__container w-full  mx-auto flex flex-col justify-center items-center relative">
           <h3 className="font-[Days] text-center text-3xl lg:text-5xl uppercase relative top-[80px]">

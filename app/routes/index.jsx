@@ -35,7 +35,7 @@ export default function Index() {
             }
           />
           <div className="absolute right-[1px] top-[-50px]">
-            <img src="/assets/circles.svg" alt="" className="" />
+            <img src="/assets/circles.svg" alt="" className="circles" />
           </div>
         </div>
         <BoardDescription />

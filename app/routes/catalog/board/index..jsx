@@ -10,7 +10,7 @@ import BreadCrumbs from '../../../components/UI/BreadCrumbs'
 export default function Catalog() {
   return (
     <CatalogLayout>
-      <BreadCrumbs className="text-black" pages={[{name:'Главная', path:'/'}, {name:'каталог ДПК', path:'/catalog'},{name:'террасная доска', path:'/catalog/board'}]}/>
+      <BreadCrumbs className="text-black pt-6 lg:pt-10 pb-6 lg:pb-2" pages={[{name:'Главная', path:'/'}, {name:'каталог ДПК', path:'/catalog'},{name:'террасная доска', path:'/catalog/board'}]}/>
       <CatalogBoard/>
       <BoardDescription/>
       <MontageBlock/>

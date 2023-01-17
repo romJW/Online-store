@@ -12,7 +12,7 @@ const cards = [
       'catalogColor5.png',
       'catalogColor6.png',
     ],
-    path:'/catalog/board'
+    path: '/catalog/board',
   },
   {
     image: 'CatalogPreview2.png',
@@ -25,7 +25,7 @@ const cards = [
       'catalogColor5.png',
       'catalogColor6.png',
     ],
-    path:'/catalog/stairs'
+    path: '/catalog/stairs',
   },
   {
     image: 'CatalogPreview3.png',
@@ -38,7 +38,7 @@ const cards = [
       'catalogColor5.png',
       'catalogColor6.png',
     ],
-    path:'/catalog/hedge'
+    path: '/catalog/hedge',
   },
   {
     image: 'CatalogPreview4.png',
@@ -51,28 +51,32 @@ const cards = [
       'catalogColor5.png',
       'catalogColor6.png',
     ],
-    path:'/catalog/hedgeboard'
+    path: '/catalog/hedgeboard',
   },
-  { image: 'CatalogPreview5.png', title: 'Комплектующие', colors: '', path:'/catalog/details' },
+  { image: 'CatalogPreview5.png', title: 'Комплектующие', colors: '', path: '/catalog/details' },
 ];
 const CatalogProducts = () => {
   return (
     <>
-      <Section>
-        <div className="mx-auto container text-black flex flex-col items-center sm:items-start justify-center relative z-10">
-          <h3 className="font-[Days] uppercase text-black text-3xl lg:text-5xl mb-12 ">
-            Каталог ДПК
-          </h3>
-          <div className="flex flex-col">
-            <div className="container grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 lg:gap-12">
-              {cards.map((card) => (
-                <CatalogPreviewCard path={card.path} image={card.image} title={card.title} colors={card.colors} />
-              ))}
-            </div>
+      <div className="mx-auto container text-black flex flex-col items-center sm:items-start justify-center relative z-10">
+        <h3 className="font-[Days] uppercase text-black text-3xl lg:text-5xl mb-12 ">
+          Каталог ДПК
+        </h3>
+        <div className="flex flex-col">
+          <div className="container grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 lg:gap-12">
+            {cards.map((card) => (
+              <CatalogPreviewCard
+                path={card.path}
+                image={card.image}
+                title={card.title}
+                colors={card.colors}
+              />
+            ))}
           </div>
         </div>
-        <img src='/assets/circles.svg' className='absolute left-0 top-1/4 rotate-180 z-0' />
-      </Section>
+      </div>
+      <img src="/assets/circles.svg" className="circles absolute left-0 top-1/4 rotate-180 z-0" />
+      <Section></Section>
     </>
   );
 };

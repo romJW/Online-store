@@ -18,7 +18,7 @@ export default function BoardDescription() {
     <Section>
         <div className='relative'>
         <div className='absolute right-[1px] top-[330px]'>
-          <img src='/assets/circles.svg' alt='' className=''/>
+          <img src='/assets/circles.svg' alt='' className='circles'/>
         </div>
       <div className="container relative mx-auto flex flex-col justify-center items-center text-[#2F2222] mt-10">
         <h3 className="font-[Days] uppercase text-3xl lg:text-5xl mb-10 text-center">

@@ -183,7 +183,7 @@ const CatalogBoard = () => {
   
 
   return (
-    <Section>
+    <>
       <div className="mx-auto container text-black px-6 xs:px-0 relative z-10">
         <h3 className="font-days uppercase text-3xl lg:text-5xl mb-14">Террасная доска</h3>
         <div className="">
@@ -235,8 +235,10 @@ const CatalogBoard = () => {
           </div>
         </div>
       </div>
-      <img src="/assets/circles.svg" className="absolute left-0 top-1/4 rotate-180 z-0" />
+      <img src="/assets/circles.svg" className="circles absolute left-0 top-1/4 rotate-180 z-0" />
+      <Section>
     </Section>
+    </>
   );
 };
 

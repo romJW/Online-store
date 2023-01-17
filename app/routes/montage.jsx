@@ -202,14 +202,14 @@ export default function Index() {
               У нас вы можете заказать материал и последующий монтаж «под ключ»
             </p>
             <div className="swiper swiperMontage  mx-auto mb-10 relative ">
-              <div className="swiper-wrapper swiper-wrapper-montage py-20 px-10 mx-auto relative">
+              <div className="swiper-wrapper swiper-wrapper-montage py-20  mx-auto relative">
                 {catalogCards.map((card) => {
                   return (
                     <div
                       key={card.image}
                       className="swiper-slide  flex items-center justify-center lg:w-[370px]">
                       <MontageSliderCard
-                        className="w-[280px] lg:w-[360px]"
+                        className="w-[280px] lg:w-[370px]"
                         image={card.image}
                         title={card.title}
                         city={card.city}
@@ -241,7 +241,7 @@ export default function Index() {
         <MontageHero />
         <div className="relative">
           <MontageAdvantages />
-          <img src="/assets/circles.svg" alt="" className="z-0 absolute right-[1px] top-[30px]" />
+          <img src="/assets/circles.svg" alt="" className="circles z-0 absolute right-[1px] top-[30px]" />
         </div>
         <MontageSlider />
         <MontagePriviliges />

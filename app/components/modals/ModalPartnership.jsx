@@ -1,7 +1,6 @@
 import { useState, useContext } from 'react';
 import { ModalPartnershipContext, ModalDataSentContext } from '../../contexts/context';
-import ImageUploading from 'react-images-uploading';
-
+import UploadImageBtn from '../UI/UploadImageBtn'
 import PhoneInput from '../UI/PhoneInput';
 import FormInput from '../UI/FormInput';
 import Btn from '../UI/Btn';
@@ -39,42 +38,7 @@ const Modal = () => {
               className="w-[300px] lg:w-[420px] h-[65px] lg:h-[75px] mb-8 placeholder:text-start"
               placeholder="Номер телефона"
             />
-            <ImageUploading
-              value={images}
-              onChange={onChange}
-              maxNumber={maxNumber}
-              dataURLKey="data_url">
-              {({
-                imageList,
-                onImageUpload,
-                onImageRemoveAll,
-                onImageUpdate,
-                onImageRemove,
-                isDragging,
-                dragProps,
-              }) => (
-                <div>
-                  {imageList.length == 0 && (
-                    <Btn
-                      className="btn-secondary rounded-md text-base w-[300px] mb-5 h-16 block lg:hidden"
-                      onClick={onImageUpload}>
-                      Прикрепить файл
-                    </Btn>
-                  )}
-                  {imageList.map((image, index) => (
-                    <div key={index} className="image-item">
-                      <img src={image['data_url']} className="h-16 w-16" />
-                      <div className="flex gap-2 items-center">
-                        <button onClick={() => onImageUpdate(index)}>Обновить</button>
-                        <i
-                          className="fa-sharp cursor-pointer fa-solid fa-xmark"
-                          onClick={() => onImageRemove(index)}></i>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </ImageUploading>
+           <UploadImageBtn className='w-[300px] block lg:hidden mb-5'/>
             <div className="flex flex-col-reverse lg:flex-col items-center gap-5 lg:pb-12">
               <Btn
                 kind="btn-primary w-[300px] lg:w-[420px] h-[65px] lg:h-[85px] text-base lg:text-xl mb-4"
