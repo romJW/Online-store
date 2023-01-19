@@ -4635,8 +4635,8 @@ html {
   max-height: 300px;
 }
 
-.max-h-\[750px\] {
-  max-height: 750px;
+.max-h-\[850px\] {
+  max-height: 850px;
 }
 
 .max-h-\[230px\] {
@@ -4649,14 +4649,6 @@ html {
 
 .max-h-\[840px\] {
   max-height: 840px;
-}
-
-.max-h-\[800px\] {
-  max-height: 800px;
-}
-
-.max-h-\[850px\] {
-  max-height: 850px;
 }
 
 .w-full {
@@ -4787,6 +4779,14 @@ html {
   width: 145px;
 }
 
+.w-\[100px\] {
+  width: 100px;
+}
+
+.w-\[190px\] {
+  width: 190px;
+}
+
 .w-\[430px\] {
   width: 430px;
 }
@@ -4847,14 +4847,6 @@ html {
 
 .w-\[80px\] {
   width: 80px;
-}
-
-.w-\[190px\] {
-  width: 190px;
-}
-
-.w-\[100px\] {
-  width: 100px;
 }
 
 .max-w-full {
