@@ -4,33 +4,33 @@ import { ModalFormContext } from '../contexts/context';
 export default function Footer() {
   const socials = [
     {
-      logo: 'fa-brands fa-youtube fa-2xl hover:scale-110',
+      logo: 'youtube.svg',
       path: '/',
-      id: '11',
+      id: '1',
       color: '#FF0000',
     },
     {
-      logo: 'fa-brands fa-instagram fa-2xl hover:scale-110',
+      logo: 'instagram.svg',
       path: '/',
-      id: '12',
+      id: '2',
       color: '#8a3ab9	',
     },
     {
-      logo: 'fa-brands fa-vk fa-2xl hover:scale-110',
+      logo: 'vk.svg',
       path: '/',
-      id: '13',
+      id: '3',
       color: '#4C75A3',
     },
     {
-      logo: 'fa-brands fa-whatsapp-square fa-2xl hover:scale-110',
+      logo: 'whatsapp.svg',
       path: '/',
-      id: '14',
+      id: '4',
       color: '#25d366',
     },
     {
-      logo: 'fa-brands fa-telegram fa-2xl hover:scale-110',
+      logo: 'telegram.svg',
       path: '/',
-      id: '15',
+      id: '5',
       color: '#2AABEE',
     },
   ];
@@ -39,12 +39,13 @@ export default function Footer() {
     <>
       <footer>
         <div className="bg-footer text-white  flex flex-col justify-center xs:items-center py-4 lg:py-8  px-2">
+          <div>
           <div className="flex flex-col items-center justify-center lg:flex-row lg:gap-4 xl:gap-20 2xl:ml-16">
             <div className="flex gap-8 justify-center items-center">
-              <div className="flex flex-col items-center justify-center lg:gap-4 xl:gap-8 lg:flex-row mb-4">
+              <div className="flex flex-col items-center justify-center lg:gap-4 xl:gap-[75px] lg:flex-row mb-4">
                 <img src="/assets/FooterLogo.png" alt="" />
                 <p className="text-[10px] lg:text-sm ">
-                  Производство террасной <br /> доски ДПК в России
+                  Крупнейший поставщик <br /> террассной доски ДПК в Казахстане
                 </p>
               </div>
               <Btn
@@ -81,25 +82,11 @@ export default function Footer() {
                 <a className="hover:opacity-75" href="/">
                   Заборная доска из ДПК
                 </a>
+                <a href="" className="hover:opacity-75 mt-6 hidden lg:block">
+                  Политика конфиденциальности
+                </a>
               </nav>
             </div>
-
-            <div className="lg:col-span-2">
-              <p className="font-bold">Полезно</p>
-              <nav className="flex flex-col gap-2 mt-4 text-sm text-[#FFFFFFB2]">
-                <a className="hover:opacity-75" href="">
-                  Инструкции
-                </a>
-                <a className="hover:opacity-75" href="">
-                  Новости и статьи
-                </a>
-                <a className="hover:opacity-75" href="/">
-                  Популярные статьи
-                </a>
-                <div className="w-2/3"></div>
-              </nav>
-            </div>
-
             <div className="lg:col-span-2">
               <p className="font-bold">О компании</p>
 
@@ -117,7 +104,32 @@ export default function Footer() {
                   <a href="" className="hover:opacity-75">
                     Контакты
                   </a>
+                  <a href="" className="hover:opacity-75 mt-6 hidden lg:block">
+                    Пользовательское соглашение
+                  </a>
                 </div>
+              </nav>
+            </div>
+
+            <div className="lg:col-span-2">
+              <p className="font-bold">Полезно</p>
+              <nav className="flex flex-col gap-2 mt-4 text-sm text-[#FFFFFFB2]">
+                <a className="hover:opacity-75" href="">
+                  Инструкции
+                </a>
+                <a className="hover:opacity-75" href="">
+                  Новости и статьи
+                </a>
+                <a className="hover:opacity-75" href="/">
+                  Популярные статьи
+                </a>
+                <a href="" className="hover:opacity-75 opacity-0">
+                  Пользовательское соглашение
+                </a>
+                <a href="" className="hover:opacity-75 mt-6 hidden lg:block">
+                  Разработка сайта ....
+                </a>
+                <div className="w-2/3"></div>
               </nav>
             </div>
 
@@ -126,9 +138,9 @@ export default function Footer() {
 
               <nav class="flex flex-col mt-4 text-sm text-[#FFFFFFB2]">
                 <div class="flex flex-col gap-2">
-                  <a href="tel:+7 (771) 741-18-22">+7 (771) 741-18-22</a>
-                  <a href="mailto:info@abbex.kz">+7 (727) 395-80-82</a>
-                  <a href="mailto:info@abbex.kz">info@abbex.kz</a>
+                  <a href="tel:+7 (701) 741-18-44">+7 (701) 741-18-44</a>
+                  <a href="tel:+7 (701) 741-18-77">+7 (701) 741-18-77</a>
+                  <a href="mailto:sales@abbex.kz">sales@abbex.kz</a>
                   <div className="flex flex-col lg:mr-4 xl:mr-0">
                     <Btn
                       kind=""
@@ -138,19 +150,18 @@ export default function Footer() {
                     <div className="flex gap-4 justify-center flex-wrap w-[110px] sm:w-full">
                       {socials.map((social) => (
                         <a key={social.id} rel="nofollow" href={social.path}>
-                          <div className="w-[19px] h-[19.5px] relative bg-white flex items-center justify-center">
-                            <i
-                              className={social.logo}
-                              style={{
-                                position: 'relative',
-                                top: '1px',
-                                color: `${social.color}`,
-                                display: 'block',
-                                justifySelf: 'center',
-                                alignSelf: 'center',
-                              }}
-                            />
-                          </div>
+                          <img
+                            className="hover:scale-110"
+                            src={`/assets/${social.logo}`}
+                            style={{
+                              position: 'relative',
+                              top: '1px',
+                              color: `${social.color}`,
+                              display: 'block',
+                              justifySelf: 'center',
+                              alignSelf: 'center',
+                            }}
+                          />
                         </a>
                       ))}
                     </div>
@@ -159,10 +170,31 @@ export default function Footer() {
               </nav>
             </div>
           </div>
-          <div className="flex flex-col mt-4 lg:mt-0 items-start lg:flex-row lg:justify-start gap-2 lg:gap-[60px] xl:gap-24 text-sm text-[#FFFFFFB2] lg:relative lg:top-[-20px] lg:left-[-160px] xl:left-[-180px]">
-            <a href="">Политика конфиденциальности</a>
-            <a href="">Пользовательское соглашение</a>
-            <a href="">Разработка сайта ....</a>
+          
+        </div>
+        <div className="text-sm text-[#FFFFFFB2] flex gap-8 items-center flex-row sm:flex-row lg:hidden">
+          <div className='flex flex-col'>
+            <a className="hover:opacity-75" href="/">
+              Политика конфедициальности
+            </a>
+            <a className="hover:opacity-75" href="/">
+              Пользовательское соглашение
+            </a>
+            <a className="hover:opacity-75" href="/">
+              Разработка сайта...
+            </a>
+            </div>
+            <div className='flex flex-col opacity-0'>
+            <a className="hover:opacity-75" href="/">
+              Политика конфедициальности
+            </a>
+            <a className="hover:opacity-75" href="/">
+              Пользовательское соглашение
+            </a>
+            <a className="hover:opacity-75" href="/">
+              Разработка сайта...
+            </a>
+            </div>
           </div>
         </div>
       </footer>

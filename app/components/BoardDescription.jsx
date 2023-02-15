@@ -2,15 +2,15 @@ import Btn from '../components/UI/Btn';
 import BorderlessCard from '../components/UI/BorderlessCard';
 import Section from "./UI/Section"
 const BorderlessCards = [
-  { icon: '/assets/noun-sprout.svg', text: (<>Состав материала <br />экологически безопасен</>) },
-  { icon: '/assets/noun-rain.svg', text: (<>Влагостойкость, не плесневеет <br /> под воздействием воды</>) },
-  { icon: '/assets/noun-thermometer.svg', text: (<>Диапазон температур: <br /> от -60С° до +75С°</>)},
-  { icon: '/assets/noun-chemistry.svg', text: (<>Не содержит вредные <br /> химические соединения</>) },
+  { icon: '/assets/noun-sprout.svg', text: (<>Состав полностью  <br />экологичен и безопасен <br />для человека </>) },
+  { icon: '/assets/noun-rain.svg', text: (<>Материал влагостойкий и не <br /> плесневеет от воды</>) },
+  { icon: '/assets/noun-thermometer.svg', text: (<>Диапазон температур: <br /> от -40С° до +55С°</>)},
+  { icon: '/assets/noun-chemistry.svg', text: (<>В составе не содержится <br /> вредных, химических <br /> соединений</>) },
   {
     icon: '/assets/noun-diamond.svg',
-    text:  (<>Не выцветает, не коробится <br /> и не трескается под солнцем</>),
+    text:  (<>Защищен от выцветания и не <br /> и не трескается под солнечным <br /> светом</>),
   },
-  { icon: '/assets/noun-bug.svg', text: (<>Материал не едят <br />  насекомые и грызуны</>)},
+  { icon: '/assets/noun-bug.svg', text: (<>Материал остаётся нетронутым<br />  грызунами и насекомыми</>)},
 ];
 export default function BoardDescription() {
   return (

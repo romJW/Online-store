@@ -5,7 +5,7 @@ import {ModalCityContext} from '../contexts/context'
 export default function MobileMenu(props) {
   const {isCityModalOpen, setCityModalOpen } = useContext(ModalCityContext)
   return (
-    <div className="container mx-auto py-5 flex flex-col items-center gap-5 font-medium text-sm text-center bg-white inset-0 object-cover w-full h-screen text-black">
+    <div className="mobileMenu container mx-auto pb-5 flex flex-col  gap-2 font-medium text-sm text-center bg-white inset-0 object-cover w-full h-screen overflow-auto text-black">
       <div>
         <h3 className="font-semibold text-base">Каталог</h3>
         <div className="w-16 border border-black mx-auto"></div>
@@ -78,7 +78,7 @@ export default function MobileMenu(props) {
           Популярные вопросы
         </a>
       </div>
-      <div className="top-header__region flex gap-5 mx-auto text-sm">
+      <div className="top-header__region flex gap-5 text-sm">
         <div className="flex items-center gap-2">
           <i className="fa-solid fa-location-dot fa-sm text-gray-400"></i>
           <p className="top-header__region-label text-gray-400">Ваш регион:</p>
@@ -87,7 +87,7 @@ export default function MobileMenu(props) {
             Выберите Город <i class="fa-sharp fa-solid fa-chevron-down"></i>
         </p>
       </div>
-      <button className="btn btn-secondary">Калькулятор стоимости</button>
+      <button className="btn btn-secondary text-white">Калькулятор стоимости</button>
       <Input className="max-w-xs" placeholder="Я ищу..." />
       <div className="mx-auto text-center">
         <a rel="nofollow" href="tel:+7 (727) 328-80-81">

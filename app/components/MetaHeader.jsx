@@ -18,8 +18,8 @@ export default function MetaHeader({ className }) {
               Выберите Город <i class="fa-sharp fa-solid fa-chevron-down"></i>  
           </p>
         </div>
-        <a rel="nofollow" className="text-white text-sm " href="mailto:info@abbex.kz">
-          info@abbex.kz
+        <a rel="nofollow" className="text-white text-sm " href="mailto:sales@abbex.kz">
+          sales@abbex.kz
         </a>
       </div>
 

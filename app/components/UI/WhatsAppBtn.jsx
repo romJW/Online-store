@@ -3,7 +3,7 @@ export default function WhatsAppBtn(props){
     const [isHover, setIsHover] = useState(false);
     return (
     <div
-        className={`z-4 hidden lg:flex border border-[#25d366] rounded-3xl w-28 h-28 items-center justify-center absolute left-3/4 duration-300 top-[550px] ${
+        className={`z-4 hidden lg:flex border border-[#25d366] rounded-3xl w-28 h-28 items-center justify-center absolute left-[90%] duration-300 top-[550px] ${
           isHover ? 'scale-110' : 'scale-100'
         } `}>
         <div

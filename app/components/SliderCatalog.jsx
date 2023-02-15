@@ -38,6 +38,8 @@ export default function Slider() {
         },
       },
       centeredSlides: true,
+      slidePrevClass: 'catalog-swiper-slide-prev',
+      slideNextClass: 'catalog-swiper-slide-next',
       pagination: {
         el: '.swiper-pagination-catalog',
         clickable: true,

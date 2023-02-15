@@ -27,7 +27,13 @@
 .swiper-pagination-bullet-active {
   background: #ac9b9c !important;
 }
-
+.mobileMenu::-webkit-scrollbar {
+  display: none;
+}
+.mobileMenu {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 .swiper-pagination-bullet-article {
   color: #2f2222 !important;
   font-family: Inter !important;
@@ -67,6 +73,15 @@
     width: 100px !important;
   }
 }
+@media (min-width: 1800px) {
+  .sliderBtnPositionRight{
+    right:-370px !important;
+  }
+  .sliderBtnPositionLeft{
+  left:-370px !important; 
+  }
+  }
+
 .activeColor {
   outline: 2px solid #e41d24;
   border-radius: 5px;
@@ -85,6 +100,9 @@
 }
 .checkboxShadow {
   box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.sliderBtnShadow{
+  box-shadow: 0px 20px 45px rgba(141, 141, 141, 0.3), inset 0px -12px 24px rgba(148, 131, 132, 0.8), inset 0px 2px 24px rgba(255, 255, 255, 0.5);
 }
 .playBtnShadow {
   box-shadow: 0px 20px 45px rgba(216, 0, 0, 0.15), inset 0px -12px 24px rgba(216, 0, 0, 0.15),
@@ -144,7 +162,20 @@
 .swiper-slide-prev {
   opacity: 1 !important;
 }
-
+.catalog-swiper-slide-prev{
+  opacity: 1;
+  transition-property: all !important;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+}
+.catalog-swiper-slide-next{
+  opacity: 1;
+  transition-property: all !important;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+}
 .swiper-pagination-bullet-active {
   background-color: #ac9b9c !important;
 }
@@ -158,23 +189,39 @@
   opacity: 0.2;
   transition-property: all !important;
   transition-duration: 1s;
-  transition-timing-function: ease-out;
+  transition-timing-function: ease-in-out;
   transition-delay: 0s;
 }
 .swiper-slide-review {
   opacity: 0.2 !important;
   transition-property: all !important;
   transition-duration: 1s;
-  transition-timing-function: ease-out;
+  transition-timing-function: ease-in-out;
   transition-delay: 0s;
 }
 .swiper-slide-active {
   opacity: 1 !important;
   transition-property: all !important;
   transition-duration: 2s;
-  transition-timing-function: ease-out;
+  transition-timing-function: ease-in-out;
   transition-delay: 0s;
 }
+/* .swiper-slide-next{
+  opacity: 1 !important;
+  transition-property: all !important;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+
+}
+.swiper-slide-prev{
+  opacity: 1 !important;
+  transition-property: all !important;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+
+} */
 .swiper-wrapper {
   padding-bottom: 10px;
 }

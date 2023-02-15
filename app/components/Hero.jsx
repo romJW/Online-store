@@ -20,9 +20,9 @@ export default function Hero() {
           Террасная доска и ограждения из ДПК
         </div>
         <ul className="list-disc list-inside flex flex-col align-center items-center lg:items-start">
-          <li className="text-white text-base lg:text-2xl">Натуральный внешний вид</li>
-          <li className="text-white text-base lg:text-2xl">Не нуждается в особом уходе</li>
-          <li className="text-white text-base lg:text-2xl">
+          <li className="text-white text-xl lg:text-2xl">Натуральный внешний вид</li>
+          <li className="text-white text-xl lg:text-2xl">Не нуждается в особом уходе</li>
+          <li className="text-white text-xl lg:text-2xl">
             Стойкость к перепадам температур
           </li>
         </ul>

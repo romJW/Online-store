@@ -1,10 +1,11 @@
-import { useContext, useState, useEffect } from 'react';
+import { useContext, useState, useEffect, useRef } from 'react';
 import { ModalBasketContext, BasketArrContext } from '../../contexts/context';
 import Btn from '../UI/Btn';
 import FormInput from '../UI/FormInput';
 import FormTextArea from '../UI/FormTextArea';
 import CheckBox from '../UI/CheckBox';
 import Agreement from '../UI/Agreement';
+import gsap from 'gsap';
 const Modal = () => {
   const { isBasketOpen, setBasketOpen } = useContext(ModalBasketContext);
   const { BasketArr, SetBasketArr } = useContext(BasketArrContext);
@@ -18,6 +19,15 @@ const Modal = () => {
   //     console.log(parsedBasketArr);
   //     SetBasketArr(parsedBasketArr);
   //   }, []);
+  const basketPrice = useRef();
+  
+    useEffect(() => {
+      gsap.to(basketPrice.current, {
+        innerText: `${total.toFixed(2)} ₸`,
+        duration: 0.5,
+      });
+      
+    });
 
   const removeFromBasket = (itemId) => {
     let items = BasketArr.filter((item) => item.id !== itemId);
@@ -149,12 +159,12 @@ const Modal = () => {
   };
   const Basket = () => {
     return (
-      <div className="py-8 lg:py-12 px-8 lg:px-12">
-        <h3 className="font-days text-3xl mb-8 text-center">Корзина</h3>
+      <div className="">
+        <h3 className="font-days text-3xl mb-8 text-center uppercase">Корзина</h3>
         <div className="justify-center gap-1 mb-4 hidden lg:flex">
           <CategoryItem text="Товар" className="w-[500px] " />
-          <CategoryItem text="Количество" className="w-[170px]" />
-          <CategoryItem text="Сумма (руб.)" className="w-[200px]" />
+          <CategoryItem text="Количество (шт.)" className="w-[170px]" />
+          <CategoryItem text="Сумма (тнг.)" className="w-[200px]" />
           <CategoryItem text="Удалить" className="w-[90px]" />
         </div>
         <div className="flex flex-col gap-8 mb-14 max-h-[300px] overflow-auto">
@@ -178,7 +188,7 @@ const Modal = () => {
         </div>
         <div className="text-[#6F6F6F] text-sm lg:text-base text-center mb-10">
           {BasketArr.length == 0 ? <p>Пусто</p> : <p>Итого:</p>}
-          <p className="text-black font-bold text-3xl lg:text-5xl">{total.toFixed(2)} ₸</p>
+          <p className="text-black font-bold text-3xl lg:text-5xl" ref={basketPrice}>0₸</p>
         </div>
         <div className="flex justify-center items-center gap-5 flex-col-reverse lg:flex-row">
           <Btn

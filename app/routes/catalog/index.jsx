@@ -10,7 +10,13 @@ import BreadCrumbs from '../../components/UI/BreadCrumbs';
 export default function Catalog() {
   return (
     <CatalogLayout>
-      <BreadCrumbs className="text-black pt-6 lg:pt-10 pb-6 lg:pb-2" pages={[{name:'Главная', path:'/'}, {name:'каталог ДПК', path:'/catalog'}]} />
+      <BreadCrumbs
+        className="text-black pt-6 lg:pt-10 pb-6 lg:pb-2"
+        pages={[
+          { name: 'Главная', path: '/' },
+          { name: 'каталог ДПК', path: '/catalog' },
+        ]}
+      />
       <CatalogProducts />
       <BoardDescription />
       <MontageBlock />
@@ -24,7 +30,12 @@ export default function Catalog() {
           </>
         }
       />
-      <Subscribe />
+      <div className="relative">
+        <Subscribe />
+        <div className="absolute right-[1px] top-[-50px]">
+          <img src="/assets/circles.svg" alt="" className="circles" />
+        </div>
+      </div>
     </CatalogLayout>
   );
 }

@@ -163,7 +163,7 @@ export default function BoardType() {
 
   const BoardPdf = () => {
     return (
-      <div className="flex flex-col justify-center text-black w-[360px] mx-auto px-5">
+      <div className="flex flex-col justify-center text-black w-[360px] mx-auto">
         <div className="flex gap-2 items-center">
           <img src="/assets/PdfIcon.svg" />
           <p className="font-medium text-base lg:text-lg mb-2">Планируете делать монтаж сами?</p>
@@ -193,7 +193,7 @@ export default function BoardType() {
   const BoardConditions = () => {
     const conditions = [
       { icon: '/assets/BoardWarranty.svg', text: 'Гарантия 3 года' },
-      { icon: '/assets/BoardDelivery.svg', text: 'Доставка по всей России' },
+      { icon: '/assets/BoardDelivery.svg', text: 'Доставка по всему Казахстану' },
       { icon: '/assets/BoardMoney.svg', text: 'Оплата при получении или на р/с' },
     ];
     const BoardItem = ({ icon, text }) => {

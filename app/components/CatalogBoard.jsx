@@ -236,6 +236,7 @@ const CatalogBoard = () => {
         </div>
       </div>
       <img src="/assets/circles.svg" className="circles absolute left-0 top-1/4 rotate-180 z-0" />
+      <img src="/assets/circles.svg" className="circles absolute right-0 top-[155%]  z-0" />
       <Section>
     </Section>
     </>

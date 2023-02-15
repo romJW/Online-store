@@ -153,10 +153,10 @@ export default function Slider() {
 
         <SliderPagination className="swiper-pagination-review"/>
         <div className="flex justify-center gap-6 mt-5">
-          <SliderBtnLeft className="relative lg:top-[-400px] lg:left-[-325px] z-20" />
-          <SliderBtnRight className="relative lg:top-[-400px] lg:right-[-325px] z-20" />
+          <SliderBtnLeft className="relative lg:top-[-400px] lg:left-[-325px] sliderBtnPositionLeft z-20" />
+          <SliderBtnRight className="relative lg:top-[-400px] lg:right-[-325px] sliderBtnPositionRight z-20" />
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center lg:mt-[-40px]">
           <Btn
             kind="secondary"
             className="mx-auto mt-5 lg:mt-0 w-[300px] lg:w-[436px] h-20 lg:h-[89px] text-base lg:text-xl">

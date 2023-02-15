@@ -1,6 +1,6 @@
 import AboutCard from './AboutCard';
 import PlayBtn from './UI/PlayBtn';
-export default function About({children, className}) {
+export default function About({ children, className }) {
   const AboutCards = [
     {
       icon: '/assets/woods.svg',
@@ -10,22 +10,20 @@ export default function About({children, className}) {
         </>
       ),
     },
-    { icon: '/assets/store.svg', text: '10 производственных линий' },
-    { icon: '/assets/Machine.svg', text: '7 складов по всей стране' },
+    { icon: '/assets/store.svg', text: '18.000м2 Продукции всегда в наличии' },
+    { icon: '/assets/Machine.svg', text: 'Объекты по всему Казахстану' },
   ];
   return (
     <>
       <div className={`mx-auto  bg-no-repeat bg-cover w-full wood-bg py-24 lg:py-36 ${className}`}>
-        <>
-        {children}
-        </>
+        <>{children}</>
         <div className="container mx-auto flex flex-col z-10 justify-center items-center px-3 lg:px-0">
           <div className="flex flex-col lg:flex-row mx-auto justify-center items-center gap-6  mb-5">
             <div className="text-white ">
               <h3 className="font-[Days] uppercase text-3xl lg:text-5xl mb-8">О компании</h3>
               <p className="text-[#FFFFFFB2] text-lg lg:text-xl mb-6">
-                Компания ABBEX занимается производством продукции <br className='hidden sm:block'/> из ДПК. Компания основана в
-                2015 году.{' '}
+                Компания ABBEX занимается монтажом и реализацией <br className="hidden sm:block" />{' '}
+                продукции из ДПК с 2017г.
               </p>
               <div
                 style={{ backgroundImage: 'url("/assets/aboutSmall.png")' }}
@@ -33,8 +31,9 @@ export default function About({children, className}) {
                 <PlayBtn />
               </div>
               <p className=" text-[#FFFFFFB2] text-lg lg:text-xl">
-                За 7 лет мы прошли путь от небольшого производства до <br className="hidden sm:block"/> автоматизированного
-                цеха с 10 производственными линиями <br className="hidden sm:block"/> и 145 дилерами по всей России.
+                За 5 лет мы прошли путь от небольшого офиса до <br className="hidden sm:block" />{' '}
+                автоматизированного склада с 20 дилерами по всему <br className="hidden sm:block" />{' '}
+                Казахстану.
               </p>
             </div>
             <div
