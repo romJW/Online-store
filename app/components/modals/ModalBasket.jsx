@@ -109,7 +109,7 @@ const Modal = () => {
             <img src={`/assets/${image}`} className="w-16 lg:w-[150px] h-16 lg:h-[100px]" />
             <div className="font-mont">
               <p className="font-bold text-base lg:text-xl">{title}</p>
-              <p className="font-medium text-sm lg:text-base">{price} ₸</p>
+              <p className="font-medium text-sm lg:text-base">1.00 пог. метр {price} ₸</p>
             </div>
           </div>
           <div className="w-[170px] justify-center hidden lg:flex">
@@ -177,7 +177,7 @@ const Modal = () => {
                   {item.title} {item.size}
                 </>
               }
-              price={+item.price}
+              price={item.price}
               cost={+item.fullPrice}
               removeFromBasket={() => removeFromBasket(item.id)}
               plusEvent={() => plusEvent(item.id)}

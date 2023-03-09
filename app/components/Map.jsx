@@ -4,7 +4,7 @@ export default function Map() {
       className="section w-full text-black text-xl relative"
       style={{ fontFamily: 'inter, sans-serif', lineHeight: '1.4', color: '#393939' }}>
       <div className="relative  mx-auto ">
-        <div className="card card-body flex flex-col gap-2 lg:gap-5 absolute z-10  rounded-[20px] bg-white justify-center top-4 lg:top-8 left-2 lg:left-[100px] py-7 2xl:left-[250px]">
+        <div className="card card-body flex flex-col gap-2 lg:gap-5 absolute z-10  rounded-[20px] bg-white justify-center top-32 lg:top-8 left-14 lg:left-[100px] py-7 2xl:left-[250px]">
           <h3 className="font-[Days] text-3xl lg:text-5xl">КОНТАКТЫ</h3>
           <div className="flex flex-col justify-between text-lg lg:text-xl">
             <p className="font-bold ">г. Астана</p>

@@ -6,8 +6,7 @@ import CheckBox from './UI/CheckBox';
 import Section from './UI/Section';
 const QuestionConsult = () => {
   return (
-    <Section>
-      <div className="container mx-auto">
+      <div className="container mx-auto pb-10">
         <div className="flex flex-col items-center gap-5 text-black">
           <div>
             <h3 className="font-days text-center uppercase text-3xl lg:text-5xl">
@@ -39,7 +38,6 @@ const QuestionConsult = () => {
           </div>
         </div>
       </div>
-    </Section>
   );
 };
 export default QuestionConsult;

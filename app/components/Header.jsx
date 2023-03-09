@@ -125,7 +125,7 @@ export default function Header() {
             </div>
           </div>
           <div className="header__menu flex gap-5 items-center  lg:hidden text-black">
-            <img src="/assets/phone.svg" alt="" />
+          <a href="tel:+7 (701) 741-18-44"><img src="/assets/phone.svg" alt="" /></a>
             <img src="/assets/basket.svg" alt="" onClick={() => setBasketOpen(true)} />
             <div className="w-3 h-3 bg-[#F12028] rounded-[10px] text-white text-[6px] relative bottom-2 right-6 z-10 flex justify-center items-center">
                 {BasketArr.length > 100 ? '9+': BasketArr.length}

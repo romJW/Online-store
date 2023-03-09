@@ -22,13 +22,13 @@ export default function BoardDescription() {
         </div>
       <div className="container relative mx-auto flex flex-col justify-center items-center text-[#2F2222] mt-10">
         <h3 className="font-[Days] uppercase text-3xl lg:text-5xl mb-10 text-center">
-        ТЕРРАСНАЯ ДОСКА Напрямую от <br/> заводов <br/> СЛУЖИТ БОЛЕЕ 15 ЛЕТ
+        Террасная доска  <br/>служит до 25 лет <br/>
         </h3>
         <div className="flex gap-8 justify-center flex-col-reverse lg:flex-row mb-14">
           <img src="/assets/BigBoard.png" alt="" className="mx-auto max-w-full" />
           <div className="text-base flex flex-col justify-center items-start lg:text-2xl">
             <h4 className="font-bold ">
-              Террасная доска WOODGRAND состоит <br /> из двух компонентов:
+              Террасная доска состоит <br /> из двух компонентов:
             </h4>
             <ul className="list-disc pl-10">
               <li>натуральная древесная мука</li>
@@ -47,7 +47,7 @@ export default function BoardDescription() {
         </div>
         <Btn
           kind="btn-primary"
-          className="w-[310px] h-[84px] lg:w-[430px] lg:h-[110px] text-base lg:text-xl">
+          className="w-[310px] h-[84px] lg:w-[430px] lg:h-[110px] text-base lg:text-2xl">
           Перейти в каталог{' '}
         </Btn>
       </div>

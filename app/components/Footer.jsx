@@ -87,7 +87,28 @@ export default function Footer() {
                 </a>
               </nav>
             </div>
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2 block lg:hidden">
+              <p className="font-bold">Полезно</p>
+              <nav className="flex flex-col gap-2 mt-4 text-sm text-[#FFFFFFB2]">
+                <a className="hover:opacity-75" href="">
+                  Инструкции
+                </a>
+                <a className="hover:opacity-75" href="">
+                  Новости и статьи
+                </a>
+                <a className="hover:opacity-75" href="/">
+                  Популярные статьи
+                </a>
+                <a href="" className="hover:opacity-75 opacity-0">
+                  Пользовательское соглашение
+                </a>
+                <a href="" className="hover:opacity-75 mt-6 hidden lg:block">
+                  Разработка сайта ....
+                </a>
+                <div className="w-2/3"></div>
+              </nav>
+            </div>
+            <div className="lg:col-span-2 hidden lg:block">
               <p className="font-bold">О компании</p>
 
               <nav className="flex flex-col mt-4  text-sm text-[#FFFFFFB2]">
@@ -111,7 +132,7 @@ export default function Footer() {
               </nav>
             </div>
 
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2 hidden lg:block">
               <p className="font-bold">Полезно</p>
               <nav className="flex flex-col gap-2 mt-4 text-sm text-[#FFFFFFB2]">
                 <a className="hover:opacity-75" href="">
@@ -132,6 +153,29 @@ export default function Footer() {
                 <div className="w-2/3"></div>
               </nav>
             </div>
+            <div className="lg:col-span-2 block lg:hidden">
+              <p className="font-bold">О компании</p>
+
+              <nav className="flex flex-col mt-4  text-sm text-[#FFFFFFB2]">
+                <div className="flex flex-col gap-2">
+                  <a href="" className="hover:opacity-75">
+                    Отзывы
+                  </a>
+                  <a href="" className="hover:opacity-75">
+                    Сертификаты и лицензии
+                  </a>
+                  <a href="" className="hover:opacity-75">
+                    Партнерам
+                  </a>
+                  <a href="" className="hover:opacity-75">
+                    Контакты
+                  </a>
+                  <a href="" className="hover:opacity-75 mt-6 hidden lg:block">
+                    Пользовательское соглашение
+                  </a>
+                </div>
+              </nav>
+            </div>
 
             <div class="lg:col-span-2">
               <p class="font-bold">Контакты</p>
@@ -147,7 +191,7 @@ export default function Footer() {
                       className="text-xs lg:w-[170px] xl:w-[190px] h-[40px] border-white text-white bg-transparent hidden lg:block mt-2 mb-2">
                       Заказать звонок
                     </Btn>
-                    <div className="flex gap-4 justify-center flex-wrap w-[110px] sm:w-full">
+                    <div className="flex gap-4  flex-wrap w-[130px] sm:w-full">
                       {socials.map((social) => (
                         <a key={social.id} rel="nofollow" href={social.path}>
                           <img
@@ -173,7 +217,7 @@ export default function Footer() {
           
         </div>
         <div className="text-sm text-[#FFFFFFB2] flex gap-8 items-center flex-row sm:flex-row lg:hidden">
-          <div className='flex flex-col'>
+          <div className='flex flex-col mt-[-60px] lg:mt-0'>
             <a className="hover:opacity-75" href="/">
               Политика конфедициальности
             </a>
@@ -184,7 +228,7 @@ export default function Footer() {
               Разработка сайта...
             </a>
             </div>
-            <div className='flex flex-col opacity-0'>
+            <div className='flex flex-col opacity-0 '>
             <a className="hover:opacity-75" href="/">
               Политика конфедициальности
             </a>

@@ -15,6 +15,19 @@ const cards = [
     path: '/catalog/board',
   },
   {
+    image: 'CatalogPreview.png',
+    title: 'Сайдинг',
+    colors: [
+      'catalogColor.png',
+      'catalogColor2.png',
+      'catalogColor3.png',
+      'catalogColor4.png',
+      'catalogColor5.png',
+      'catalogColor6.png',
+    ],
+    path: '/catalog/board',
+  },
+  {
     image: 'CatalogPreview2.png',
     title: 'Ступени из ДПК',
     colors: [

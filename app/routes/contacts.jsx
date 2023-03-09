@@ -8,10 +8,10 @@ const contacts = () => {
   
   return (
     <MainLayout>
-      <div className="header-bg py-12 ">
+      <div className="header-bg py-20 ">
         <div className="container mx-auto text-white">
           <BreadCrumbs
-            className="text-white"
+            className="text-white mb-6"
             pages={[
               { name: 'Главная', path: '/' },
               { name: 'Контакты', path: '/contacts' },

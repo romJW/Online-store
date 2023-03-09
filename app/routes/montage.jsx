@@ -15,7 +15,7 @@ export default function Index() {
       { icon: 'Calculator.svg', text: 'Рассчитаем количество материалов и объем работ' },
       { icon: 'Drill.svg', text: 'Проведем замер с учетом всех нюансов и деталей' },
       { icon: 'MeasureTape.svg', text: 'Проведем замер с учетом всех нюансов и деталей' },
-      { icon: 'Location.svg', text: 'Работаем во всех крупных городах РФ' },
+      { icon: 'Location.svg', text: 'Работаем во всех крупных городах Казахстана' },
     ];
     const AdvantageCard = ({ icon, text }) => {
       return (
@@ -73,11 +73,11 @@ export default function Index() {
     return (
       <>
         <div
-          className={`flex flex-col CatalogCardBg rounded-[10px] pb-4  text-black ${className}`}
+          className={`flex flex-col CatalogCardBg rounded-[10px] pb-4 border-2 border-transparent hover:border-l-[#D3585C] hover:border-r-[#D3585C] hover:border-b-[#D3585C]  text-black ${className}`}
           onClick={onClick}>
-          <div className="flex flex-col justify-center mx-auto gap-2 text-sm lg:text-xl text-black">
-            <img src={`/assets/${image}`} className="mb-3" />
-            <div className="px-4">
+          <div className="flex flex-col justify-center mx-auto gap-2 text-sm lg:text-xl text-black ">
+            <img src={`/assets/${image}`} className="mb-3 h-[250px]" />
+            <div className="px-4 ">
               <p className="font-semibold text-lg lg:text-xl mb-3">{title}</p>
               <div className="flex gap-8 lg:gap-10 text-[#286F2B] text-sm lg:text-base mb-4">
                 <div className="flex gap-2">
@@ -91,7 +91,7 @@ export default function Index() {
               </div>
               <p className="text-sm lg:text-lg mb-7">{text}</p>
 
-              <a href={path} className="text-sm lg:text-lg underline">
+              <a href={path} className="text-sm lg:text-lg underline hover:text-[#D3585C]">
                 Cмотреть полностью
               </a>
             </div>
@@ -120,13 +120,13 @@ export default function Index() {
               </p>
               <p>Отправьте заявку для связи прямо сейчас. Вам перезвонят и дадут консультацию. </p>
             </div>
-            <img src="assets/MontagePriceBlock.png" className="lg:h-[300px] " />
+            <img src="assets/Slider1.jpg" className="lg:h-[300px] " />
           </div>
           <div className="flex flex-col lg:flex-row gap-5 lg:gap-[185px] text-sm lg:text-lg  text-[#FDF7F2]">
             <div className="flex items-center gap-4">
               <img src="/assets/MontageWarranty.svg" className="w-8 h-8 lg:w-12 lg:h-12" />
               <p>
-                Услуги бригад от компании «WOODGRAND» <br /> соответствуют всем стандартам
+                Услуги бригад от компании "ABBEX" <br /> соответствуют всем стандартам
               </p>
             </div>
             <div className="flex items-center gap-4">
@@ -144,7 +144,7 @@ export default function Index() {
   const MontageSlider = () => {
     const catalogCards = [
       {
-        image: 'sliderPhoto1.png',
+        image: 'Slider1.jpg',
         title: 'Настил из доски для бассейна (Антрацит)',
         city: 'Алматы',
         size: '30',
@@ -152,7 +152,7 @@ export default function Index() {
         text: 'Реализовали эстетически слаженный проект, придомовая терраса из доски 150х22 мм и выставили по перимет...',
       },
       {
-        image: 'SliderPhoto2.png',
+        image: 'Slider2.jpg',
         title: 'Настил из доски для бассейна (Антрацит)',
         city: 'Алматы',
         size: '30',
@@ -160,7 +160,7 @@ export default function Index() {
         text: 'Реализовали эстетически слаженный проект, придомовая терраса из доски 150х22 мм и выставили по перимет...',
       },
       {
-        image: 'SliderPhoto3.png',
+        image: 'Slider3.jpeg',
         title: 'Настил из доски для бассейна (Антрацит)',
         city: 'Алматы',
         size: '30',
@@ -194,7 +194,7 @@ export default function Index() {
     return (
       <>
         <Section>
-          <div className="mx-auto mt-20 text-black container">
+          <div className="mx-auto text-black container">
             <h2 className="text-center text-3xl lg:text-5xl font-[Days] uppercase mb-10">
               Объекты наших клиентов
             </h2>
@@ -207,7 +207,7 @@ export default function Index() {
                   return (
                     <div
                       key={card.image}
-                      className="swiper-slide  flex items-center justify-center lg:w-[370px]">
+                      className="swiper-slide swiper-opacity flex items-center justify-center lg:w-[370px]">
                       <MontageSliderCard
                         className="w-[280px] lg:w-[370px]"
                         image={card.image}
@@ -221,9 +221,10 @@ export default function Index() {
                   );
                 })}
               </div>
+              <SliderPagination className=" swiper-pagination-montage " />
             </div>
 
-            <SliderPagination className="swiper-pagination-montage " />
+            
             <div className="flex justify-center gap-6 mt-5 mb-5">
               <SliderBtnLeft className="relative xl:top-[-420px] xl:left-[-580px]  z-20" />
               <SliderBtnRight className="relative xl:top-[-420px] xl:right-[-580px] z-20" />

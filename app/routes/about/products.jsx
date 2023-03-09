@@ -196,7 +196,7 @@ const products = () => {
             ]}
           />
           <h2 className="text-3xl lg:text-5xl text-center lg:text-start font-days uppercase">
-            ПРОДУКЦИЯ WOODGRAND
+            ПРОДУКЦИЯ ДПК
           </h2>
         </div>
       </div>

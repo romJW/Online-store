@@ -63,10 +63,10 @@ const ListItem = ({children}) => {
         lg:py-12
         mt-2
         relative lg:container mx-auto h-full flex flex-col 
-        items-center  lg:items-start gap-4 lg:gap-10
+        items-center  lg:items-start gap-4 lg:gap-8
         px-3
       ">
-           <BreadCrumbs className='text-white' pages={[{name:'Главная', path:'/'}, {name:'каталог ДПК', path:'/catalog'},{name:'cтупени из ДПК', path:'/catalog/board'}]}/>
+           <BreadCrumbs className='text-white pt-10' pages={[{name:'Главная', path:'/'}, {name:'каталог ДПК', path:'/catalog'},{name:'cтупени из ДПК', path:'/catalog/board'}]}/>
         <h3 className="
           font-days text-white font-semibold uppercase text-3xl
           lg:w-[70%] lg:text-5xl lg:whitespace-nowrap

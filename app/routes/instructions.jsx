@@ -127,7 +127,7 @@ const instructions = () => {
             </ul>
             <div className="flex flex-col lg:flex-row items-center gap-5">
               <Btn
-                className="btn-secondary w-[280px] lg:w-[360px] h-20"
+                className="btn-secondary w-[280px] lg:w-[360px] h-20 text-lg"
                 onClick={() => setInstructionModalOpen(true)}>
                 Скачать инструкцию
               </Btn>
@@ -166,30 +166,30 @@ const instructions = () => {
       </div>
     );
   };
-  const InstructionBlock = () => {
+  const InstructionBlock = ({className}) => {
     return (
-      <div className="container mx-auto text-black rounded-[20px] InstructionShadow">
+      <div className={`container mx-auto text-black rounded-[20px] InstructionShadow ${className}`}>
         <div className="flex flex-col ">
           <div className="container mx-auto cursor-pointer hidden lg:flex">
             <CategoryItem
               onClick={() => setVideo(false)}
               icon="PdfInstruction.svg"
               text="Письменные инструкции"
-              className={`${isVideo ? '' : 'bg-[#F3DFCE]'} rounded-tl-[20px]`}
+              className={`${isVideo ? 'bg-[#F3DFCE]' : 'whiteGradient'} rounded-tl-[20px]`}
             />
             <CategoryItem
               icon="YoutubeInstruction.svg"
               text="Видеоинструкции"
               onClick={() => setVideo(true)}
-              className={`  rounded-tr-[20px] ${isVideo ? 'bg-[#F3DFCE]' : 'whiteGradient'}`}
+              className={`  rounded-tr-[20px] ${isVideo ? 'whiteGradient' : 'bg-[#F3DFCE]'}`}
             />
           </div>
           <div className="block lg:hidden container mx-auto">
-            {isVideo ? (
+            {isVideo ?(
               <CategoryItem
                 onClick={() => setMobileOpen(!isMobileOpen)}
-                text="Видеоинструкции"
-                icon="YoutubeInstruction.svg"
+                text="Письменные инструкции"
+                icon="PdfInstruction.svg"
                 className={`rounded-t-[15px] bg-[#F3DFCE]`}>
                 {isMobileOpen ? (
                   <i className="fa-sharp fa-solid fa-chevron-down"></i>
@@ -197,11 +197,11 @@ const instructions = () => {
                   <i className="fa-sharp fa-solid fa-chevron-up"></i>
                 )}
               </CategoryItem>
-            ) : (
+            )  : (
               <CategoryItem
                 onClick={() => setMobileOpen(!isMobileOpen)}
-                text="Письменные инструкции"
-                icon="PdfInstruction.svg"
+                text="Видеоинструкции"
+                icon="YoutubeInstruction.svg"
                 className={`rounded-t-[15px] bg-[#F3DFCE]`}>
                 {isMobileOpen ? (
                   <i className="fa-sharp fa-solid fa-chevron-down"></i>
@@ -265,7 +265,7 @@ const instructions = () => {
   return (
     <>
       <MainLayout>
-        <div className="header-bg py-6 lg:py-12 ">
+        <div className="header-bg pb-6 pt-6  lg:pt-20 lg:pb-12">
           <div className="container mx-auto text-white">
             <BreadCrumbs
               className="text-white"
@@ -279,7 +279,7 @@ const instructions = () => {
             </h2>
           </div>
         </div>
-        <InstructionBlock />
+        <InstructionBlock className='mt-10'/>
         <Consult
           title="Получите консультацию"
           text={

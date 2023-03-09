@@ -11,10 +11,10 @@ const license = () => {
       <div className="bg-[#FDF7F2] text-black rounded-[80px] lg:py-16 xl:py-0 pt-12 lg:pt-0 pl-0 lg:pl-24 max-w-[1370px] mx-auto relative z-10 mb-[-50px]">
         <div className="flex flex-col lg:flex-row items-center text-center lg:text-start">
           <div className='px-2'>
-            <h3 className="uppercase font-days text-3xl lg:text-5xl mb-8">ПРОВЕРЕНО И СООТВЕТСТВУЕТ ВСЕМ ТРЕБОВАНИЯ СЕРТИФИКАЦИИ РФ</h3>
+            <h3 className="uppercase font-days text-3xl lg:text-5xl mb-8">ПРОВЕРЕНО И СООТВЕТСТВУЕТ ВСЕМ ТРЕБОВАНИЯ СЕРТИФИКАЦИИ Казахстана</h3>
             <p className="text-base lg:text-xl">
-              Изделия из ДПК компании «WOODGRAND» прошли добровольную сертификацию и соответствуют
-              всем требованиям, предъявленным на территории России
+              Изделия из ДПК компании «ABBEX» прошли добровольную сертификацию и соответствуют
+              всем требованиям, предъявленным на территории Казахсатана
             </p>
           </div>
           <img src='/assets/License.png' className='lg:w-[480px] xl:w-full'/>

@@ -4,10 +4,11 @@ import { useContext, useEffect } from 'react';
 import { ModalBasketContext, ModalPartnershipContext, BasketArrContext } from '../contexts/context';
 const nav = [
   { logo: '/assets/noun-woodgrain.svg', title: 'Террасная доска', path: '/catalog/board', id: '1' },
-  { logo: '/assets/noun-stairs.svg', title: 'Ступени из ДПК', path: '/catalog/stairs', id: '2' },
-  { logo: '/assets/noun-ladder.svg', title: 'Ограждения из ДПК', path: '/catalog', id: '3' },
-  { logo: '/assets/wooden-board.svg', title: 'Заборная доска из ДПК', path: '/catalog', id: '4' },
-  { logo: '/assets/noun-screw.svg', title: 'Комплектующие', path: '/catalog', id: '5' },
+  { logo: '/assets/noun-stairs.svg', title: 'Сайдинг', path: '/catalog', id: '2' },
+  { logo: '/assets/noun-stairs.svg', title: 'Ступени из ДПК', path: '/catalog/stairs', id: '3' },
+  { logo: '/assets/noun-ladder.svg', title: 'Ограждения из ДПК', path: '/catalog', id: '4' },
+  { logo: '/assets/wooden-board.svg', title: 'Заборная доска из ДПК', path: '/catalog', id: '5' },
+  { logo: '/assets/noun-screw.svg', title: 'Комплектующие', path: '/catalog', id: '6' },
 ];
 
 function MenuItem({ children, className, onClick }) {

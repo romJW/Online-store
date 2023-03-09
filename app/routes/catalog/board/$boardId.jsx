@@ -75,7 +75,7 @@ export default function BoardType() {
     const el = useRef();
     useEffect(() => {
       gsap.to(el.current, {
-        innerText: `${(size * 395).toFixed(2)} ₸`,
+        innerText: `${(size * 395)} ₸`,
         duration: 0.5,
       });
     });
@@ -115,7 +115,7 @@ export default function BoardType() {
           <div className="mx-auto border-2 border-white lg:w-[230px] mt-8 mb-4"></div>
           <p className="text-[#6F6F6F] text-base mb-1">1.00 пог. метр 359.00 ₸</p>
           <p className="text-black text-3xl font-bold uppercase mb-5" ref={el}>
-            {(size * 395).toFixed(2)} ₸
+            {(size * 395)} ₸
           </p>
           <Btn className="btn btn-primary w-[280px] lg:w-[230px] h-[65px]"> В корзину </Btn>
         </div>
@@ -186,7 +186,7 @@ export default function BoardType() {
         <div className="BoardVidBg flex justify-center items-center w-[280px] rounded h-[196px] xl:w-[370px] lg:h-[230px]">
           <PlayBtn />
         </div>
-        <p className="text-black font-mediun text-sm lg:text-lg">{text}</p>
+        <p className="text-black font-mediun text-sm lg:text-lg font-semibold">{text}</p>
       </div>
     );
   };
@@ -281,9 +281,18 @@ export default function BoardType() {
       // swiper.slideToLoop(sliderState);
     });
     const slides = [
-      { image: '/assets/sliderPhoto1.png' },
-      { image: '/assets/SliderPhoto2.png' },
-      { image: '/assets/SliderPhoto3.png' },
+      { image: '/assets/Slider1.jpg' },
+      { image: '/assets/Slider2.jpg' },
+      { image: '/assets/Slider3.jpg' },
+      { image: '/assets/Slider1.jpg' },
+      { image: '/assets/Slider2.jpg' },
+      { image: '/assets/Slider3.jpg' },
+      { image: '/assets/Slider1.jpg' },
+      { image: '/assets/Slider2.jpg' },
+      { image: '/assets/Slider3.jpg' },
+      { image: '/assets/Slider1.jpg' },
+      { image: '/assets/Slider2.jpg' },
+      { image: '/assets/Slider3.jpg' },
     ];
     return (
       <>
@@ -295,7 +304,7 @@ export default function BoardType() {
                   <div
                     key={slide.image}
                     className="swiper-slide swiper-opacity flex gap-12 items-center justify-center overflow-hidden">
-                    <img src={slide.image} className="" alt="" />
+                    <img src={slide.image} className="h-[300px] rounded-[20px]" alt="" />
                   </div>
                 );
               })}
@@ -335,9 +344,18 @@ export default function BoardType() {
       // swiper.slideToLoop(sliderState);
     });
     const slides = [
-      { image: '/assets/sliderPhoto1.png' },
-      { image: '/assets/SliderPhoto2.png' },
-      { image: '/assets/SliderPhoto3.png' },
+      { image: '/assets/Slider1.jpg' },
+      { image: '/assets/Slider2.jpg' },
+      { image: '/assets/Slider3.jpg' },
+      { image: '/assets/Slider1.jpg' },
+      { image: '/assets/Slider2.jpg' },
+      { image: '/assets/Slider3.jpg' },
+      { image: '/assets/Slider1.jpg' },
+      { image: '/assets/Slider2.jpg' },
+      { image: '/assets/Slider3.jpg' },
+      { image: '/assets/Slider1.jpg' },
+      { image: '/assets/Slider2.jpg' },
+      { image: '/assets/Slider3.jpg' },
     ];
     return (
       <>

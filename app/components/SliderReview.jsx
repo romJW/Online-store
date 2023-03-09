@@ -31,7 +31,7 @@ export default function Slider() {
   });
   const reviews = [
     {
-      image: '/assets/reviewPhoto.png',
+      image: '/assets/Slider1.jpg',
       review: (
         <>
           Отправка в день заказа со складов в Москве, Ульяновске, Санкт-Петербурге, Ростове-на-Дону,
@@ -50,7 +50,7 @@ export default function Slider() {
       key: 1,
     },
     {
-      image: '/assets/reviewPhoto.png',
+      image: '/assets/Slider1.jpg',
       review: (
         <>
           Отправка в день заказа со складов в Москве, Ульяновске, Санкт-Петербурге, Ростове-на-Дону,
@@ -69,7 +69,7 @@ export default function Slider() {
       key: 2,
     },
     {
-      image: '/assets/reviewPhoto.png',
+      image: '/assets/Slider1.jpg',
       review: (
         <>
           Отправка в день заказа со складов в Москве, Ульяновске, Санкт-Петербурге, Ростове-на-Дону,
@@ -88,7 +88,7 @@ export default function Slider() {
       key: 3,
     },
     {
-      image: '/assets/reviewPhoto.png',
+      image: '/assets/Slider1.jpg',
       review: (
         <>
           Отправка в день заказа со складов в Москве, Ульяновске, Санкт-Петербурге, Ростове-на-Дону,
@@ -107,7 +107,7 @@ export default function Slider() {
       key: 4,
     },
     {
-      image: '/assets/reviewPhoto.png',
+      image: '/assets/Slider3.jpeg',
       review: (
         <>
           Отправка в день заказа со складов в Москве, Ульяновске, Санкт-Петербурге, Ростове-на-Дону,

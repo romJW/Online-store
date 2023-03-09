@@ -22,7 +22,7 @@ export default function mainSection() {
   ];
   return (
     <>
-      <div className="mainSection w-full relative mx-auto flex flex-col justify-center  text-black py-12">
+      <div className="mainSection w-full relative mx-auto flex flex-col justify-center  text-black ">
       <div className='absolute right-[1px] top-[110px]'>
           <img src='assets/circles.svg' alt='' className='circles'/>
         </div>

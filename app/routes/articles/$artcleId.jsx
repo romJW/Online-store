@@ -62,6 +62,8 @@ const articleID = () => {
     };
     return (
       <Section>
+      
+       
         <div className="container mx-auto text-black px-4">
           <div className="flex flex-col">
             <div className="flex flex-col-reverse lg:flex-row gap-2 lg:gap-5 items-center lg:items-start">
@@ -71,7 +73,9 @@ const articleID = () => {
                 Терраса на даче своими <br /> руками. Пошаговый план
               </h3>
             </div>
-            <p className="text-sm lg:text-lg text-[#B6B6B6] text-center lg:text-start my-2 lg:my-4">06.09.2022</p>
+            <p className="text-sm lg:text-lg text-[#B6B6B6] text-center lg:text-start my-2 lg:my-4">
+              06.09.2022
+            </p>
             <div className="flex flex-col gap-10">
               <p className="font-medium text-sm lg:text-lg">
                 Для того чтобы сделать свой участок максимально комфортным, многие владельцы
@@ -117,7 +121,9 @@ const articleID = () => {
   };
   return (
     <MainLayout>
-      <div className="header-bg py-6 lg:py-12 ">
+      <div className='relative z-30'>
+      <div className="header-bg py-6 lg:py-12 relative z-20">
+   
         <BreadCrumbs
           className="text-white"
           pages={[
@@ -128,8 +134,11 @@ const articleID = () => {
         />
       </div>
       <ArticleContent />
+      <img src="/assets/circles.svg" className="circles absolute left-0 top-[-1%] rotate-180 z-0" />
+      <Section/>
       <QuestionConsult />
       <Subscribe />
+      </div>
     </MainLayout>
   );
 };

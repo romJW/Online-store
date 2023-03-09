@@ -1,5 +1,7 @@
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react';
+import {useContext} from 'react'
 import styles from './styles/tailwind.css';
+import { MobileMenuContext } from './contexts/context';
 export function links() {
   return [
     { rel: 'stylesheet', href: styles },
@@ -24,7 +26,7 @@ export const meta = () => ({
 });
 
 export default function App() {
-
+  
   return (
     <html lang="en">
       <head>

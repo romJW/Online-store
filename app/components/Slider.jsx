@@ -28,16 +28,16 @@ export default function Slider() {
     });
   });
   const slides = [
-    { image: '/assets/sliderPhoto1.png' },
-    { image: '/assets/SliderPhoto2.png' },
-    { image: '/assets/SliderPhoto3.png' },
-    { image: '/assets/sliderPhoto1.png' },
-    { image: '/assets/SliderPhoto2.png' },
+    { image: '/assets/Slider1.jpg' },
+    { image: '/assets/Slider2.jpg' },
+    { image: '/assets/Slider3.jpg' },
+    { image: '/assets/Slider4.jpg' },
+
   ];
 
   return (
     <>
-      <div className="mx-auto w-full relative mt-12 text-black">
+      <div className="mx-auto w-full relative lg:mt-12 text-black">
         <img src='/assets/circles.svg' className='circles absolute rotate-180 top-[-85px]'/>
         <h2 className="text-center uppercase font-[Days] text-3xl lg:text-5xl mb-8 lg:mb-10">Фотографии с мест установки</h2>
         <div className="swiper swiperClassic mx-auto mb-10 relative">
@@ -45,7 +45,7 @@ export default function Slider() {
             {slides.map((slide) => {
               return (
                 <div key={slide.image} className="swiper-slide swiper-opacity flex gap-12 items-center justify-center overflow-hidden">
-                  <img src={slide.image} className="" alt=''/>
+                  <img src={slide.image} className="h-[300px] rounded-[20px]" alt=''/>
                 </div>
               );
             })}
@@ -54,10 +54,10 @@ export default function Slider() {
         <SliderPagination className="swiper-pagination-photo"/>
         <div className="flex justify-center gap-6 mt-5">
           <SliderBtn className='btn-left'>
-          <i class="fa-solid fa-chevron-left text-white fa-2x"/>
+          <i className="fa-solid fa-chevron-left text-white text-lg lg:text-5xl"/>
           </SliderBtn>
           <SliderBtn className='btn-right'>
-          <i class="fa-solid fa-chevron-right text-white fa-2x  "/>
+          <i className="fa-solid fa-chevron-right text-white text-lg lg:text-5xl  "/>
           </SliderBtn>
         </div>
       </div>

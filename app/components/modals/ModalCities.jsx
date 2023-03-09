@@ -1,16 +1,16 @@
 import { useContext } from 'react';
 import {ModalCityContext} from '../../contexts/context'
 
-const CityItem = function({children}){
+const CityItem = function({children, onClick}){
     
     return(
         <>
-        <a href='' className='text-xs cursor-pointer'>{children}</a>
+        <p  className='text-xs cursor-pointer' onClick={onClick}>{children}</p>
         </>
     )
 }
 const Modal = function(){
-    const {isCityModalOpen, setCityModalOpen } = useContext(ModalCityContext)
+    const {isCityModalOpen, setCityModalOpen, currentCity, setCurrentCity } = useContext(ModalCityContext)
     const cities ={
         letterA:['Актобе', 'Акколь', 'Актобе', 'Аксай', 'Аксу', 'Актау', 'Актобе', 'Алга', 'Алматы,', 'Арал', 'Аркалык', 'Арыс', 'Астана', 'Атбасар', 'Атырау', 'Аягоз', 'Астана'],
         letterB:['Байконур', 'Балхаш', 'Булаево'],
@@ -44,37 +44,67 @@ const Modal = function(){
                         <div>
                             <h3 className='font-bold text-base mb-2'>А</h3>
                             <div className="flex flex-col gap-2">
-                                {cities.letterA.map((city)=><CityItem children={city}/>)}
+                                {cities.letterA.map((city)=><CityItem children={city} onClick={()=>{
+                                    setCurrentCity(city)
+                                    setCityModalOpen(false)
+                                }
+                                    
+                                    }/>)}
                             </div>
                         </div>
                         <div>
                             <h3 className='font-bold text-base mb-2'>Б</h3>
                             <div className="flex flex-col gap-2">
-                                {cities.letterB.map((city)=><CityItem children={city}/>)}
+                                {cities.letterB.map((city)=><CityItem children={city} onClick={()=>{
+                                    setCurrentCity(city)
+                                    setCityModalOpen(false)
+                                }
+                                    
+                                    }/>)}
                             </div>
                         </div>
                         <div>
                             <h3 className='font-bold text-base mb-2'>Д</h3>
                             <div className="flex flex-col gap-2">
-                                {cities.letterD.map((city)=><CityItem children={city}/>)}
+                                {cities.letterD.map((city)=><CityItem children={city} onClick={()=>{
+                                    setCurrentCity(city)
+                                    setCityModalOpen(false)
+                                }
+                                    
+                                    }/>)}
                             </div>
                         </div>
                         <div>
                             <h3 className='font-bold text-base mb-2'>Е</h3>
                             <div className="flex flex-col gap-2">
-                                {cities.letterE.map((city)=><CityItem children={city}/>)}
+                                {cities.letterE.map((city)=><CityItem children={city} onClick={()=>{
+                                    setCurrentCity(city)
+                                    setCityModalOpen(false)
+                                }
+                                    
+                                    }/>)}
                             </div>
                         </div>
                         <div>
                             <h3 className='font-bold text-base mb-2'>Ж</h3>
                             <div className="flex flex-col gap-2">
-                                {cities.letterJ.map((city)=><CityItem children={city}/>)}
+                                {cities.letterJ.map((city)=><CityItem children={city} onClick={()=>{
+                                    setCurrentCity(city)
+                                    setCityModalOpen(false)
+                                }
+                                    
+                                    }/>)}
                             </div>
                         </div>
                         <div>
                             <h3 className='font-bold text-base mb-2'>З</h3>
                             <div className="flex flex-col gap-2">
-                                {cities.letterZ.map((city)=><CityItem children={city}/>)}
+                                {cities.letterZ.map((city)=><CityItem children={city} onClick={()=>{
+                                    setCurrentCity(city)
+                                    setCityModalOpen(false)
+                                }
+                                    
+                                    }/>)}
                             </div>
                         </div>
                     </div>
@@ -82,37 +112,67 @@ const Modal = function(){
                         <div>
                             <h3 className='font-bold text-base mb-2'>К</h3>
                             <div className="flex flex-col gap-2">
-                                {cities.letterK.map((city)=><CityItem children={city}/>)}
+                                {cities.letterK.map((city)=><CityItem children={city} onClick={()=>{
+                                    setCurrentCity(city)
+                                    setCityModalOpen(false)
+                                }
+                                    
+                                    }/>)}
                             </div>
                         </div>
                         <div>
                             <h3 className='font-bold text-base mb-2'>Л</h3>
                             <div className="flex flex-col gap-2">
-                                {cities.letterL.map((city)=><CityItem children={city}/>)}
+                                {cities.letterL.map((city)=><CityItem children={city} onClick={()=>{
+                                    setCurrentCity(city)
+                                    setCityModalOpen(false)
+                                }
+                                    
+                                    }/>)}
                             </div>
                         </div>
                         <div>
                             <h3 className='font-bold text-base mb-2'>М</h3>
                             <div className="flex flex-col gap-2">
-                                {cities.letterM.map((city)=><CityItem children={city}/>)}
+                                {cities.letterM.map((city)=><CityItem children={city} onClick={()=>{
+                                    setCurrentCity(city)
+                                    setCityModalOpen(false)
+                                }
+                                    
+                                    }/>)}
                             </div>
                         </div>
                         <div>
                             <h3 className='font-bold text-base mb-2'>П</h3>
                             <div className="flex flex-col gap-2">
-                                {cities.letterP.map((city)=><CityItem children={city}/>)}
+                                {cities.letterP.map((city)=><CityItem children={city} onClick={()=>{
+                                    setCurrentCity(city)
+                                    setCityModalOpen(false)
+                                }
+                                    
+                                    }/>)}
                             </div>
                         </div>
                         <div>
                             <h3 className='font-bold text-base mb-2'>Р</h3>
                             <div className="flex flex-col gap-2">
-                                {cities.letterR.map((city)=><CityItem children={city}/>)}
+                                {cities.letterR.map((city)=><CityItem children={city} onClick={()=>{
+                                    setCurrentCity(city)
+                                    setCityModalOpen(false)
+                                }
+                                    
+                                    }/>)}
                             </div>
                         </div>
                         <div>
                             <h3 className='font-bold text-base mb-2'>С</h3>
                             <div className="flex flex-col gap-2">
-                                {cities.letterS.map((city)=><CityItem children={city}/>)}
+                                {cities.letterS.map((city)=><CityItem children={city} onClick={()=>{
+                                    setCurrentCity(city)
+                                    setCityModalOpen(false)
+                                }
+                                    
+                                    }/>)}
                             </div>
                         </div>
                     </div>
@@ -120,43 +180,78 @@ const Modal = function(){
                         <div>
                             <h3 className='font-bold text-base mb-2'>Т</h3>
                             <div className="flex flex-col gap-2">
-                                {cities.letterT.map((city)=><CityItem children={city}/>)}
+                                {cities.letterT.map((city)=><CityItem children={city} onClick={()=>{
+                                    setCurrentCity(city)
+                                    setCityModalOpen(false)
+                                }
+                                    
+                                    }/>)}
                             </div>
                         </div>
                         <div>
                             <h3 className='font-bold text-base mb-2'>У</h3>
                             <div className="flex flex-col gap-2">
-                                {cities.letterU.map((city)=><CityItem children={city}/>)}
+                                {cities.letterU.map((city)=><CityItem children={city} onClick={()=>{
+                                    setCurrentCity(city)
+                                    setCityModalOpen(false)
+                                }
+                                    
+                                    }/>)}
                             </div>
                         </div>
                         <div>
                             <h3 className='font-bold text-base mb-2'>Ф</h3>
                             <div className="flex flex-col gap-2">
-                                {cities.letterF.map((city)=><CityItem children={city}/>)}
+                                {cities.letterF.map((city)=><CityItem children={city} onClick={()=>{
+                                    setCurrentCity(city)
+                                    setCityModalOpen(false)
+                                }
+                                    
+                                    }/>)}
                             </div>
                         </div>
                         <div>
                             <h3 className='font-bold text-base mb-2'>Х</h3>
                             <div className="flex flex-col gap-2">
-                                {cities.letterH.map((city)=><CityItem children={city}/>)}
+                                {cities.letterH.map((city)=><CityItem children={city} onClick={()=>{
+                                    setCurrentCity(city)
+                                    setCityModalOpen(false)
+                                }
+                                    
+                                    }/>)}
                             </div>
                         </div>
                         <div>
                             <h3 className='font-bold text-base mb-2'>Ш</h3>
                             <div className="flex flex-col gap-2">
-                                {cities.letterSH.map((city)=><CityItem children={city}/>)}
+                                {cities.letterSH.map((city)=><CityItem children={city} onClick={()=>{
+                                    setCurrentCity(city)
+                                    setCityModalOpen(false)
+                                }
+                                    
+                                    }/>)}
                             </div>
                         </div>
                         <div>
                             <h3 className='font-bold text-base mb-2'>Щ</h3>
                             <div className="flex flex-col gap-2">
-                                {cities.letterSHI.map((city)=><CityItem children={city}/>)}
+                                {cities.letterSHI.map((city)=><CityItem children={city} onClick={()=>{
+                                    setCurrentCity(city)
+                                    setCityModalOpen(false)
+                                }
+                                    
+                                    }/>)}
                             </div>
                         </div>
                         <div>
                             <h3 className='font-bold text-base mb-2'>Э</h3>
                             <div className="flex flex-col gap-2">
-                                {cities.letterEA.map((city)=><CityItem children={city}/>)}
+                                {cities.letterEA.map((city)=><CityItem children={city} onClick={()=>{
+                                    setCurrentCity(city)
+                                    setCityModalOpen(false)
+                                }
+                                    
+                                    }/>)}
                             </div>
                         </div>
                     </div>

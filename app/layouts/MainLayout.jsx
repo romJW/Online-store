@@ -26,6 +26,7 @@ export default function MainLayout({ children }) {
   const [isPartnership, setPartnership] = useState(false);
   const [isFormPartnersFull, setFormPartnersFull] = useState(false);
   const [isQuizModal, setQuizModal] = useState(false);
+  const [currentCity, setCurrentCity] = useState('Ваш регион:')
   return (
     <div
       style={{
@@ -33,7 +34,7 @@ export default function MainLayout({ children }) {
         fontSize: '18px',
       }}
       className="">
-      <ModalCityContext.Provider value={{ isCityModalOpen, setCityModalOpen }}>
+      <ModalCityContext.Provider value={{ isCityModalOpen, setCityModalOpen, currentCity, setCurrentCity}}>
         <MobileMenuContext.Provider value={{ isMobileMenuOpen, SetMobileMenuOpen }}>
           <ModalBasketContext.Provider value={{ isBasketOpen, setBasketOpen }}>
             <BasketArrContext.Provider value={{ BasketArr, SetBasketArr }}>

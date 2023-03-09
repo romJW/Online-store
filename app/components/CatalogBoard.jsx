@@ -26,7 +26,7 @@ const catalogCards = [
       'catalogColor6.png',
     ],
     size: '301х31x31 мм',
-    price: '351',
+    price: '359.00',
     fullPrice: '2560',
   },
   {
@@ -43,7 +43,7 @@ const catalogCards = [
       'catalogColor6.png',
     ],
     size: '302х32x32 мм',
-    price: '352',
+    price: '359.00',
     fullPrice: '2561',
   },
   {
@@ -60,7 +60,7 @@ const catalogCards = [
       'catalogColor6.png',
     ],
     size: '303х33x33 мм',
-    price: '353',
+    price: '359.00',
     fullPrice: '2562',
   },
   {
@@ -77,7 +77,7 @@ const catalogCards = [
       'catalogColor6.png',
     ],
     size: '304х34x34 мм',
-    price: '354',
+    price: '359.00',
     fullPrice: '2563',
   },
   {
@@ -94,7 +94,7 @@ const catalogCards = [
       'catalogColor6.png',
     ],
     size: '305х35x35 мм',
-    price: '355',
+    price: '359.00',
     fullPrice: '2564',
   },
   {
@@ -111,7 +111,7 @@ const catalogCards = [
       'catalogColor6.png',
     ],
     size: '306х36x36 мм',
-    price: '356',
+    price: '359.00',
     fullPrice: '2565',
   },
   {
@@ -128,7 +128,7 @@ const catalogCards = [
       'catalogColor6.png',
     ],
     size: '307х37x37 мм',
-    price: '357',
+    price: '359.00',
     fullPrice: '2566',
   },
 ];

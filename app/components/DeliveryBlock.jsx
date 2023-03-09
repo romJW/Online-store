@@ -3,8 +3,8 @@ import Btn from './UI/Btn';
 export default function DeliveryBlock() {
   return (
     <>
-      <div className="max-w-[1272px] bg-[#FDF7F2] rounded-[80px] relative mx-auto mb-[90px] lg:mb-[-150px] z-40">
-        <div className="wrapper text-black lg:h-[500px] pt-20 pl-10 mx-auto ">
+      <div className="max-w-[1272px] bg-[#FDF7F2] rounded-[80px] relative mx-auto mb-[-100px] lg:mb-[-150px] z-40">
+        <div className="wrapper text-black lg:h-[500px] pt-20 px-6 lg:px-0 lg:pl-10 mx-auto ">
           <h3 className="text-center lg:text-start text-3xl lg:text-5xl font-[Days] mb-3">
             ДОСТАВЛЯЕМ ПО ВСЕМУ КАЗАХСТАНУ
           </h3>

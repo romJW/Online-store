@@ -39,16 +39,16 @@ const questions = () => {
   };
   const QuestionBlock = () => {
     return (
-      <div className="container mx-auto text-black">
+      <div className="container mx-auto text-black pt-14">
         <div className="flex flex-col items-center">
-          <div className="flex bg-[#FDF7F2] gap-4 rounded-[20px] py-5 lg:py-8 px-5 lg:px-8">
+          <div className="flex bg-[#FDF7F2] gap-4 rounded-[20px] py-5 lg:py-8 px-5 lg:px-8 mb-8">
             <img src="/assets/QuestionMarkIcon.svg" />
             <p>
               Выберите интересующую тему, внутри вы найдете развернутые ответы на самые частые и
               сложные вопросы по продукции из ДПК и нюансам монтажа
             </p>
           </div>
-          <div className="container h-20 bg-[#D9D9D9] hidden lg:block mt-[-30px]"></div>
+          
           <div className="flex flex-wrap gap-6 justify-center items-center mt-8 lg:mt-0">
             {questionCategory.map((category) => (
               <QuestionCard
@@ -61,6 +61,7 @@ const questions = () => {
           </div>
         </div>
       </div>
+     
     );
   };
 

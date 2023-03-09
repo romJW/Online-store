@@ -55,7 +55,7 @@ const about = () => {
             </div>
             <img
               src="/assets/QualityBoard.png"
-              className="w-full lg:w-1/3 rotate-90 lg:rotate-0 justify-self-stretch"
+              className="w-full lg:w-1/3 rotate-90 lg:rotate-0 justify-self-stretch rounded-[60px]"
             />
           </div>
         </div>

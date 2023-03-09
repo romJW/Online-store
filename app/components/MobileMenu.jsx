@@ -78,7 +78,7 @@ export default function MobileMenu(props) {
           Популярные вопросы
         </a>
       </div>
-      <div className="top-header__region flex gap-5 text-sm">
+      <div className="top-header__region flex gap-5 text-sm mx-auto">
         <div className="flex items-center gap-2">
           <i className="fa-solid fa-location-dot fa-sm text-gray-400"></i>
           <p className="top-header__region-label text-gray-400">Ваш регион:</p>
@@ -88,7 +88,7 @@ export default function MobileMenu(props) {
         </p>
       </div>
       <button className="btn btn-secondary text-white">Калькулятор стоимости</button>
-      <Input className="max-w-xs" placeholder="Я ищу..." />
+      <Input className="max-w-xs mx-auto" placeholder="Я ищу..." />
       <div className="mx-auto text-center">
         <a rel="nofollow" href="tel:+7 (727) 328-80-81">
           <p className="text-lg font-bold">+7 (727) 328-80-81</p>
@@ -103,8 +103,8 @@ export default function MobileMenu(props) {
         {props.socials.map((social) => (
           <a key={social.id} rel="nofollow" href={social.path}>
             <div className="border border-white rounded-full w-7 h-7 grid">
-              <i
-                className={social.logo}
+              <img
+                src={`/assets/${social.logo}`}
                 style={{
                   color: `${social.color}`,
                   display: "block",
