@@ -22,8 +22,8 @@ export default function Index() {
         <div className="w-[290px] relative z-10 self-stretch  py-5 px-2 rounded-[10px] montageCardShadow ">
           <div className="flex flex-col justify-center items-center">
             <div className="flex flex-col justify-center items-center gap-2 lg:gap-6">
-            <img src={`/assets/${icon}`} className="h-[70px] w-[70px] scale-75 lg:scale-100" />
-            <p className="font-medium text-base lg:text-xl text-center text-black">{text}</p>
+              <img src={`/assets/${icon}`} className="h-[70px] w-[70px] scale-75 lg:scale-100" />
+              <p className="font-medium text-base lg:text-xl text-center text-black">{text}</p>
             </div>
           </div>
         </div>
@@ -73,7 +73,7 @@ export default function Index() {
     return (
       <>
         <div
-          className={`flex flex-col CatalogCardBg rounded-[10px] pb-4 border-2 border-transparent hover:border-l-[#D3585C] hover:border-r-[#D3585C] hover:border-b-[#D3585C]  text-black ${className}`}
+          className={`flex flex-col CatalogCardBg rounded-[10px] pb-4 border-2 border-transparent hover:border-[#D3585C]  text-black ${className}`}
           onClick={onClick}>
           <div className="flex flex-col justify-center mx-auto gap-2 text-sm lg:text-xl text-black ">
             <img src={`/assets/${image}`} className="mb-3 h-[250px]" />
@@ -120,11 +120,11 @@ export default function Index() {
               </p>
               <p>Отправьте заявку для связи прямо сейчас. Вам перезвонят и дадут консультацию. </p>
             </div>
-            <img src="assets/Slider1.jpg" className="lg:h-[300px] " />
+            <img src="assets/Slider1.jpg" className="lg:h-[300px] rounded-[10px]" />
           </div>
           <div className="flex flex-col lg:flex-row gap-5 lg:gap-[185px] text-sm lg:text-lg  text-[#FDF7F2]">
             <div className="flex items-center gap-4">
-              <img src="/assets/MontageWarranty.svg" className="w-8 h-8 lg:w-12 lg:h-12" />
+              <img src="/assets/MontageWarranty.svg" className="w-8 h-8 lg:w-12 lg:h-12 " />
               <p>
                 Услуги бригад от компании "ABBEX" <br /> соответствуют всем стандартам
               </p>
@@ -160,7 +160,7 @@ export default function Index() {
         text: 'Реализовали эстетически слаженный проект, придомовая терраса из доски 150х22 мм и выставили по перимет...',
       },
       {
-        image: 'Slider3.jpeg',
+        image: 'Slider3.jpg',
         title: 'Настил из доски для бассейна (Антрацит)',
         city: 'Алматы',
         size: '30',
@@ -198,7 +198,7 @@ export default function Index() {
             <h2 className="text-center text-3xl lg:text-5xl font-[Days] uppercase mb-10">
               Объекты наших клиентов
             </h2>
-            <p className="text-center text-2xl lg:text-3xl mb-10">
+            <p className="text-center text-2xl lg:text-3xl ">
               У нас вы можете заказать материал и последующий монтаж «под ключ»
             </p>
             <div className="swiper swiperMontage  mx-auto mb-10 relative ">
@@ -224,10 +224,9 @@ export default function Index() {
               <SliderPagination className=" swiper-pagination-montage " />
             </div>
 
-            
             <div className="flex justify-center gap-6 mt-5 mb-5">
-              <SliderBtnLeft className="relative xl:top-[-420px] xl:left-[-580px]  z-20" />
-              <SliderBtnRight className="relative xl:top-[-420px] xl:right-[-580px] z-20" />
+              <SliderBtnLeft className="relative xl:top-[-420px] xl:left-[-620px]  z-20" />
+              <SliderBtnRight className="relative xl:top-[-420px] xl:right-[-620px] z-20" />
             </div>
             <div className="flex justify-center"></div>
           </div>
@@ -242,7 +241,11 @@ export default function Index() {
         <MontageHero />
         <div className="relative">
           <MontageAdvantages />
-          <img src="/assets/circles.svg" alt="" className="circles z-0 absolute right-[1px] top-[30px]" />
+          <img
+            src="/assets/circles.svg"
+            alt=""
+            className="circles z-0 absolute right-[1px] top-[30px]"
+          />
         </div>
         <MontageSlider />
         <MontagePriviliges />

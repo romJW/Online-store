@@ -30,6 +30,7 @@ const contacts = () => {
         />
       </div>
       <Map/>
+      <Section/>
       <QuestionConsult />
       <Subscribe />
     </MainLayout>

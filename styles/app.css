@@ -13,7 +13,16 @@
     display: block;
   }
 }
-
+.swiper-wrapper-montage{
+background:white !important;
+box-shadow: none !important;
+filter: drop-shadow(0 0 #0000) !important;
+}
+.swiperMontage{
+  background:white !important;
+  box-shadow: none !important;
+  filter: drop-shadow(0 0 #0000) !important;
+  }
 @media (max-width: 1024px) {
   .swiper-pagination-bullet {
     width: 10px !important;

@@ -107,7 +107,7 @@ export default function Slider() {
       key: 4,
     },
     {
-      image: '/assets/Slider3.jpeg',
+      image: '/assets/Slider3.jpg',
       review: (
         <>
           Отправка в день заказа со складов в Москве, Ульяновске, Санкт-Петербурге, Ростове-на-Дону,
