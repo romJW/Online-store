@@ -2059,14 +2059,6 @@ html {
   content: attr(data-content);
 }
 
-.table tr.hover:hover th,
-    .table tr.hover:hover td,
-    .table tr.hover:nth-child(even):hover th,
-    .table tr.hover:nth-child(even):hover td {
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--b3, var(--b2)) / var(--tw-bg-opacity));
-}
-
 .textarea:focus {
   outline: 2px solid hsla(var(--bc) / 0.2);
   outline-offset: 2px;
@@ -4240,6 +4232,22 @@ html {
 
 .top-\[180px\] {
   top: 180px;
+}
+
+.top-\[110\] {
+  top: 110;
+}
+
+.top-\[110\%\] {
+  top: 110%;
+}
+
+.top-\[1230\%\] {
+  top: 1230%;
+}
+
+.top-\[230\%\] {
+  top: 230%;
 }
 
 .z-10 {
@@ -6586,21 +6594,6 @@ html {
   border-color: rgb(211 88 92 / var(--tw-border-opacity));
 }
 
-.hover\:border-l-\[\#D3585C\]:hover {
-  --tw-border-opacity: 1;
-  border-left-color: rgb(211 88 92 / var(--tw-border-opacity));
-}
-
-.hover\:border-r-\[\#D3585C\]:hover {
-  --tw-border-opacity: 1;
-  border-right-color: rgb(211 88 92 / var(--tw-border-opacity));
-}
-
-.hover\:border-b-\[\#D3585C\]:hover {
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(211 88 92 / var(--tw-border-opacity));
-}
-
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -7461,9 +7454,9 @@ html {
     padding-bottom: 3rem;
   }
 
-  .lg\:py-32 {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+  .lg\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   .lg\:py-10 {
@@ -7509,11 +7502,6 @@ html {
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
-  }
-
-  .lg\:py-0 {
-    padding-top: 0px;
-    padding-bottom: 0px;
   }
 
   .lg\:pl-10 {

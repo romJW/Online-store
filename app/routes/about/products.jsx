@@ -121,7 +121,7 @@ const products = () => {
         image: 'AdvantageThermometer.svg',
         text: (
           <>
-            диапазон температур <br className="hidden lg:block" /> от -450 до +750
+            Диапазон температур <br className="hidden lg:block" /> от -45° до +75°
           </>
         ),
       },

@@ -8,7 +8,7 @@ const socials = [
   },
   {
     logo: 'instagram.svg',
-    path: '/',
+    path: 'https://www.instagram.com/abbex.kz/',
     id: '2',
     color: '#8a3ab9	',
   },
@@ -26,7 +26,7 @@ const socials = [
   },
   {
     logo: 'telegram.svg',
-    path: '/',
+    path: 'https://t.me/pianist_1234',
     id: '5',
     color: '#2AABEE',
   },

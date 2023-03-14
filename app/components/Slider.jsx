@@ -38,7 +38,7 @@ export default function Slider() {
   return (
     <>
       <div className="mx-auto w-full relative lg:mt-12 text-black">
-        <img src='/assets/circles.svg' className='circles absolute rotate-180 top-[-85px]'/>
+
         <h2 className="text-center uppercase font-[Days] text-3xl lg:text-5xl mb-8 lg:mb-10">Фотографии с мест установки</h2>
         <div className="swiper swiperClassic mx-auto mb-10 relative">
           <div className="swiper-wrapper mx-auto">

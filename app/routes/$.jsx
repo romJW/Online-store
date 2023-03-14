@@ -4,6 +4,7 @@ import { Link } from '@remix-run/react'
 const ErrorPage = () =>{
     return(
         <MainLayout>
+            <img src="/assets/circles.svg" className="circles absolute left-0 top-1/4 rotate-180 z-0" />
             <div className='container flex items-center mx-auto py-16 lg:py-0 text-black px-4'>
                 <div className="flex flex-col">
                 <h3 className='font-days text-3xl lg:text-5xl mb-1 lg:mb-2 uppercase whitespace-nowrap'>Страница не найдена</h3>

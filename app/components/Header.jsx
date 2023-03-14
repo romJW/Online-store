@@ -17,13 +17,13 @@ import { Link } from '@remix-run/react';
 const socials = [
   {
     logo: 'youtube.svg',
-    path: '/',
+    path: 'https://www.youtube.com/@abbex2289',
     id: '1',
     color: '#FF0000',
   },
   {
     logo: 'instagram.svg',
-    path: '/',
+    path: 'https://www.instagram.com/abbex.kz/',
     id: '2',
     color: '#8a3ab9	',
   },
@@ -35,13 +35,13 @@ const socials = [
   },
   {
     logo: 'whatsapp.svg',
-    path: '/',
+    path: 'https://wa.me/+77717411844',
     id: '4',
     color: '#25d366',
   },
   {
     logo: 'telegram.svg',
-    path: '/',
+    path: 'https://t.me/pianist_1234',
     id: '5',
     color: '#2AABEE',
   },

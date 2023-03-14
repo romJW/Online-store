@@ -27,10 +27,8 @@ const partners = () => {
               </p>
               <p className="font-mont font-bold text-white text-lg lg:text-2xl mb-8 lg:mb-10">
                 <span className="text-[#D3585C]">
-                  Вам не нужно продавать - просто порекомендуйте нас,
-                </span>
-                <br />
-                остальное мы сделаем сами и отправим вам %
+                Станьте партнером самого большого поставшика ДПК в Казахстане,
+                </span> остальное мы сделаем сами и отправим вам %
               </p>
               <Btn className="btn-primary max-w-[670px] text-base lg:text-xl h-24 lg:h-20 mb-10 lg:mb-0">
                 Узнать условия работы и получить образцы
@@ -98,7 +96,7 @@ const partners = () => {
   const { isQuizModal, setQuizModal } = useContext(ModalQuizContext);
 
     return (
-      <div className="container mx-auto my-32">
+      <div className="container mx-auto my-32 relative">
         <div className="bg-[#FDF7F2] text-black max-w-[740px] h-[280px] mx-auto rounded-[20px] pt-6 lg:pt-0">
           <div className="flex flex-col-reverse lg:flex-row items-center">
             <img src="/assets/DealerList.png" className="lg:ml-[-130px]" />
@@ -146,14 +144,14 @@ const partners = () => {
                   </p>
                 </div>
                 <Btn
-                  className="btn-primary w-[300px] xl:w-[340px] h-16 xl:h-20 hidden lg:block"
+                  className="btn-primary text-xl w-[300px] xl:w-[340px] h-16 xl:h-20 hidden lg:block"
                   onClick={() => setFormPartnersFull(true)}>
                   Cтать партнером
                 </Btn>
               </div>
               <img src="/assets/DesignerLaptop.png" className="lg:w-3/5 xl:w-3/4" />
               <Btn
-                className="btn-primary w-[300px] xl:w-[340px] h-16 xl:h-20 block lg:hidden mt-1"
+                className="btn-primary l w-[300px] xl:w-[340px] h-16 xl:h-20 block lg:hidden mt-1"
                 onClick={() => setFormPartnersFull(true)}>
                 Cтать партнером
               </Btn>
@@ -171,12 +169,12 @@ const partners = () => {
         <div className="container mx-auto">
           <div className="bg-[#FDF7F2] box-bg rounded-[60px]  py-8 lg:py-16 lg:pl-16">
             <div className="flex flex-col justify-center lg:justify-start items-center lg:items-start text-black font-mont text-center lg:text-start mb-5">
-              <h3 className="font-days uppercase text-3xl lg:text-5xl ">
-                НАШ ДИЛЕР ЗАРАБАТЫВАЕТ
+              <h3 className="font-days uppercase text-3xl lg:text-5xl mb-4">
+              Наши партнеры зарабатывают 
                 <br />
-                ОТ 150 000 Р В МЕСЯЦ
+                от 1.000.000тг/мес
               </h3>
-              <p className="font-bold text-xl lg:text-3xl">Узнайте, сколько вы можете заработать</p>
+              <p className="font-bold text-xl lg:text-3xl">Узнайте, сколько вы cможете заработать с нами</p>
               <p className="font-medium text-sm lg:text-lg mb-5">Введите объем продаж (м²)</p>
               <FormInput
                 value={volume}
@@ -210,8 +208,10 @@ const partners = () => {
       <MainLayout>
         <PartnersHero />
         <DealerCondition />
+        <img src="/assets/circles.svg" className="circles absolute right-0 top-[110%]  z-0" />
         <DesignerCondition />
         <DealerEarn />
+        <img src="/assets/circles.svg" className="circles absolute left-0 top-[230%] rotate-180 z-0" />
       </MainLayout>
     </>
   );
