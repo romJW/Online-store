@@ -13,6 +13,7 @@ import {
   ModalPartnershipContext,
   ModalFormPartnersFullContext,
   ModalQuizContext,
+  ModalCertContext
 } from '../contexts/context';
 export default function MainLayout({ children }) {
   const [isCityModalOpen, setCityModalOpen] = useState(false);
@@ -26,6 +27,7 @@ export default function MainLayout({ children }) {
   const [isPartnership, setPartnership] = useState(false);
   const [isFormPartnersFull, setFormPartnersFull] = useState(false);
   const [isQuizModal, setQuizModal] = useState(false);
+  const [isCertModal, setCertModal] = useState(false);
   const [currentCity, setCurrentCity] = useState('Ваш регион:')
   return (
     <div
@@ -48,10 +50,12 @@ export default function MainLayout({ children }) {
                         <ModalFormPartnersFullContext.Provider
                           value={{ isFormPartnersFull, setFormPartnersFull }}>
                           <ModalQuizContext.Provider value={{ isQuizModal, setQuizModal }}>
+                          <ModalCertContext.Provider value={{ isCertModal, setCertModal }}>
                             <Header />
 
                             {children}
                             <Footer />
+                            </ModalCertContext.Provider>
                           </ModalQuizContext.Provider>
                         </ModalFormPartnersFullContext.Provider>
                       </ModalPartnershipContext.Provider>

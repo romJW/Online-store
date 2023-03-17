@@ -1,14 +1,18 @@
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect, useContext } from 'react';
 import SliderBtnLeft from './UI/SliderBtnLeft';
 import SliderBtnRight from './UI/SliderBtnRight';
 import SliderPagination from './UI/SliderPagination';
 import Section from './UI/Section';
+import ModalCert from './modals/ModalCert';
+import { ModalCertContext } from '../contexts/context';
 export default function Slider({ className }) {
   const [activeIndex, setActiveIndex] = useState(null);
   const isActive = useRef(false)
-  const handleClick = (itemId) => {
-    setActiveIndex(itemId);
-  };
+  const { isCertModal, setCertModal } = useContext(
+    ModalCertContext,
+  );
+ const [activePic,setActivePic] = useState('');
+
   useEffect(() => {
     const swiper = new Swiper('.swiperLicense', {
       loop: true,
@@ -46,9 +50,9 @@ export default function Slider({ className }) {
   });
   const slides = [
     { image: '/assets/Certificate1.jpg' },
-    { image: '/assets/Certificate2.jpg' },
     { image: '/assets/Certificate4.jpg' },
     { image: '/assets/Certificate3.jpg' },
+    { image: '/assets/Certificate2.jpg' },
   ];
   return (
     <>
@@ -64,8 +68,15 @@ export default function Slider({ className }) {
                   return (
                     <div
                       className={`swiper-slide swiper-slide-license flex items-center justify-center overflow-hidden`}>
-                      <img src={slide.image} className="" onClick={() => handleClick(index)} />
+                      <img src={slide.image} className="" onClick={() =>{
+                        setCertModal(true)
+                        setActivePic(slide.image);
+                        console.log(activePic)
+                      }
+                      } />
                     </div>
+                    
+                    
                   );
                 })}
               </div>
@@ -77,6 +88,7 @@ export default function Slider({ className }) {
             </div>
           </div>
         </div>
+        <ModalCert image={activePic}/>
       </Section>
     </>
   );
